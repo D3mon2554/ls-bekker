@@ -1,5 +1,18 @@
-import '@/styles/globals.css'
+import "@css/bundle.scss";
+import "@css/nextjs-override.css";
+import Navigation from "@ui/navigation";
+import Footer from "@ui/footer";
 
-export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />
+function MyApp({ Component, pageProps }) {
+  return (
+    <>
+      {<Navigation />}
+      <main>
+        <Component {...pageProps} />
+      </main>
+      <Footer />
+    </>
+  );
 }
+
+export default MyApp;

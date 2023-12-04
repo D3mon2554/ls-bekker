@@ -1,0 +1,142 @@
+.button {
+  cursor: pointer;
+  border: none;
+  background: #206fa1 0% 0% no-repeat padding-box;
+  border-radius: 14px;
+  color: #fefefe;
+  width: 198px;
+  height: 57px;
+  position: relative;
+  &:hover {
+    background: #1ca1da 0% 0% no-repeat padding-box;
+    color: #fefefe;
+  }
+}
+.getStarted {
+  cursor: pointer;
+  width: 198px;
+  height: 57px;
+  background-color: maroon;
+  color: #fefefe;
+  border-radius: 13px;
+  position: relative;
+  display: inline;
+  justify-content: center;
+  transition: ease-out 0.6s;
+  &:hover {
+    background-color: rgb(182, 5, 5);
+    // scale: 1.1;
+    transition: ease-in 0.6s;
+  }
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+}
+.submit {
+  cursor: pointer;
+  height: 50px;
+  color: #fefefe;
+  background-color: #206fa1;
+  transition: ease-out 0.3s;
+  &:hover {
+    background-color: #1ca1da;
+    transition: ease-in 0.3s;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.about {
+  cursor: pointer;
+  width: 198px;
+  height: 57px;
+  position: relative;
+  display: inline;
+  justify-content: center;
+  border: 2px solid #707070;
+  border-radius: 14px;
+  background-color: #f5f5f5;
+  color: #707070;
+  transition: ease-out 0.3s;
+  &:hover {
+    border: 2px solid #206fa1;
+    color: #206fa1;
+    background-color: #f5f5f5;
+    transition: ease-in 0.3s;
+  }
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+}
+.next {
+  position: relative;
+  text-align: left;
+  display: inline;
+  justify-content: center;
+  background-color: #206fa1;
+  transition: ease-out 0.3s;
+  &:hover {
+    transition: ease-in 0.3s;
+  }
+}
+.label {
+  position: relative;
+  left: 10px;
+  bottom: 14.3px;
+  width: 108px;
+  height: 26px;
+  display: flex;
+  justify-content: center;
+}
+.chevron:before {
+  position: relative;
+  border-style: solid;
+  border-width: 3px 3px 0 0;
+  content: "";
+  display: inline-block;
+  height: 0.45em;
+  left: 145px;
+  position: relative;
+  top: 18px;
+  transform: rotate(45deg);
+  vertical-align: top;
+  width: 0.45em;
+}
+.link {
+  position: relative;
+  background-color: transparent;
+  color: #707070;
+  height: 20px;
+  width: 100px;
+  text-decoration: none;
+  &:hover {
+    background-color: transparent;
+    color: #206fa1;
+  }
+}
+.Dark {
+  position: relative;
+  background-color: transparent;
+  color: #f5f5f5;
+  height: 20px;
+  width: 100px;
+  text-decoration: none;
+  &:hover {
+    background-color: transparent;
+    color: #1ca1da;
+  }
+}
+.signUp {
+  left: 200px;
+  top: 400px;
+  position: relative;
+  height: 49px;
+  width: 131px;
+  color: #f5f5f5;
+  background-color: #206fa1;
+  &:hover {
+    background-color: #1ca1da;
+  }
+}

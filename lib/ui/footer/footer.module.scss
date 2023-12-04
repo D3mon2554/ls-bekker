@@ -1,0 +1,17 @@
+.footer {
+  background-color: #131313;
+}
+
+.home {
+  text-decoration: none;
+  color: #ffffff;
+  &:hover {
+    color: #206fa1;
+  }
+  &:active {
+    color: #206fa1;
+  }
+  &:focus {
+    color: #206fa1;
+  }
+}

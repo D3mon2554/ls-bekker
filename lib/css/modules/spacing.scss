@@ -1,0 +1,71 @@
+$spacing_mediums: (margin, padding);
+$spacing_sides: (around, horizontal, vertical, top, right, bottom, left);
+$spacing_sizes: (
+  "xxx-small": 0.125rem,
+  "xx-small": 0.25rem,
+  "x-small": 0.5rem,
+  "small": 0.75rem,
+  "medium": 1rem,
+  "large": 1.5rem,
+  "x-large": 2rem,
+  "xx-large": 3rem,
+  "xxx-large": 4.5rem,
+  "none": 0,
+);
+
+:root {
+  @each $key, $val in $spacing_sizes {
+    --spacing-#{$key}: #{$val};
+  }
+}
+
+@mixin generateClasses($medium, $side, $breakpoint) {
+  $breakpoint_string: null;
+  @if $breakpoint != null {
+    $breakpoint_string: $breakpoint + "-";
+  }
+  @each $key, $val in $spacing_sizes {
+    @if $side == "around" {
+      .#{$breakpoint_string}#{$medium}-#{$side}_#{$key} {
+        #{$medium}: var(--spacing-#{$key});
+      }
+    } @else if $side == "horizontal" {
+      .#{$breakpoint_string}#{$medium}-#{$side}_#{$key} {
+        #{$medium}-left: var(--spacing-#{$key});
+        #{$medium}-right: var(--spacing-#{$key});
+      }
+    } @else if $side == "vertical" {
+      .#{$breakpoint_string}#{$medium}-#{$side}_#{$key} {
+        #{$medium}-top: var(--spacing-#{$key});
+        #{$medium}-bottom: var(--spacing-#{$key});
+      }
+    } @else {
+      .#{$breakpoint_string}#{$medium}-#{$side}_#{$key} {
+        #{$medium}-#{$side}: var(--spacing-#{$key});
+      }
+    }
+  }
+}
+@mixin generateMediumClassSet($breakpoint: null) {
+  @each $medium in $spacing_mediums {
+    @each $side in $spacing_sides {
+      @include generateClasses($medium, $side, $breakpoint);
+    }
+  }
+}
+
+@include generateMediumClassSet();
+
+@media screen and (min-width: 480px) {
+  @include generateMediumClassSet("small");
+}
+@media screen and (min-width: 768px) {
+  @include generateMediumClassSet("medium");
+}
+@media screen and (min-width: 1024px) {
+  @include generateMediumClassSet("large");
+}
+.line {
+  list-style: none;
+  padding: 0;
+}

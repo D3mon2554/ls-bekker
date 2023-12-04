@@ -1,0 +1,142 @@
+.hoverCardContainer {
+  position: relative;
+  height: 450px;
+  width: 400px;
+  box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  border-radius: 30px;
+  cursor: pointer;
+  &:hover {
+    .hoverCardImageContainer {
+      height: 50%;
+    }
+    .hoverCardContent {
+      height: 50%;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    width: 300px;
+
+    .hoverCardImageContainer {
+      height: 30%;
+    }
+    .hoverCardContent {
+      height: 70%;
+    }
+  }
+}
+.hoverCardImageContainer {
+  position: relative;
+  width: 100%;
+  height: 90%;
+}
+.hoverCardContent {
+  padding: 10px;
+  padding-left: 30px;
+  background-color: #ffffff;
+  position: relative;
+  width: 100%;
+  text-decoration: none;
+  @media screen and (max-width: 768px) {
+    padding: 10px;
+    padding-left: none;
+  }
+}
+.hoverCardImage {
+  height: 100%;
+  width: 100%;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+}
+.text {
+  text-decoration: none;
+  color: #707070;
+  font-size: 18px;
+}
+.title {
+  font-size: 30px;
+}
+.cardContainer {
+  width: 100%;
+  height: 300px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, 0.39);
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    height: 700px;
+  }
+}
+.cardImage {
+  position: relative;
+  width: 50%;
+  height: 300px;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    height: 300px;
+  }
+}
+.cardContent {
+  width: 40%;
+  height: 300px;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    padding-top: 50px;
+    height: 400px;
+  }
+}
+.cardTitle {
+  align-items: center;
+  display: flex;
+  height: 20%;
+  color: maroon;
+}
+.cardDescription {
+  height: 50%;
+}
+.image {
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+}
+.SportshoverCardContainer {
+  position: relative;
+  height: 450px;
+  width: 400px;
+  box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  border-radius: 30px;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+
+    .SportshoverCardImageContainer {
+      height: 70%;
+    }
+    .SportshoverCardContent {
+      height: 30%;
+    }
+  }
+}
+.SportshoverCardImageContainer {
+  position: relative;
+  width: 100%;
+  height: 70%;
+}
+.SportshoverCardContent {
+  padding: 10px;
+  background-color: #ffffff;
+  position: relative;
+  width: 100%;
+  height: 30%;
+  text-align: center;
+  top: 40px;
+  @media screen and (max-width: 768px) {
+    padding: 10px;
+    padding-left: none;
+  }
+}
+.SportshoverCardImage {
+  height: 100%;
+  width: 100%;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+}

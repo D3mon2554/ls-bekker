@@ -1,7 +1,14 @@
 {
   "compilerOptions": {
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"],
+      "@css":["./lib/css"],
+      "@css/*":["./lib/css/*"],
+      "@ui":["./lib/ui"],
+      "@ui/*":["./lib/ui/*"],
+      "@modules":["./lib/modules"],
+      "@modules/*":["./lib/modules/*"],
+      "@lib/*":["./lib/*"],
     }
   }
 }

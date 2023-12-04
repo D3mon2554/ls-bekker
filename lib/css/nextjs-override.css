@@ -1,0 +1,20 @@
+#__next {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Set minimum height to 100% of the viewport height */
+  }
+  
+  main {
+    flex: 1; /* Grow and take remaining available space */
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #e0e0e0;
+  }
+  
+  footer {
+    margin-top: auto; /* Push the footer to the bottom */
+  }

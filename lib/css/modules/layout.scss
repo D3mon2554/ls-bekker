@@ -1,0 +1,219 @@
+$grid_columns: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
+
+// $breakpoints: (
+//     --breakpoint-x-small: x-small,
+//     --breakpoint-small: small,
+//     --breakpoint-medium: medium,
+//     --breakpoint-large: large,
+//     --breakpoint-x-large: x-large
+//     // --breakpoint-x-small: 320px;
+//     // --breakpoint-small: 480px;
+//     // --breakpoint-medium: 768px;
+//     // --breakpoint-large: 1024px;
+//     // --breakpoint-x-large: 1280px;
+//     // 320px: x-small,
+//     // 480px: small,
+//     // 768px: medium,
+//     // 1024px: large,
+//     // 1280px: x-large
+//     // x-small: --breakpoint-x-small,
+//     // small: --breakpoint-small,
+//     // medium: --breakpoint-medium,
+//     // large: --breakpoint-large,
+//     // x-large: --breakpoint-x-large
+//     // "x-small": 320px,
+//     // "small": 480px,
+//     // "medium": 768px,
+//     // "large": 1024px,
+//     // "x-large": 1280px
+
+// );
+
+$breakpoints: (
+  x-small: 320px,
+  small: 480px,
+  medium: 768px,
+  large: 1024px,
+  x-large: 1280px,
+);
+
+@mixin sizeClasses($breakpoint: null) {
+  $breakpoint_string: null;
+
+  @each $column in $grid_columns {
+    @if ($breakpoint !=null) {
+      $breakpoint_string: $breakpoint + "-";
+    }
+
+    @for $i from 1 through $column {
+      .#{$breakpoint_string}size_#{$i}-of-#{$column} {
+        width: math.div($i, $column) * 100%;
+      }
+    }
+  }
+}
+
+@mixin alignmentClasses($breakpoint: null) {
+  $breakpoint_string: null;
+  @if ($breakpoint !=null) {
+    $breakpoint_string: $breakpoint + "-";
+  }
+
+  &-#{$breakpoint_string}align_vertical {
+    &-center {
+      align-items: center;
+    }
+
+    &-start {
+      align-items: flex-start;
+    }
+
+    &-end {
+      align-items: flex-end;
+    }
+  }
+  &-#{$breakpoint_string}align_horizontal {
+    &-center {
+      justify-content: center;
+    }
+
+    &-spread {
+      justify-content: space-between;
+    }
+
+    &-space {
+      justify-content: space-around;
+    }
+
+    &-even {
+      justify-content: space-evenly;
+    }
+
+    &-start {
+      justify-content: flex-start;
+    }
+
+    &-end {
+      justify-content: flex-end;
+    }
+  }
+}
+
+.grid {
+  display: flex;
+  &-wrap {
+    flex-wrap: wrap;
+  }
+  &-vertical {
+    flex-direction: column;
+  }
+
+  &-col_bump-left {
+    margin-left: auto;
+  }
+  &-col_bump-right {
+    margin-right: auto;
+  }
+  &-no-wrap {
+    flex-wrap: nowrap;
+  }
+
+  @include alignmentClasses();
+  @each $key, $val in $breakpoints {
+    @media screen and (min-width: #{$val}) {
+      &-#{$key}-vertical {
+        flex-direction: column;
+      }
+      &-#{$key}-col_bump-left {
+        margin-left: auto;
+      }
+      &-#{$key}-col_bump-right {
+        margin-right: auto;
+      }
+      @include alignmentClasses($key);
+    }
+  }
+
+  &-negate-padding {
+    @each $key, $val in $spacing_sizes {
+      &_#{$key} {
+        margin-left: -$val;
+        margin-right: -$val;
+      }
+    }
+  }
+}
+
+.flex {
+  &-none {
+    flex: none;
+  }
+  &-grow {
+    flex-grow: 1;
+  }
+}
+
+@include sizeClasses();
+@each $key, $val in $breakpoints {
+  @media screen and (min-width: $val) {
+    @include sizeClasses($key);
+  }
+}
+
+// hide elements on mobile
+.hide-mobile {
+  @media screen and (min-width: 200px) and (max-width: 768px) {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+}
+
+.hide-desktop {
+  @media screen and (min-width: 768px) {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+}
+.section {
+  min-height: 500px;
+  width: 100%;
+
+  .section-content {
+    box-sizing: border-box;
+    height: 100%;
+    margin-left: 100px;
+    margin-right: 100px;
+    min-height: 500px;
+    @media screen and (max-width: 768px) {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    // Additional styling for section-content goes here
+  }
+
+  // Additional styling for section goes here
+}
+.cutout-section {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 100%;
+  clip-path: circle(60% at 10% 50%);
+  background-color: rgba(
+    128,
+    0,
+    0,
+    0.815
+  ); /* Inherit the background color from the parent */
+
+  color: #fdfc26; /* Set text color for better visibility */
+  @media screen and (max-width: 768px) {
+    height: 600px;
+    width: 100%;
+    clip-path: fill-box;
+  }
+}
