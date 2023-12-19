@@ -31,8 +31,15 @@ export default function Contact() {
         // Handle successful response
         console.log("Form data submitted successfully!");
       } else {
+        // Log the details of the failed response
+        console.error(
+          "Failed to submit form data",
+          response.status,
+          response.statusText
+        );
+
         // Handle error response
-        console.error("Failed to submit form data");
+        console.error("Error response:", await response.text());
       }
     } catch (error) {
       // Handle network or other errors
