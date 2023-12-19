@@ -1,0 +1,29 @@
+.checkboxContainer {
+  display: flex;
+  align-items: center;
+}
+
+.checkboxContainer .checkboxLabel {
+  margin-left: 0.5rem;
+  color: var(--label-color); /* Customize label color */
+}
+
+.checkboxContainer .checkboxInput {
+  margin-right: 0.5rem;
+}
+
+.checkboxInput {
+  appearance: none;
+  background-color: #ffffff; /* Customize checkbox background color */
+  border: 1px solid maroon; /* Customize checkbox border color */
+  border-radius: 10%;
+  height: 20px; /* Customize checkbox size */
+  width: 20px;
+  outline: none;
+  cursor: pointer;
+
+  &:checked {
+    background-color: yellow; /* Customize checked checkbox background color */
+    border: 1px solid maroon; /* Customize checked checkbox border color */
+  }
+}

@@ -81,7 +81,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="section" style={{ backgroundColor: "maroon" }}>
+      <div className="section" style={{ backgroundColor: "#800000" }}>
         <div className="section-content">
           <div className="padding-top_xxx-large padding-bottom_xxx-large">
             <h1 className="color-white">

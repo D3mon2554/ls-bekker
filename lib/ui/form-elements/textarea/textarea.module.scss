@@ -1,0 +1,29 @@
+.element {
+  background-color: none;
+  border: none;
+  border-radius: var(--input-border-radius);
+  color: var(--input-color);
+  display: block;
+  min-height: calc(var(--input-height) * 2);
+  outline: none;
+  padding: 1rem 1rem;
+  resize: vertical;
+  width: 100%;
+  &::-webkit-input-placeholder {
+    color: var(--input-placeholder-color);
+    line-height: 1.4;
+    font-size: var(--font-size-base);
+  }
+
+  &:-ms-input-placeholder {
+    color: var(--input-placeholder-color);
+    line-height: 1.4;
+    font-size: var(--font-size-base);
+  }
+
+  &::placeholder {
+    color: var(--input-placeholder-color);
+    line-height: 1.4;
+    font-size: var(--font-size-base);
+  }
+}
