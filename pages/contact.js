@@ -16,7 +16,7 @@ export default function Contact() {
 
     try {
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbx46hiCGpJW9PFRffqB1eXnnxGsLXyIQ2vYlKWTvBuAIRi8zbTza8gQqQfJW7FGt16mNw/exec",
+        "https://script.google.com/macros/s/AKfycbzSJJUzRKdQuvIVZijWSaFMqIGE4JVydXK3gFHgBMwEPn-4MByQPgAQwY7kNHEXhE-K9A/exec",
         {
           method: "POST",
           mode: "cors", // Add this line to enable cross-origin resource sharing
