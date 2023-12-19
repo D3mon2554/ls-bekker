@@ -19,13 +19,14 @@ export default function Contact() {
         "https://script.google.com/macros/s/AKfycbx46hiCGpJW9PFRffqB1eXnnxGsLXyIQ2vYlKWTvBuAIRi8zbTza8gQqQfJW7FGt16mNw/exec",
         {
           method: "POST",
+          mode: "cors", // Add this line to enable cross-origin resource sharing
           headers: {
             "Content-Type": "application/json",
           },
           body: JSON.stringify(formData),
-          mode: "no-cors",
         }
       );
+
       if (response.ok) {
         // Handle successful response
         console.log("Form data submitted successfully!");
