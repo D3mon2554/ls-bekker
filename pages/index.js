@@ -4,7 +4,11 @@ import Button from "@/lib/ui/button/button";
 import Image from "next/image";
 import CarouselImage from "@/lib/ui/carousels/carousel-image";
 
-const images = ["/img/hostel/hostel.webp", "/img/hostel/hostel2.webp"];
+const images = [
+  "/img/hostel/hostel.webp",
+  "/img/hostel/hostel2.webp",
+  "/img/school/back2school.webp",
+];
 export default function Home() {
   return (
     <div>
