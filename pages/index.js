@@ -1,28 +1,14 @@
-import { HoverCard } from "@ui/card/card";
 import Link from "next/link";
 import Events from "@/lib/ui/eventes/events";
 import Button from "@/lib/ui/button/button";
 import Image from "next/image";
+import CarouselImage from "@/lib/ui/carousels/carousel-image";
 
-const hovercard = [
-  {
-    image: "/img/school/backtoschool.webp",
-    title: "School",
-    description:
-      "Giving every child the opportunity to reach his or her full potential. Gehalte personeel wat vaardig is in beide Engels en Afrikaans, sowel as in hulle spesifieke vakgebied, aan te stel, tot voordeel van die skool.",
-    link: "/school/about-school",
-  },
-  {
-    image: "/img/hostel/hostel2.webp",
-    title: "Hostel",
-    description:
-      "The decision to attend boarding school is not an easy one. Young children find it difficult to be away from their family. Moving away from the familiar in to the unknown is not a decision to be taken lightly.",
-    link: "/hostel/about-hostel",
-  },
-];
+const images = ["/img/hostel/hostel.webp", "/img/hostel/hostel2.webp"];
 export default function Home() {
   return (
     <div>
+      {/* Banner */}
       <div className="section landingContainer">
         <div className="cutout-section">
           <div className="section-content grid grid-align_vertical-center">
@@ -34,6 +20,55 @@ export default function Home() {
           </div>
         </div>
       </div>
+      {/* Principal Message */}
+      <div className="section" style={{ backgroundColor: "#fff" }}>
+        <div className="section-content padding-bottom_xxx-large">
+          <div className=" padding-top_xxx-large padding-bottom_large medium-padding-left_large medium-padding-right_large">
+            <div className="grid grid-wrap grid-align_vertical-center ">
+              <div className=" size_1-of-1 medium-size_2-of-6 padding-bottom_large medium-padding-bottom_none ">
+                <div className=" image3">
+                  <Image
+                    src="/img/school/SirOpperman.webp"
+                    alt="Andre Opperman"
+                    fill={true}
+                  />
+                </div>
+              </div>
+              <div className="size_1-of-1 medium-size_4-of-7  medium-padding-left_xxx-large">
+                <h2 className="color-maroon ">Andre Opperman,</h2>
+                <h3 className="padding-bottom_medium color-maroon">
+                  Principal
+                </h3>
+                <p>
+                  Welcome to Bekker Primary School!
+                  <br />
+                  <br />
+                  Nestled in the picturesque Magaliesberge, our school is a
+                  second home where children thrive academically, socially, and
+                  emotionally. With dedicated educators and unique boarding
+                  facilities, we provide a nurturing environment.
+                  <br />
+                  <br />
+                  Our diverse sports program, cultural activities, and upcoming
+                  events like a major production showcase students' talents.
+                  Explore our revamped website for updates and curriculum
+                  information. As we begin this academic journey, let's
+                  celebrate learning in the stunning Magaliesberg.
+                  <br />
+                  <br />
+                  Your partnership is crucial, and we look forward to a year of
+                  growth and unforgettable experiences. Thank you for choosing
+                  Bekker Primary School.
+                  <br />
+                  <br />
+                  Warm regards.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* Brief description of school */}
       <div className="section" style={{ backgroundColor: "#fff" }}>
         <div className="section-content padding-bottom_xxx-large">
           <div className="padding-top_xxx-large ">
@@ -81,70 +116,40 @@ export default function Home() {
           </div>
         </div>
       </div>
+      {/* Brief description of education */}
       <div className="section" style={{ backgroundColor: "#800000" }}>
         <div className="section-content">
           <div className="padding-top_xxx-large padding-bottom_xxx-large">
-            <h1 className="color-white">
-              Empowering Education and Boarding Excellence at Laerskool Bekker
-              Primary
-            </h1>
-            <div className="grid grid-wrap grid-align_horizontal-space padding-top_xxx-large">
-              <div
-                className="size_1-of-1 medium-size_3-of-7 padding-around_large"
-                style={{ backgroundColor: "#fff" }}
-              >
-                <h2 className="color-maroon">
-                  Tailored Education at Laerskool Bekker
-                </h2>
-                <p className="padding-top_large">
-                  At Laerskool Bekker, we champion personalized learning through
-                  separate English and Afrikaans classes within the CAPS
-                  curriculum. Our well-equipped classrooms strike a balance
-                  between relaxation and discipline, fostering an environment
-                  where your child can thrive. With ongoing upgrades and
-                  exciting projects, we're committed to continuous improvement.
-                  Our cutting-edge computer center and on-site Bekker Bekkies
-                  Nursery School ensure your child's education is enriched with
-                  the latest technology and optimal preparation for Grade R.
-                </p>
-              </div>
-              <div
-                className="size_1-of-1 medium-size_3-of-7 padding-around_large"
-                style={{ backgroundColor: "#fff" }}
-              >
-                <h2 className="color-maroon">
-                  Bekker Boarding: Home Away From Home
-                </h2>
-                <p className=" padding-top_large">
-                  At Laerskool Bekker, boarding is more than a choice; it's a
-                  transformative journey. Nestled in the serene Magaliesburg
-                  Mountains, our tranquil setting shapes independent,
-                  disciplined, and well-rounded individuals. From Grades 1-7,
-                  our boarding experience offers a 'home away from home,'
-                  blending structured discipline with enriching extramural
-                  activities.
-                </p>
+            <div
+              className="size_4-of-5 carousel"
+              style={{ backgroundColor: "#fff" }}
+            >
+              <div className="grid grid-wrap grid-align_horizontal-spread">
+                <div className="size_1-of-2 padding-top_xxx-large">
+                  <div className="size_1-of-1 grid grid-wrap padding-left_xxx-large">
+                    <h2 className="color-maroon">
+                      Bekker Boarding: Home Away From Home
+                    </h2>
+                    <p className="padding-top_xxx-large">
+                      At Laerskool Bekker, boarding is more than a choice; it's
+                      a transformative journey. Nestled in the serene
+                      Magaliesburg Mountains, our tranquil setting shapes
+                      independent, disciplined, and well-rounded individuals.
+                      From Grades 1-7, our boarding experience offers a 'home
+                      away from home,' blending structured discipline with
+                      enriching extramural activities.
+                    </p>
+                  </div>
+                </div>
+                <div className="size_2-of-5 padding-around_small">
+                  <CarouselImage images={images} />
+                </div>
               </div>
             </div>
           </div>
-          <div className="grid grid-wrap grid-align_horizontal-space padding-bottom_xxx-large padding-top_xxx-large">
-            {hovercard.map((x) => {
-              return (
-                <div key={x.title}>
-                  <div className="padding-around_small">
-                    <HoverCard
-                      title={x.title}
-                      image={x.image}
-                      description={x.description}
-                      link={x.link}
-                    />
-                  </div>
-                </div>
-              );
-            })}
-          </div>
         </div>
       </div>
+      {/* Events */}
       <div className="section" style={{ backgroundColor: "#fff" }}>
         <div className="section-content">
           <div className="padding-top_xxx-large padding-bottom_xxx-large">
@@ -172,14 +177,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-      {/* <div className="section">
-        <div className="section-content">
-          What parents have to say/like rating reviews from google
-        </div>
-      </div> */}
-      {/* <div className="section">
-        <div className="section-content">where we are located</div>
-      </div> */}
     </div>
   );
 }
