@@ -1,0 +1,44 @@
+.datePickerContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.datePickerLabel {
+  margin-bottom: 8px;
+}
+
+.datePickerInputs {
+  display: flex;
+}
+
+.datePickerInput {
+  width: 80px;
+  padding: 8px;
+  margin-right: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.separator {
+  align-self: center;
+  margin-right: 4px;
+}
+
+@media (max-width: 600px) {
+  .datePickerInputs {
+    flex-direction: column;
+  }
+
+  .datePickerInput {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 8px;
+  }
+}
+.yearpicker {
+  width: 80px;
+  padding: 8px;
+  margin-left: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}

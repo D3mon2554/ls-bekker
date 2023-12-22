@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { SortsHoverCard } from "@/lib/ui/card/card";
+import { SortsHoverCard, TeachersCard } from "@/lib/ui/card/card";
 import Card from "@/lib/ui/card/card";
 
 const cardContent = [
@@ -16,7 +16,23 @@ const cardContent = [
       "A robotics class in primary school introduces students to the exciting world of designing, building, and programming robots. It provides a hands-on learning experience that combines elements of science, technology, engineering, and mathematics (STEM).",
   },
 ];
-
+const teachers = [
+  {
+    Image: "/img/school/teachers/angelique.jpg",
+    Name: "Angelique",
+    Slogan: "Admin",
+  },
+  {
+    Image: "/img/school/teachers/AnneMarieRadiceadmin.jpg",
+    Name: "Anne Marie",
+    Slogan: "Admin",
+  },
+  {
+    Image: "/img/school/teachers/Janineadmin.jpg",
+    Name: "Janine",
+    Slogan: "Admin",
+  },
+];
 const hovercard = [
   {
     image: "/img/sports/rugby.webp",
@@ -129,18 +145,19 @@ export default function AboutOurSchool() {
               educational journey.
             </p>
           </div>
-          <div>
+          <div className="grid grid-wrap">
             {cardContent.map((x) => {
               return (
-                <>
-                  <div key={x.title} className="padding-around_large">
-                    <Card
-                      image={x.image}
-                      title={x.title}
-                      description={x.description}
-                    />
-                  </div>
-                </>
+                <div
+                  className="size_1-of-1 medium-size_1-of-2 padding-around_large"
+                  key={x.title}
+                >
+                  <Card
+                    image={x.image}
+                    title={x.title}
+                    description={x.description}
+                  />
+                </div>
               );
             })}
           </div>
@@ -226,9 +243,25 @@ export default function AboutOurSchool() {
           </div>
         </div>
       </div>
-      {/* <div className="section">
-        <div className="section-content">Applications</div>
-      </div> */}
+      <div className="section" style={{ backgroundColor: "#fff" }}>
+        <div className="section-content">
+          <div className="grid grid-wrap grid-align_horizontal-start ">
+            {teachers.map((x) => {
+              return (
+                <div key={x.Name}>
+                  <div className="padding-around_small">
+                    <TeachersCard
+                      Name={x.Name}
+                      Image={x.Image}
+                      Slogan={x.Slogan}
+                    />
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
     </>
   );
 }

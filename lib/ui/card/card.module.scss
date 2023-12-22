@@ -1,3 +1,4 @@
+// HoverCard
 .hoverCardContainer {
   position: relative;
   height: 450px;
@@ -56,9 +57,11 @@
 .title {
   font-size: 30px;
 }
+
+// standard Card
 .cardContainer {
   width: 100%;
-  height: 300px;
+  height: 350px;
   background-color: #ffffff;
   border-radius: 20px;
   box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, 0.39);
@@ -70,14 +73,14 @@
 .cardImage {
   position: relative;
   width: 50%;
-  height: 300px;
+  height: 350px;
   @media screen and (max-width: 768px) {
     width: 100%;
     height: 300px;
   }
 }
 .cardContent {
-  width: 40%;
+  width: 50%;
   height: 300px;
   @media screen and (max-width: 768px) {
     width: 100%;
@@ -91,13 +94,18 @@
   height: 20%;
   color: maroon;
 }
-.cardDescription {
-  height: 50%;
-}
+
 .image {
   border-bottom-left-radius: 20px;
   border-top-left-radius: 20px;
+  @media screen and (max-width: 768px) {
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 0px;
+  }
 }
+
+//SportsCards
 .SportshoverCardContainer {
   position: relative;
   height: 450px;
@@ -139,4 +147,65 @@
   width: 100%;
   border-top-right-radius: 30px;
   border-top-left-radius: 30px;
+}
+
+//MessageCard
+.messageCardContainer {
+  width: 60%;
+  background-color: #ffffff;
+  border-radius: 20px;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+}
+.messageCardImage {
+  position: relative;
+  width: 45%;
+  height: 500px;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    height: 400px;
+  }
+}
+.messageImage {
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+}
+.messageCardContent {
+  width: 40%;
+  height: 300px;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    padding-top: 50px;
+    height: 400px;
+  }
+}
+.messageCardTitle {
+  align-items: center;
+  display: flex;
+  height: 20%;
+  color: maroon;
+}
+.messageCardDescription {
+  height: 50%;
+}
+
+// Teacher Card
+.teacherContainer {
+  width: 200px;
+  height: 250px;
+}
+.teacherImage {
+  position: relative;
+  border-radius: 100%;
+  width: 150px;
+  height: 150px;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.teacherSlogan {
+  display: block;
+  justify-content: center;
+  align-items: center;
 }

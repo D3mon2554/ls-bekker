@@ -1,0 +1,97 @@
+/* multiselect-dropdown.module.scss */
+
+.dropdownContainer {
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+  height: 45px;
+  align-items: center;
+  justify-content: center;
+  display: inline-flex;
+}
+
+.label {
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent; /* Updated */
+}
+
+.label:hover {
+  background-color: #ffffff;
+}
+
+.chevron::before {
+  border-style: solid;
+  border-width: 0.15em 0.15em 0 0;
+  content: "";
+  display: inline-block;
+  height: 0.45em;
+  position: relative;
+  transform: rotate(45deg);
+  vertical-align: center;
+  width: 0.45em;
+  transition: ease-in-out 0.3s;
+}
+.chevron.bottom:before {
+  top: -2px;
+  transform: rotate(135deg);
+  transition: ease-in-out 0.3s;
+}
+
+.dropdownOptions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px;
+  z-index: 1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Added box-shadow */
+}
+
+.dropdownContainer.active .dropdownOptions {
+  display: block;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.option input {
+  margin-right: 8px;
+}
+
+/* Applied styles for the input element */
+.element {
+  background-color: transparent;
+  border: none;
+  border-radius: var(--input-border-radius);
+  color: var(--input-color);
+  display: block;
+  height: var(--input-height);
+  outline: none;
+  padding: 0 1rem;
+  width: 100%;
+
+  &::-webkit-input-placeholder {
+    color: var(--input-placeholder-color);
+    font-size: var(--font-size-base);
+  }
+
+  &:-ms-input-placeholder {
+    color: var(--input-placeholder-color);
+    font-size: var(--font-size-base);
+  }
+
+  &::placeholder {
+    color: var(--input-placeholder-color);
+    font-size: var(--font-size-base);
+  }
+}
