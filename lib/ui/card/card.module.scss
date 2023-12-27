@@ -65,7 +65,7 @@
   background-color: #ffffff;
   border-radius: 20px;
   box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, 0.39);
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     width: 100%;
     height: 700px;
   }
@@ -74,60 +74,77 @@
   position: relative;
   width: 50%;
   height: 350px;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     width: 100%;
     height: 300px;
   }
 }
 .cardContent {
   width: 50%;
-  height: 300px;
-  @media screen and (max-width: 768px) {
+
+  @media screen and (max-width: 1024px) {
     width: 100%;
     padding-top: 50px;
     height: 400px;
   }
 }
 .cardTitle {
-  align-items: center;
-  display: flex;
-  height: 20%;
   color: maroon;
 }
 
 .image {
   border-bottom-left-radius: 20px;
   border-top-left-radius: 20px;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 0px;
   }
 }
+.cardDescription {
+  width: 100%;
+  font-size: small;
+}
 
 //SportsCards
 .SportshoverCardContainer {
   position: relative;
-  height: 450px;
-  width: 400px;
+  cursor: pointer;
+  height: 350px;
+  width: 350px;
   box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, 0.5);
   overflow: hidden;
   border-radius: 30px;
   @media screen and (max-width: 768px) {
     width: 100%;
-
     .SportshoverCardImageContainer {
-      height: 70%;
+      height: 0%;
     }
     .SportshoverCardContent {
-      height: 30%;
+      height: 100%;
+    }
+    .sortsHoverCardDescription {
+      padding-top: 10px;
+    }
+  }
+  &:hover {
+    .SportshoverCardImageContainer {
+      height: 0%;
+      transition: ease-out 1s;
+      .SportshoverCardImage {
+        display: none;
+      }
+    }
+    .SportshoverCardContent {
+      height: 100%;
+      transition: ease-in 2s;
     }
   }
 }
 .SportshoverCardImageContainer {
   position: relative;
   width: 100%;
-  height: 70%;
+  height: 100%;
 }
 .SportshoverCardContent {
   padding: 10px;
@@ -147,6 +164,9 @@
   width: 100%;
   border-top-right-radius: 30px;
   border-top-left-radius: 30px;
+}
+.sortsHoverCardDescription {
+  padding-top: 80px;
 }
 
 //MessageCard

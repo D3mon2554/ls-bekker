@@ -161,6 +161,9 @@ body {
 }
 .borderLine {
   border-left: #ffffff 2px solid;
+  @media screen and (max-width: 768px) {
+    border: none;
+  }
 }
 .carousel {
   border-radius: 20px;

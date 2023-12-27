@@ -42,7 +42,7 @@ const hovercard = [
   },
   {
     image: "/img/sports/hokey.webp",
-    title: "Hokey",
+    title: "Hockey",
     description:
       "The decision to attend boarding school is not an easy one. Young children find it difficult to be away from their family. Moving away from the familiar in to the unknown is not a decision to be taken lightly.",
   },
@@ -122,7 +122,7 @@ export default function AboutOurSchool() {
         <div className="section-content padding-bottom_xxx-large">
           <div className="padding-top_xxx-large padding-bottom_xxx-large">
             <h1 className="color-white">Academics/Akademie</h1>
-            <p className="color-white medium-size_3-of-6 padding-top_large padding-bottom_large">
+            <p className="color-white size_1-of-1 medium-size_1-of-1 padding-top_large padding-bottom_large">
               Distinct English and Afrikaans classes guarantee that your
               children receive education in their preferred language. We adhere
               to the CAPS curriculum, ensuring a comprehensive and structured
@@ -167,7 +167,7 @@ export default function AboutOurSchool() {
         <div className="section-content">
           <div className="padding-top_xxx-large">
             <h1 className="color-maroon">Sports</h1>
-            <p className="size_3-of-5 padding-top_xxx-large">
+            <p className="size_1-of-1 padding-top_xxx-large">
               Sport forms an integral part of life at Bekker. It provides the
               learners with the opportunity to show their talents. Laerskool
               Bekker offers both summer and winter sports. Laerskool Bekker has
@@ -179,11 +179,11 @@ export default function AboutOurSchool() {
               eisteddfods and enjoy being part of the annual play.
             </p>
           </div>
-          <div className="grid grid-wrap grid-align_horizontal-start padding-bottom_xxx-large padding-top_xxx-large">
+          <div className="grid grid-wrap grid-align_horizontal-spread medium-grid-align_horizontal-start padding-bottom_xxx-large padding-top_xxx-large">
             {hovercard.map((x) => {
               return (
                 <div key={x.title}>
-                  <div className="padding-around_small">
+                  <div className="padding-around_medium">
                     <SortsHoverCard
                       title={x.title}
                       image={x.image}
@@ -197,24 +197,24 @@ export default function AboutOurSchool() {
           </div>
         </div>
       </div>
-      {/* <div className="section">
+      <div className="section">
         <div className="section-content">Extra Activities</div>
-      </div> */}
+      </div>
       <div className="section" style={{ backgroundColor: "maroon" }}>
-        <div className="section-content grid grid-align_vertical-center">
-          <div className=" color-white">
+        <div className="section-content grid grid-align_vertical-center padding-top_xx-large padding-bottom_xx-large">
+          <div className="color-white">
             <div>
               <h1>School Fees | Skool fonds</h1>
             </div>
-            <div className="padding-top_xxx-large grid grid-wrap">
-              <div className="size_1-of-4 padding-top_large">
+            <div className="grid grid-wrap padding-top_xxx-large">
+              <div className="size_1-of-1 medium-size_1-of-4 padding-top_large">
                 <h3>Annual payments R 12 540.00</h3>
                 <p className="padding-top_large">
                   Annually (before the end of Feb 2023) R 11 400. (10 % discount
                   for advance payment)
                 </p>
               </div>
-              <div className="size_1-of-4 padding-left_xxx-large padding-top_large borderLine">
+              <div className="size_1-of-1 medium-size_1-of-4 medium-padding-left_xxx-large padding-top_large borderLine">
                 <h3>Quarterly payments</h3>
                 <ul className="line">
                   <li>1st Quarter – R 3 420.00</li>
@@ -223,7 +223,7 @@ export default function AboutOurSchool() {
                   <li>4th Quarter – R 2 280.00</li>
                 </ul>
               </div>
-              <div className="size_1-of-4  padding-left_xx-large padding-top_large borderLine">
+              <div className="size_1-of-1 medium-size_1-of-4  medium-padding-left_xx-large padding-top_large borderLine">
                 <h3>Bi-Annually</h3>
                 <ul className="line">
                   R 6 270.00 payable 11 Jan. (Discount included)
@@ -232,7 +232,7 @@ export default function AboutOurSchool() {
                   R 6 270.00 payable 7 June. (Discount included)
                 </ul>
               </div>
-              <div className="size_1-of-4 padding-left_xxx-large padding-top_large borderLine">
+              <div className="size_1-of-1 medium-size_1-of-4 medium-padding-left_xxx-large padding-top_large borderLine">
                 <h3>Monthly payments</h3>
                 <p className="padding-top_large">
                   Monthly payments of R 1 140.00 by EFT before the 7th of each

@@ -4,10 +4,11 @@ import Button from "@/lib/ui/button/button";
 import Image from "next/image";
 import CarouselImage from "@/lib/ui/carousels/carousel-image";
 
-const images = [
-  "/img/hostel/hostel.webp",
-  "/img/hostel/hostel2.webp",
-  "/img/school/back2school.webp",
+const images = ["/img/hostel/hostel.webp", "/img/hostel/hostel2.webp"];
+const schoolImages = [
+  "/img/banners/school.webp",
+  "/img/banners/preprimary.webp",
+  "/img/banners/fundraiser.webp",
 ];
 export default function Home() {
   return (
@@ -27,18 +28,18 @@ export default function Home() {
       {/* Principal Message */}
       <div className="section" style={{ backgroundColor: "#fff" }}>
         <div className="section-content padding-bottom_xxx-large">
-          <div className=" padding-top_xxx-large padding-bottom_large medium-padding-left_large medium-padding-right_large">
+          <div className=" padding-top_xxx-large padding-bottom_large medium-padding-left_large ">
             <div className="grid grid-wrap grid-align_vertical-center ">
               <div className=" size_1-of-1 medium-size_2-of-6 padding-bottom_large medium-padding-bottom_none ">
                 <div className=" image3">
                   <Image
-                    src="/img/school/SirOpperman.webp"
+                    src="/img/school/teachers/SirOpperman .jpg"
                     alt="Andre Opperman"
                     fill={true}
                   />
                 </div>
               </div>
-              <div className="size_1-of-1 medium-size_4-of-7  medium-padding-left_xxx-large">
+              <div className="size_1-of-1 medium-size_4-of-6  medium-padding-left_xxx-large">
                 <h2 className="color-maroon ">Andre Opperman,</h2>
                 <h3 className="padding-bottom_medium color-maroon">
                   Principal
@@ -123,30 +124,79 @@ export default function Home() {
       {/* Brief description of education */}
       <div className="section" style={{ backgroundColor: "#800000" }}>
         <div className="section-content">
+          <div className="padding-bottom_large">
+            <div className="padding-top_xxx-large padding-bottom_xxx-large">
+              <div
+                className="size_1-of-1 carousel"
+                style={{ backgroundColor: "#fff" }}
+              >
+                <div className="grid grid-wrap grid-align_horizontal-spread">
+                  <div className="size_1-of-1 medium-size_1-of-2 padding-top_xxx-large padding-around_small">
+                    <div className="size_1-of-1 grid grid-wrap medium-padding-left_xxx-large">
+                      <h2 className="color-maroon">
+                        Bekker Boarding: Home Away From Home
+                      </h2>
+                      <p className="padding-top_xxx-large">
+                        At Laerskool Bekker, boarding is more than a choice;
+                        it's a transformative journey. Nestled in the serene
+                        Magaliesburg Mountains, our tranquil setting shapes
+                        independent, disciplined, and well-rounded individuals.
+                        From Grades 1-7, our boarding experience offers a 'home
+                        away from home,' blending structured discipline with
+                        enriching extramural activities.
+                      </p>
+                      <div className="padding-top_xxx-large">
+                        <Link
+                          href="/hostel/about-hostel"
+                          style={{ textDecoration: `none` }}
+                        >
+                          <Button variant="getStarted" label="Read More" />
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="size_1-of-1 medium-size_1-of-2 padding-around_small">
+                    <CarouselImage images={images} />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <div className="padding-top_xxx-large padding-bottom_xxx-large">
             <div
-              className="size_4-of-5 carousel"
+              className="size_1-of-1 carousel"
               style={{ backgroundColor: "#fff" }}
             >
               <div className="grid grid-wrap grid-align_horizontal-spread">
-                <div className="size_1-of-2 padding-top_xxx-large">
-                  <div className="size_1-of-1 grid grid-wrap padding-left_xxx-large">
+                <div className="size_1-of-1 medium-size_1-of-2 padding-top_xxx-large padding-around_small">
+                  <div className="size_1-of-1 grid grid-wrap medium-padding-left_xxx-large">
                     <h2 className="color-maroon">
-                      Bekker Boarding: Home Away From Home
+                      Bekker School: Where Education Becomes Fun
                     </h2>
                     <p className="padding-top_xxx-large">
-                      At Laerskool Bekker, boarding is more than a choice; it's
-                      a transformative journey. Nestled in the serene
-                      Magaliesburg Mountains, our tranquil setting shapes
-                      independent, disciplined, and well-rounded individuals.
-                      From Grades 1-7, our boarding experience offers a 'home
-                      away from home,' blending structured discipline with
-                      enriching extramural activities.
+                      Laerskool Bekker is a public school for Afrikaans and
+                      English speaking children from pre-school to grade 7. We
+                      have 500 learners from all over Gauteng of whom
+                      approximately 150 learners from grade 1 to grade 7 are
+                      accommodated in the hostel. All aspects of school
+                      governance, including finance, asset management, policy
+                      and personal selection are looked after by an active and
+                      energetic governing body, most of whom are selected by the
+                      parents of the school. The professional management of the
+                      school is in the hands of capable and experienced staff.
                     </p>
+                    <div className="padding-top_xxx-large">
+                      <Link
+                        href="/school/about-school"
+                        style={{ textDecoration: `none` }}
+                      >
+                        <Button variant="getStarted" label="Read More" />
+                      </Link>
+                    </div>
                   </div>
                 </div>
-                <div className="size_2-of-5 padding-around_small">
-                  <CarouselImage images={images} />
+                <div className="size_1-of-1 medium-size_1-of-2 padding-around_small">
+                  <CarouselImage images={schoolImages} />
                 </div>
               </div>
             </div>

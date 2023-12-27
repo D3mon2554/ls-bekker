@@ -96,14 +96,14 @@ export default function About() {
       {/* <div className="section">
         <div className="section-content">Our Mission</div>
       </div> */}
-      <div className="section" style={{ backgroundColor: "rgb(128, 25, 25)" }}>
+      <div className="section" style={{ backgroundColor: "#fff" }}>
         <div className="section-content">
           <div className="size_1-of-1 medium-size_3-of-4 padding-bottom_xxx-large padding-top_xxx-large">
-            <h1 className="color-white">
+            <h1 className="color-maroon">
               Laerskool Bekker: Cultivating Character, Fostering Excellence –
               Our Core Values
             </h1>
-            <p className="padding-top_large color-white">
+            <p className="padding-top_large ">
               Beyond academic proficiency, Laerskool Bekker is unwavering in its
               commitment to nurturing a foundation of indispensable
               values—respect, honesty, accountability, attitude, and loyalty.
@@ -122,7 +122,7 @@ export default function About() {
               meaningful contributions to a society characterized by harmony,
               safety, and a collective commitment to excellence.
             </p>
-            <ul className=" color-white">
+            <ul>
               <li>
                 <h5>RESPECT</h5>
               </li>
