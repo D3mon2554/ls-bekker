@@ -60,7 +60,7 @@ const hovercard = [
   },
 ];
 
-export default function AboutOurSchool() {
+export default function OurSchool() {
   return (
     <>
       <div className="section prefect">

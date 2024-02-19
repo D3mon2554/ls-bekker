@@ -6,11 +6,11 @@ import Footer from "@ui/footer";
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      {/* {<Navigation />} */}
+      {<Navigation />}
       <main>
         <Component {...pageProps} />
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function PreSchool() {
+export default function OurPreSchool() {
   return (
     <>
       <div className="section prePrimary">

@@ -141,17 +141,27 @@ export default function Home() {
       </div>
       {/* Boarding and school */}
       <div className="section" style={{ backgroundColor: "#fff" }}>
-        <div className="contentLeft">
-          <div className="grid grid-wrap">
+        <div className="contentLeft ">
+          <div className="grid grid-wrap padding-bottom_xx-large">
             <div className="size_1-of-1 medium-size_1-of-2">
               Bekker Boarding
             </div>
-            <div className="size_1-of-1 medium-size_1-of-2">Image</div>
+            <div
+              className="size_1-of-1 medium-size_1-of-2"
+              style={{ position: "relative", height: "500px" }}
+            >
+              <Image src="/img/hostel/dinner.jpg" alt="Dinner" fill />
+            </div>
           </div>
         </div>
         <div className="contentRight">
-          <div className="grid grid-wrap">
-            <div className="size_1-of-1 medium-size_1-of-2">Image</div>
+          <div className="grid grid-wrap padding-bottom_xxx-large">
+            <div
+              className="size_1-of-1 medium-size_1-of-2"
+              style={{ position: "relative", height: "500px" }}
+            >
+              Image
+            </div>
             <div className="size_1-of-1 medium-size_1-of-2">Bekker School</div>
           </div>
         </div>

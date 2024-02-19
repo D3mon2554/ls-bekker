@@ -1,4 +1,4 @@
-export default function AboutHostel() {
+export default function OurHostel() {
   return (
     <>
       <div className="section hostel">
