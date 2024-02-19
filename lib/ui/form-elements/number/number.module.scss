@@ -1,6 +1,6 @@
 .element {
-  background-color: none;
-  border: none;
+  background-color: var(--input-background-color);
+  border: var(--input-border);
   border-radius: var(--input-border-radius);
   color: var(--input-color);
   display: block;
@@ -23,4 +23,9 @@
     color: var(--input-placeholder-color);
     font-size: var(--font-size-base);
   }
+}
+.title {
+  padding-left: 2%;
+  padding-bottom: 2%;
+  font-size: var(--font-size-small);
 }

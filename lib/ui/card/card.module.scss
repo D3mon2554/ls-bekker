@@ -130,10 +130,9 @@
   &:hover {
     .SportshoverCardImageContainer {
       height: 0%;
-      transition: ease-out 1s;
-      .SportshoverCardImage {
-        display: none;
-      }
+      position: relative;
+      top: 0%;
+      transition: ease-out 0.4s;
     }
     .SportshoverCardContent {
       height: 100%;
@@ -147,7 +146,7 @@
   height: 100%;
 }
 .SportshoverCardContent {
-  padding: 10px;
+  padding: 5px;
   background-color: #ffffff;
   position: relative;
   width: 100%;
@@ -166,7 +165,7 @@
   border-top-left-radius: 30px;
 }
 .sortsHoverCardDescription {
-  padding-top: 80px;
+  padding-top: 10%;
 }
 
 //MessageCard
@@ -228,4 +227,88 @@
   display: block;
   justify-content: center;
   align-items: center;
+}
+
+// PrincipalCard
+.principalCardContainer {
+  position: relative;
+  height: 620px;
+  width: 100%;
+  background-color: #6a0911;
+  display: block;
+}
+.PrincipalTitleContainer {
+  padding-top: 30px;
+}
+.PrincipalTitle {
+  color: #ffffff;
+  font-size: 44px;
+}
+.PrincipalSubTitle {
+  padding-top: 10px;
+  color: #ffc82d;
+  font-size: 20px;
+}
+.PrincipalImageContainer {
+  position: relative;
+  display: flex;
+  justify-content: end;
+  height: 515px;
+  align-items: end;
+  @media screen and (max-width: 768px) {
+    justify-content: center;
+    align-items: center;
+  }
+}
+.principalImage {
+  position: relative;
+  height: 500px;
+  width: 350px;
+  z-index: 5;
+  @media screen and (max-width: 768px) {
+    height: 420px;
+  }
+}
+.PrincipalImageFeetContainer {
+  position: absolute;
+  z-index: 2;
+  bottom: 150px;
+}
+
+//EducationalCard
+.EducationCardCardContainer {
+  position: relative;
+  display: flex;
+}
+.EducationCardTitleContainer {
+  padding-left: 30px;
+  padding-top: 50px;
+  padding-right: 40px;
+}
+.EducationCardTitle {
+  color: #ffffff;
+  font-size: 44px;
+}
+.EducationCardSubTitle {
+  padding-top: 10px;
+  color: #ffc82d;
+  font-size: 20px;
+}
+.EducationCardImageFeetContainer {
+  position: absolute;
+  z-index: 2;
+  right: 70px;
+  padding-top: 40px;
+  // bottom: 150px;
+}
+.EducationCardImageContainer {
+  position: relative;
+  display: flex;
+  justify-content: end;
+  height: 375px;
+  align-items: end;
+}
+.EducationCardImage {
+  width: 100%;
+  height: 285px;
 }

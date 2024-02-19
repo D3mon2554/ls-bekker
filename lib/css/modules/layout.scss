@@ -179,41 +179,70 @@ $breakpoints: (
 .section {
   min-height: 500px;
   width: 100%;
-
-  .section-content {
-    box-sizing: border-box;
-    height: 100%;
-    margin-left: 100px;
-    margin-right: 100px;
-    min-height: 500px;
-    @media screen and (max-width: 768px) {
-      margin-left: 10px;
-      margin-right: 10px;
-    }
-
-    // Additional styling for section-content goes here
+  // Additional styling for section goes here
+}
+.section-content {
+  box-sizing: border-box;
+  margin-left: 70px;
+  margin-right: 70px;
+  min-height: 500px;
+  @media screen and (max-width: 768px) {
+    margin-left: 10px;
+    margin-right: 10px;
   }
 
-  // Additional styling for section goes here
+  // Additional styling for section-content goes here
+}
+.contentLeft {
+  box-sizing: border-box;
+  margin-left: 70px;
+  min-height: 500px;
+  @media screen and (max-width: 768px) {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+.contentRight {
+  box-sizing: border-box;
+  margin-right: 70px;
+  min-height: 500px;
+  @media screen and (max-width: 768px) {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }
 .cutout-section {
   position: relative;
-  top: 0;
-  left: 0;
-  width: 80%;
+  width: 50%;
   height: 100%;
-  clip-path: circle(60% at 10% 50%);
-  background-color: rgba(
-    128,
-    0,
-    0,
-    0.815
+  z-index: 1;
+  // clip-path: circle(100% at 100% 50%);
+  background: linear-gradient(
+    90deg,
+    rgba(106, 9, 17, 0.89) 20%,
+    rgba(106, 9, 17, 0.822) 30%,
+    rgba(106, 9, 17, 0.849) 40%,
+    rgba(106, 9, 17, 0.671) 70%,
+    rgba(106, 9, 17, 0.548) 90%,
+    rgba(106, 9, 17, 0) 100%
   ); /* Inherit the background color from the parent */
 
-  color: #fdfc26; /* Set text color for better visibility */
+  color: #ffffff; /* Set text color for better visibility */
   @media screen and (max-width: 768px) {
     height: 600px;
     width: 100%;
-    clip-path: fill-box;
+
+    background: rgb(106, 9, 17);
   }
+}
+.banner {
+  height: 300px;
+  width: 100%;
+}
+.banner-content {
+  margin-top: 4%;
+  height: 50%;
+  margin-left: 100px;
+  margin-right: 100px;
+  width: 100%;
 }

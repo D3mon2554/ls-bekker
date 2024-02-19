@@ -34,12 +34,14 @@
 }
 .submit {
   cursor: pointer;
-  height: 50px;
+  height: 60px;
   color: #fefefe;
-  background-color: #206fa1;
+  background-color: maroon;
   transition: ease-out 0.3s;
+  font-size: x-large;
+  font-weight: 600;
   &:hover {
-    background-color: #1ca1da;
+    background-color: rgb(182, 5, 5);
     transition: ease-in 0.3s;
   }
 

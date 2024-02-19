@@ -124,7 +124,7 @@ export default function About() {
             </p>
             <ul>
               <li>
-                <h5>RESPECT</h5>
+                <h5>RESPECT haha</h5>
               </li>
               <li className=" padding-top_medium">
                 <h5>HONESTY</h5>

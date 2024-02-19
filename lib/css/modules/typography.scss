@@ -1,138 +1,153 @@
-@import './fonts.scss';
+@import "./fonts.scss";
 
 @function pem($pixels) {
-    @return math.round(math.div($pixels, 10) * 1000) / 1000 + rem;
+  @return math.round(math.div($pixels, 10) * 1000) / 1000 + rem;
 }
 
 $base_font_size: 16;
 html {
-    font-size: 62.5%;
-    font-family: 'Futura PT Book', Arial, sans-serif;
+  font-size: 62.5%;
+  font-family: "Futura PT Book", Arial, sans-serif;
 }
 
 $font_sizes: (
-    x-small: pem(9),
-    small: pem(12),
-    regular: pem(14),
-    base: pem($base_font_size),
-    medium: pem(18),
-    large: pem(24),
-    x-large: pem(30),
-    xx-large: pem(40)
+  x-small: pem(9),
+  small: pem(12),
+  regular: pem(14),
+  base: pem($base_font_size),
+  medium: pem(18),
+  large: pem(22),
+  x-large: pem(70),
+  xx-large: pem(80),
 );
 
 @media screen and (min-width: 768px) {
-    $font_sizes: (
-        xx-large: pem(30)
-    );
+  $font_sizes: (
+    xx-large: pem(30),
+  );
 }
 
 $font_weights: (
-    thin: 100,
-    light: 300,
-    regular: 400,
-    medium: 500,
-    bold: 700,
-    black: 900
+  thin: 100,
+  light: 300,
+  regular: 400,
+  medium: 500,
+  bold: 700,
+  black: 900,
 );
 
 $heading_sizes: (
-    h1: pem(30),
-    h2: pem(24),
-    h3: pem(20),
-    h4: pem(18),
-    h5: pem(16),
-    h6: pem(14)
+  h1: pem(40),
+  h2: pem(24),
+  h3: pem(20),
+  h4: pem(18),
+  h5: pem(16),
+  h6: pem(14),
 );
 
 $title_sizes: (
-    xx-small: pem(14),
-    x-small: pem(16),
-    small: pem(18),
-    medium: pem(20),
-    large: pem(24),
-    x-large: pem(30)
+  xx-small: pem(14),
+  x-small: pem(16),
+  small: pem(18),
+  medium: pem(20),
+  large: pem(24),
+  x-large: pem(30),
 );
 
 :root {
-    --font-default-family: 'Futura PT Book', sans-serif;
+  --font-default-family: "Futura PT Book";
 
-    @each $key, $val in $font_sizes {
-        --font-size-#{$key}: #{$val};
-    }
-    @each $key, $val in $font_weights {
-        --font-weight-#{$key}: #{$val};
-    }
-    @each $key, $val in $title_sizes {
-        --title-size-#{$key}: #{$val};
-    }
+  @each $key, $val in $font_sizes {
+    --font-size-#{$key}: #{$val};
+  }
+  @each $key, $val in $font_weights {
+    --font-weight-#{$key}: #{$val};
+  }
+  @each $key, $val in $title_sizes {
+    --title-size-#{$key}: #{$val};
+  }
 }
 
 body {
-    font-size: var(--font-size-base);
+  font-size: var(--font-size-base);
 }
 
 .font {
-    @each $key, $val in $font_sizes {
-        &-size_#{$key} {
-            font-size: var(--font-size-#{$key});
-        }
+  @each $key, $val in $font_sizes {
+    &-size_#{$key} {
+      font-size: var(--font-size-#{$key});
     }
-    @each $key, $val in $font_weights {
-        &-weight_#{$key} {
-            font-weight: var(--font-size-#{$key});
-        }
+  }
+  @each $key, $val in $font_weights {
+    &-weight_#{$key} {
+      font-weight: var(--font-size-#{$key});
     }
+  }
 }
 
 .text {
-    &-case_upper {
-        text-transform: uppercase;
-    }
-    &-case_lower {
-        text-transform: lowercase;
-    }
-    &-case_title {
-        text-transform: capitalize;
-    }
-    &-align_center {
-        text-align: center;
-    }
-    &-align_left {
-        text-align: left;
-    }
-    &-align_justify {
-        text-align: justify;
-    }
-    &-align_right {
-        text-align: right;
-    }
+  &-case_upper {
+    text-transform: uppercase;
+  }
+  &-case_lower {
+    text-transform: lowercase;
+  }
+  &-case_title {
+    text-transform: capitalize;
+  }
+  &-align_center {
+    text-align: center;
+  }
+  &-align_left {
+    text-align: left;
+  }
+  &-align_justify {
+    text-align: justify;
+  }
+  &-align_right {
+    text-align: right;
+  }
 }
 
 .title {
-    @each $key, $val in $title_sizes {
-        &-#{$key} {
-            font-size: #{$val};
-            font-weight: var(--font-weight-medium);
-        }
+  @each $key, $val in $title_sizes {
+    &-#{$key} {
+      font-size: #{$val};
+      font-weight: var(--font-weight-medium);
     }
+  }
 }
 
 @each $key, $val in $heading_sizes {
-    #{$key},
-    .#{$key} {
-        font-size: #{$val};
-        font-weight: var(--font-weight-bold);
-        line-height: 1;
-        margin: 0;
-    }
+  #{$key},
+  .#{$key} {
+    font-size: #{$val};
+    font-weight: var(--font-weight-bold);
+    line-height: 1;
+    margin: 0;
+  }
 }
 
 p {
-    line-height: 1.5;
-    font-weight: var(--font-weight-regular);
-    margin: 0;
-    & + {
-        padding-top: var(--spacing-medium);
-    }
+  line-height: 1.5;
+  font-weight: var(--font-weight-regular);
+  margin: 0;
+  & + {
+    padding-top: var(--spacing-medium);
+  }
+}
+.principalName {
+  font-size: 75px;
+  font: normal normal bold 75px/44px Futura PT;
+  @media screen and (max-width: 768px) {
+    font-size: 44px;
+  }
+}
+.principalPosition {
+  font: 38px/44px Futura PT;
+  font-size: 38px;
+  font-weight: 500;
+  @media screen and (max-width: 768px) {
+    font-size: 28px;
+  }
 }
