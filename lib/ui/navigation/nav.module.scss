@@ -21,10 +21,10 @@
   font-size: 18px;
   font-weight: 600;
   text-decoration: none;
-  color: #6a0911;
+  color: #3f3e3e;
 
   &:hover {
-    color: #707070;
+    color: #6a0911;
     text-decoration: underline;
   }
 }
@@ -52,13 +52,13 @@
   width: 45%;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-evenly;
 }
 .navRight {
   width: 45%;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-evenly;
 }
 .tabContainer {
   width: 80%;
@@ -67,119 +67,57 @@
   align-items: center;
   justify-content: space-between;
 }
-
-.content {
-  top: 30px;
-  position: relative;
-  font-size: 18px;
-  font-weight: 600;
-  text-decoration: none;
-  color: #ffffff;
-
-  &:hover {
-    color: #ffdc04;
-    text-decoration: underline;
-  }
-}
-
-.socialContainer {
-  width: 20%;
-  position: relative;
+.activePageIndicator {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-}
-
-.dropdownToggle {
-  font-size: 18px;
-  font-weight: 600;
-  text-decoration: none;
+  font-size: 20px;
   color: #ffffff;
+
+  .activeDropdown {
+    color: #ffd70e;
+  }
+}
+.label {
+  cursor: pointer;
+}
+.tab {
   cursor: pointer;
   position: relative;
-  &:hover {
-    color: #ffd22f;
-    text-decoration: underline;
-  }
+  height: 80px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
 }
-.dropdownContent {
+// .dropdownContainer {
+//   position: relative;
+//   z-index: 10;
+// }
+.dropdown {
   position: absolute;
-  background-color: #b22222;
-  height: 100px;
-  width: 160px;
-  display: flex;
+  background-color: #ffffff;
+  width: 146px;
+  height: 114px;
+  top: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 0px 0px 15px 15px;
+  text-align: center;
+  display: grid;
+  justify-content: center;
   align-items: center;
-  left: 28%;
-  top: 75%;
-  z-index: 5;
+  padding: 10px;
 }
-.item {
-  display: flex;
-  position: relative;
-  justify-content: flex-start;
-  color: #fdfc26;
+.link {
   text-decoration: none;
-  padding-right: 5px;
-  margin: 10px;
+  color: #6a0911;
   &:hover {
-    text-decoration: underline;
+    color: #ffd70e;
   }
 }
-.chevron {
-  position: absolute;
-  height: 20px;
-  width: 20px;
-  background-color: #b22222;
-  z-index: 0;
-  transform: rotate(45deg);
-  top: 70%; // Adjust this based on your design
+.line {
+  width: 120px;
+  border: 1px #6a0911 solid;
 }
-.active {
-  color: #ffd22f;
-  text-decoration: underline;
-}
-.tabClicked {
-  color: #ffd22f;
-  text-decoration: underline;
-}
-.hostelDropdown {
-  width: 500px;
-  color: #ffffff;
-}
-.hostelDropdownContent {
-  position: absolute;
-  background-color: #b22222;
-  height: 50px;
-  width: 150px;
-  display: flex;
-  align-items: center;
-  left: 42%;
-  top: 75%;
-  z-index: 5;
-}
-.regDropdownContent {
-  position: absolute;
-  background-color: #b22222;
-  height: 100px;
-  width: 150px;
-  display: flex;
-  align-items: center;
-  left: 53%;
-  top: 75%;
-  z-index: 5;
-}
-.moreDropdownContent {
-  position: absolute;
-  background-color: #b22222;
-  height: 100px;
-  width: 160px;
-  display: flex;
-  align-items: center;
-  left: 70%;
-  top: 75%;
-  z-index: 5;
-}
-
 //mobile view
 .mobileContainer {
   display: inline-flex;

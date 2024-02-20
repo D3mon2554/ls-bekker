@@ -7,7 +7,7 @@
 $base_font_size: 16;
 html {
   font-size: 62.5%;
-  font-family: "Futura PT Book", Arial, sans-serif;
+  font-family: "Futura PT Book";
 }
 
 $font_sizes: (
@@ -15,10 +15,10 @@ $font_sizes: (
   small: pem(12),
   regular: pem(14),
   base: pem($base_font_size),
-  medium: pem(18),
-  large: pem(22),
-  x-large: pem(70),
-  xx-large: pem(80),
+  medium: pem(25),
+  large: pem(35),
+  x-large: pem(45),
+  xx-large: pem(65),
 );
 
 @media screen and (min-width: 768px) {
@@ -54,6 +54,12 @@ $title_sizes: (
   x-large: pem(30),
 );
 
+$font_family: (
+  futura: "Futura ",
+  futuraPT: "Futura PT Book",
+  futuraDemi: "Futura PT Demi",
+);
+
 :root {
   --font-default-family: "Futura PT Book";
 
@@ -80,7 +86,12 @@ body {
   }
   @each $key, $val in $font_weights {
     &-weight_#{$key} {
-      font-weight: var(--font-size-#{$key});
+      font-weight: var(--font-weight-#{$key});
+    }
+  }
+  @each $key, $val in $font_family {
+    &-family_#{$key} {
+      font-family: #{$val};
     }
   }
 }

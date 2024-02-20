@@ -51,7 +51,7 @@ export default function Home() {
             </div>
           </div>
           <div className="contentRight medium-size_4-of-7 grid grid-align_vertical-center">
-            <p className="color-secondary font-size_large">
+            <p className="color-secondary font-size_medium">
               Welcome to Bekker Primary School!
               <br /> <br /> Nestled in the picturesque Magaliesberge, our school
               is a second home where children thrive academically, socially, and
@@ -77,7 +77,7 @@ export default function Home() {
           style={{ position: "relative" }}
         >
           <div className="contentLeft medium-size_4-of-8 grid grid-align_vertical-center padding-top_xxx-large">
-            <p className="color-secondary font-size_large">
+            <p className="color-secondary font-size_medium">
               When contemplating a school curriculum, the usual associations are
               with subjects such as math, languages, and social sciences.
               However, the importance of instilling core values is often
@@ -118,7 +118,7 @@ export default function Home() {
               <h1 className="color-maroon">Upcoming Events</h1>
             </div>
             <div className=" padding-top_x-large">
-              <p className="font-size_large">
+              <p className="font-size_medium">
                 Embark on a journey of anticipation and joy as we unveil the
                 uplifting events planned for our school. From inspiring
                 educational experiences to heartwarming community gatherings,
@@ -143,8 +143,31 @@ export default function Home() {
       <div className="section" style={{ backgroundColor: "#fff" }}>
         <div className="contentLeft ">
           <div className="grid grid-wrap padding-bottom_xx-large">
-            <div className="size_1-of-1 medium-size_1-of-2">
-              Bekker Boarding
+            <div className="size_1-of-1 medium-size_1-of-2 grid grid-wrap grid-align_vertical-spread medium-padding-right_xxx-large padding-bottom_xx-large medium-padding-bottom_none">
+              <div className="size_1-of-1 padding-top_xx-large">
+                <h1 className="font-size_large color-maroon">
+                  Bekker Boarding: Home Away From Home
+                </h1>
+              </div>
+              <div>
+                <p className="font-size_medium">
+                  At Laerskool Bekker, boarding is more than a choice; it's a
+                  transformative journey. Our tranquil setting shapes
+                  independent, disciplined, and well-rounded individuals in the
+                  serene Magaliesburg Mountains.
+                  <br /> <br />
+                  From Grades 1-7, our boarding experience offers a 'home away
+                  from home,' blending structured discipline with enriching
+                  extramural activities.
+                </p>
+              </div>
+              <div className="size_1-of-1 grid grid-align_vertical-center">
+                <div className="size_1-of-1">
+                  <Link href="/hostel/our-hostel">
+                    <Button label="Read More" variant="submit" />
+                  </Link>
+                </div>
+              </div>
             </div>
             <div
               className="size_1-of-1 medium-size_1-of-2"
@@ -160,9 +183,36 @@ export default function Home() {
               className="size_1-of-1 medium-size_1-of-2"
               style={{ position: "relative", height: "500px" }}
             >
-              Image
+              <Image src="/img/banners/school.webp" alt="Dinner" fill />
             </div>
-            <div className="size_1-of-1 medium-size_1-of-2">Bekker School</div>
+            <div className="size_1-of-1 medium-size_1-of-2 grid grid-wrap grid-align_vertical-spread medium-padding-left_xxx-large">
+              <div className="size_1-of-1 padding-top_xx-large">
+                <h1 className="font-size_large color-maroon">
+                  Bekker School: Where Education Becomes Fun
+                </h1>
+              </div>
+              <div>
+                <p className="font-size_medium">
+                  Laerskool Bekker is a public school for Afrikaans and English
+                  speaking children from pre-school to grade 7. We have 500
+                  learners from all over Gauteng of whom approximately 150
+                  learners from grade 1 to grade 7 are accommodated in the
+                  hostel. All aspects of school governance, including finance,
+                  asset management, policy and personal selection are looked
+                  after by an active and energetic governing body, most of whom
+                  are selected by the parents of the school. The professional
+                  management of the school is in the hands of capable and
+                  experienced staff.
+                </p>
+              </div>
+              <div className="size_1-of-1 grid grid-align_vertical-center">
+                <div className="size_1-of-1 ">
+                  <Link href="/about/our-school">
+                    <Button label="Read More" variant="submit" />
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
