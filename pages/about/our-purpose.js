@@ -110,7 +110,8 @@ export default function OurPurpose() {
             but also develop a deep sense of respect for others, a commitment to
             honesty, a strong sense of accountability, a positive attitude, and
             unwavering loyalty.
-            <div className="size_1-of-1 padding-top_x-large"></div>
+          </p>
+          <p className="color-maroon font-size_x-medium padding-top_x-large">
             At the heart of our educational approach is the belief that these
             values are integral to shaping well-rounded individuals. We aspire
             to graduate students who not only possess the academic prowess to

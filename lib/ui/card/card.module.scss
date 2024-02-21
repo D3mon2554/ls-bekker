@@ -308,9 +308,9 @@
 .EducationCardImageContainer {
   position: relative;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   height: 375px;
-  align-items: end;
+  align-items: flex-end;
 }
 .EducationCardImage {
   width: 100%;
