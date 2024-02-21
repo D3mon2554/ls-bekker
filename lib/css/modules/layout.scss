@@ -179,12 +179,13 @@ $breakpoints: (
 .section {
   min-height: 500px;
   width: 100%;
+
   // Additional styling for section goes here
 }
 .section-content {
   box-sizing: border-box;
-  margin-left: 70px;
-  margin-right: 70px;
+  margin-left: 40px;
+  margin-right: 40px;
   min-height: 100%;
   @media screen and (max-width: 768px) {
     margin-left: 10px;
@@ -195,7 +196,7 @@ $breakpoints: (
 }
 .contentLeft {
   box-sizing: border-box;
-  margin-left: 70px;
+  margin-left: 40px;
   min-height: 500px;
 
   @media screen and (max-width: 768px) {
@@ -250,20 +251,12 @@ $breakpoints: (
 
   color: #ffffff; /* Set text color for better visibility */
   @media screen and (max-width: 768px) {
-    height: 600px;
+    height: 100%;
     width: 100%;
 
     background: rgb(106, 9, 17);
   }
 }
 .banner {
-  height: 300px;
-  width: 100%;
-}
-.banner-content {
-  margin-top: 4%;
-  height: 50%;
-  margin-left: 100px;
-  margin-right: 100px;
-  width: 100%;
+  min-height: 500px;
 }

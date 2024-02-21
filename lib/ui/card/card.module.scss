@@ -231,48 +231,40 @@
 
 // PrincipalCard
 .principalCardContainer {
-  position: relative;
-  height: 620px;
+  height: 100%;
   width: 100%;
-  background-color: #6a0911;
-  display: block;
 }
-.PrincipalTitleContainer {
-  padding-top: 30px;
-}
-.PrincipalTitle {
-  color: #ffffff;
-  font-size: 44px;
-}
-.PrincipalSubTitle {
-  padding-top: 10px;
-  color: #ffc82d;
-  font-size: 20px;
-}
-.PrincipalImageContainer {
-  position: relative;
-  display: flex;
-  justify-content: end;
-  height: 515px;
-  align-items: end;
+.principalTitleContainer {
+  padding-top: 28px;
+  padding-bottom: 20px;
   @media screen and (max-width: 768px) {
-    justify-content: center;
-    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
+
 .principalImage {
   position: relative;
-  height: 500px;
-  width: 350px;
+  width: 80%;
+  height: 520px;
   z-index: 5;
   @media screen and (max-width: 768px) {
-    height: 420px;
+    width: 100%;
+  }
+  @media screen and (min-width: 1025px) {
+    width: 60%;
   }
 }
 .PrincipalImageFeetContainer {
   position: absolute;
   z-index: 2;
-  bottom: 150px;
+  bottom: 200px;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+  @media screen and (min-width: 1025px) {
+    left: 220px;
+  }
 }
 
 //EducationalCard
@@ -282,12 +274,21 @@
 }
 .EducationCardTitleContainer {
   padding-left: 30px;
-  padding-top: 50px;
+  padding-top: 20px;
   padding-right: 40px;
+  padding-bottom: 120px;
+  @media screen and (max-width: 768px) {
+    padding-bottom: 0px;
+  }
+  @media screen and (min-width: 1025px) {
+    padding-bottom: 0px;
+    padding-top: 50px;
+  }
 }
 .EducationCardTitle {
   color: #ffffff;
   font-size: 44px;
+  padding-bottom: 15px;
 }
 .EducationCardSubTitle {
   padding-top: 10px;
@@ -300,6 +301,9 @@
   right: 70px;
   padding-top: 40px;
   // bottom: 150px;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 }
 .EducationCardImageContainer {
   position: relative;

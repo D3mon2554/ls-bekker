@@ -89,16 +89,12 @@ body {
 }
 .prefect {
   background-color: #ebecec;
-  background-image: url(/img/banners/prefect.webp);
+  background-image: url(/img/banners/prefects1.jpg);
   background-size: cover;
-  // background-position: center;
+  background-position: center;
   background-repeat: no-repeat;
   @media screen and (min-width: 768px) {
     height: 80vh;
-  }
-  @media screen and (max-width: 1200px) {
-    // push the image to the right on a smaller screen
-    // background-image: none;
   }
 }
 .hostel {
@@ -195,6 +191,6 @@ body {
   background-repeat: no-repeat;
   background-color: #6a0911;
 }
-.test {
+.testing {
   background-color: #f4eeee;
 }

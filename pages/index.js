@@ -18,18 +18,15 @@ export default function Home() {
       {/* Banner */}
       <div className="section landingContainer">
         <div className="cutout-section">
-          <div className="section-content grid grid-align_vertical-center">
-            <div className="size_1-of-1 medium-size_2-of-3">
-              <h1 className="font-size_x-large medium-font-size_xx-large">
-                Laerskool
-              </h1>
-              <h1 className=" font-size_x-large medium-font-size_xx-large color-primary">
-                Bekker
-              </h1>
-              <h1 className=" font-size_x-large medium-font-size_xx-large">
-                Primary
-              </h1>
-              <h5 className=" font-size_large padding-top_medium color-primary">
+          <div className="section-content grid grid-wrap grid-align_vertical-center">
+            <div className="size_1-of-1 padding-top_xxx-large ">
+              <h1 className="test">Laerskool</h1>
+              <h1 className="color-primary test">Bekker</h1>
+              <h1 className="test">Primary</h1>
+              <h5
+                className=" font-size_medium padding-top_medium color-primary"
+                style={{ letterSpacing: "2px" }}
+              >
                 STAAN VAS | STAND FIRM
               </h5>
             </div>
@@ -39,36 +36,37 @@ export default function Home() {
       {/* Principal Message */}
       <div className=" section background ">
         <div
-          className="grid grid-wrap grid-align_horizontal-spread"
+          className="grid grid-wrap  grid-align_horizontal-spread"
           style={{ position: "relative" }}
         >
           <div
-            className="size_1-of-1 medium-size_1-of-3"
+            className="size_1-of-1 medium-size_1-of-2"
             style={{ backgroundColor: "#6a0911" }}
           >
-            <div className="contentLeft">
+            <div className="medium-padding-left_xx-large">
               <PrincipalCard />
             </div>
           </div>
-          <div className="contentRight medium-size_4-of-7 grid grid-align_vertical-center">
-            <p className="color-secondary font-size_medium">
+          <div className="padding-left_xx-large padding-right_xx-large medium-size_4-of-8 grid grid-align_vertical-center">
+            <p className="color-secondary font-size_x-medium font-weight_regular padding-top_xxx-large">
               Welcome to Bekker Primary School!
-              <br /> <br /> Nestled in the picturesque Magaliesberge, our school
-              is a second home where children thrive academically, socially, and
+              <div className="size_1-of-1 padding-top_large"></div>
+              Nestled in the picturesque Magaliesberge, our school is a second
+              home where children thrive academically, socially, and
               emotionally. With dedicated educators and unique boarding
               facilities, we provide a nurturing environment.
-              <br />
-              <br /> Our diverse sports program, cultural activities, and
-              upcoming events like a major production showcase students'
-              talents. Explore our revamped website for updates and curriculum
-              information. As we begin this academic journey, let's celebrate
-              learning in the stunning Magaliesberg.
-              <br />
-              <br /> Your partnership is crucial, and we look forward to a year
-              of growth and unforgettable experiences. Thank you for choosing
-              Bekker Primary School.
-              <br />
-              <br /> Warm regards.
+              <div className="size_1-of-1 padding-top_large"></div>
+              Our diverse sports program, cultural activities, and upcoming
+              events like a major production showcase students' talents. Explore
+              our revamped website for updates and curriculum information. As we
+              begin this academic journey, let's celebrate learning in the
+              stunning Magaliesberg.
+              <div className="size_1-of-1 padding-top_large"></div>Your
+              partnership is crucial, and we look forward to a year of growth
+              and unforgettable experiences. Thank you for choosing Bekker
+              Primary School.
+              <div className="size_1-of-1 padding-top_large"></div>
+              Warm regards.
             </p>
           </div>
         </div>
@@ -76,23 +74,22 @@ export default function Home() {
           className="grid grid-wrap grid-align_horizontal-spread padding-top_xxx-large"
           style={{ position: "relative" }}
         >
-          <div className="contentLeft medium-size_4-of-8 grid grid-align_vertical-center padding-top_xxx-large">
-            <p className="color-secondary font-size_medium">
+          <div className="padding-left_xx-large padding-right_xx-large medium-size_4-of-8 grid grid-align_vertical-center padding-top_large padding-bottom_large">
+            <p className="color-secondary font-size_x-medium font-weight_regular">
               When contemplating a school curriculum, the usual associations are
               with subjects such as math, languages, and social sciences.
               However, the importance of instilling core values is often
               overlooked. At Bekker, we invite you to embrace a higher echelon
               of education.
-              <br />
-              <br /> Beyond academic proficiency, we are dedicated to
-              cultivating a foundation of essential values—respect,
-              accountability, honesty, attitude, and loyalty. By seamlessly
-              integrating these moral principles into our curriculum, we aim to
-              ensure that our students not only leave equipped with the
-              knowledge to succeed but also possess the compassion and emotional
-              resilience to make meaningful contributions to a society
-              characterized by peace and safety. <br />
-              <br />
+              <div className="size_1-of-1 padding-top_x-large"></div>
+              Beyond academic proficiency, we are dedicated to cultivating a
+              foundation of essential values—respect, accountability, honesty,
+              attitude, and loyalty. By seamlessly integrating these moral
+              principles into our curriculum, we aim to ensure that our students
+              not only leave equipped with the knowledge to succeed but also
+              possess the compassion and emotional resilience to make meaningful
+              contributions to a society characterized by peace and safety.
+              <div className="size_1-of-1 padding-top_x-large"></div>
               Welcome to Bekker, where education extends beyond the
               conventional, shaping individuals who are not only academically
               adept but also morally grounded contributors to a harmonious
@@ -100,7 +97,7 @@ export default function Home() {
             </p>
           </div>
           <div
-            className="size_1-of-1 medium-size_3-of-7"
+            className="size_1-of-1 medium-size_3-of-6"
             style={{ backgroundColor: "#6a0911" }}
           >
             <EducationCard />
@@ -108,22 +105,24 @@ export default function Home() {
         </div>
       </div>
       {/* Events */}
-      <div className="section test">
+      <div className="section testing">
         <div className="grid grid-wrap">
           <div className="size_1-of-1 medium-size_1-of-2">
             <EventCountdown />
           </div>
           <div className=" size_1-of-1 medium-size_1-of-2 medium-padding-left_xxx-large padding-top_x-large medium-padding-right_xxx-large">
-            <div className="text-align_center font-size_x-large">
-              <h1 className="color-maroon">Upcoming Events</h1>
+            <div className="">
+              <h1 className="color-maroon text-align_center font-size_x-large">
+                Upcoming Events
+              </h1>
             </div>
-            <div className=" padding-top_x-large">
-              <p className="font-size_medium">
+            <div className="padding-around_medium  padding-top_x-large">
+              <p className="font-size_x-medium font-weight_regular">
                 Embark on a journey of anticipation and joy as we unveil the
                 uplifting events planned for our school. From inspiring
                 educational experiences to heartwarming community gatherings,
                 our calendar is filled with moments that nurture the spirit.
-                <br /> <br />
+                <div className="size_1-of-1 padding-top_x-large"></div>
                 To discover the blessings awaiting you, click on the button
                 below. Let faith guide you through the excitement of upcoming
                 events, where learning, connection, and celebration come
@@ -131,7 +130,7 @@ export default function Home() {
                 inspiration!
               </p>
             </div>
-            <div className="padding-top_xx-large padding-bottom_xxx-large padding-left_large padding-right_large medium-padding-left_none medium-padding-right_none">
+            <div className="padding-top_xxx-large padding-bottom_xxx-large padding-left_large padding-right_large medium-padding-left_none medium-padding-right_none">
               <Link href="/about">
                 <Button label="Learn More" variant="submit" />
               </Link>
@@ -140,29 +139,29 @@ export default function Home() {
         </div>
       </div>
       {/* Boarding and school */}
-      <div className="section" style={{ backgroundColor: "#fff" }}>
-        <div className="contentLeft ">
-          <div className="grid grid-wrap padding-bottom_xx-large">
-            <div className="size_1-of-1 medium-size_1-of-2 grid grid-wrap grid-align_vertical-spread medium-padding-right_xxx-large padding-bottom_xx-large medium-padding-bottom_none">
+      <div className="section">
+        <div className=" medium-padding-left_xx-large">
+          <div className="grid grid-wrap padding-bottom_xx-large padding-top_xx-large ">
+            <div className="size_1-of-1 medium-size_1-of-2 grid grid-wrap grid-align_vertical-spread medium-padding-right_xxx-large padding-bottom_xx-large medium-padding-bottom_none padding-left_small padding-right_small">
               <div className="size_1-of-1 padding-top_xx-large">
-                <h1 className="font-size_large color-maroon">
+                <h1 className="font-size_x-large color-maroon">
                   Bekker Boarding: Home Away From Home
                 </h1>
               </div>
               <div>
-                <p className="font-size_medium">
+                <p className="font-size_x-medium font-weight_regular">
                   At Laerskool Bekker, boarding is more than a choice; it's a
                   transformative journey. Our tranquil setting shapes
                   independent, disciplined, and well-rounded individuals in the
                   serene Magaliesburg Mountains.
-                  <br /> <br />
+                  <div className="size_1-of-1 padding-top_x-large"></div>
                   From Grades 1-7, our boarding experience offers a 'home away
                   from home,' blending structured discipline with enriching
                   extramural activities.
                 </p>
               </div>
               <div className="size_1-of-1 grid grid-align_vertical-center">
-                <div className="size_1-of-1">
+                <div className="size_1-of-1 padding-top_large">
                   <Link href="/hostel/our-hostel">
                     <Button label="Read More" variant="submit" />
                   </Link>
@@ -177,22 +176,22 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="contentRight">
-          <div className="grid grid-wrap padding-bottom_xxx-large">
+        <div className="medium-padding-right_xx-large">
+          <div className="grid grid-wrap padding-bottom_xx-large">
             <div
               className="size_1-of-1 medium-size_1-of-2"
-              style={{ position: "relative", height: "500px" }}
+              style={{ position: "relative", height: "550px" }}
             >
               <Image src="/img/banners/school.webp" alt="Dinner" fill />
             </div>
             <div className="size_1-of-1 medium-size_1-of-2 grid grid-wrap grid-align_vertical-spread medium-padding-left_xxx-large">
               <div className="size_1-of-1 padding-top_xx-large">
-                <h1 className="font-size_large color-maroon">
+                <h1 className="font-size_x-large color-maroon">
                   Bekker School: Where Education Becomes Fun
                 </h1>
               </div>
               <div>
-                <p className="font-size_medium">
+                <p className="font-size_x-medium font-weight_regular">
                   Laerskool Bekker is a public school for Afrikaans and English
                   speaking children from pre-school to grade 7. We have 500
                   learners from all over Gauteng of whom approximately 150
@@ -206,7 +205,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="size_1-of-1 grid grid-align_vertical-center">
-                <div className="size_1-of-1 ">
+                <div className="size_1-of-1 padding-top_large">
                   <Link href="/about/our-school">
                     <Button label="Read More" variant="submit" />
                   </Link>

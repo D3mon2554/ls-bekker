@@ -5,8 +5,11 @@
 }
 .eventImage {
   position: relative;
-  height: 300px;
+  height: 410px;
   width: 100%;
+  @media screen and (min-width: 1025px) {
+    height: 280px;
+  }
 }
 .content {
   position: relative;
@@ -17,13 +20,21 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding-top: 20px;
+  @media screen and (max-width: 768px) {
+    padding-top: 20px;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
 .countdownSquare {
   background-color: #6a0911;
   width: 100px;
   height: 80px;
   border-radius: 17px;
+  @media screen and (max-width: 768px) {
+    width: 80px;
+  }
 }
 .countdownValue {
   color: #ffffff;

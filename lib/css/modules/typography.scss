@@ -4,9 +4,9 @@
   @return math.round(math.div($pixels, 10) * 1000) / 1000 + rem;
 }
 
-$base_font_size: 16;
+$base_font_size: 18;
 html {
-  font-size: 62.5%;
+  font-size: 60.5%;
   font-family: "Futura PT Book";
 }
 
@@ -15,8 +15,9 @@ $font_sizes: (
   small: pem(12),
   regular: pem(14),
   base: pem($base_font_size),
-  medium: pem(25),
-  large: pem(35),
+  medium: pem(20),
+  x-medium: pem(22),
+  large: pem(30),
   x-large: pem(45),
   xx-large: pem(65),
 );
@@ -30,8 +31,8 @@ $font_sizes: (
 $font_weights: (
   thin: 100,
   light: 300,
-  regular: 400,
-  medium: 500,
+  regular: 500,
+  medium: 600,
   bold: 700,
   black: 900,
 );
@@ -160,5 +161,12 @@ p {
   font-weight: 500;
   @media screen and (max-width: 768px) {
     font-size: 28px;
+  }
+}
+.test {
+  font-size: pem(80);
+  background-color: transparent;
+  @media screen and (max-width: 768px) {
+    font-size: pem(95);
   }
 }
