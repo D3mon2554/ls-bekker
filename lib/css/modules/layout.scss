@@ -260,3 +260,23 @@ $breakpoints: (
 .banner {
   min-height: 500px;
 }
+.contentRightSmall {
+  box-sizing: border-box;
+  margin-right: 40px;
+  min-height: 300px;
+
+  @media screen and (max-width: 768px) {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+.contentLeftSmall {
+  box-sizing: border-box;
+  margin-left: 40px;
+  min-height: 300px;
+
+  @media screen and (max-width: 768px) {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}

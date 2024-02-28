@@ -1,19 +1,80 @@
 import Image from "next/image";
-import { SortsHoverCard, TeachersCard } from "@/lib/ui/card/card";
-import Card from "@/lib/ui/card/card";
+import { SortsHoverCard, ExtraActivities } from "@/lib/ui/card/card";
 
-const cardContent = [
+const SportsCards = [
   {
-    image: "/img/subjects/computerSience.webp",
-    title: "Computer Science",
+    image: "/img/sports/rugbyteam.jpg",
+    title: "Rugby",
     description:
-      "Learning computer science in primary school benefits students by fostering critical thinking, digital literacy, creativity, and problem-solving skills. It provides early exposure to STEM (Science, Technology, Engineering, and Mathematics.), prepares for the future, promotes collaboration, and enhances adaptability.",
+      " Played in a safe and modified format, primary school rugby introduces the fundamentals of the sport, emphasizing teamwork, sportsmanship, and basic skills such as passing, catching, and running with the ball. The focus is on fostering a love for physical activity, building social skills, and instilling values of fair play.",
   },
   {
-    image: "/img/subjects/robotics.webp",
-    title: "Robotics",
+    image: "/img/sports/cricket.webp",
+    title: "Cricket",
     description:
-      "A robotics class in primary school introduces students to the exciting world of designing, building, and programming robots. It provides a hands-on learning experience that combines elements of science, technology, engineering, and mathematics (STEM).",
+      "Primary school cricket is a dynamic and inclusive bat-and-ball sport tailored for young children, typically aged 6 to 12. Played in a simplified format, primary school cricket introduces fundamental skills such as batting, bowling, and fielding. The emphasis is on developing hand-eye coordination, teamwork, and fair play. ",
+  },
+  {
+    image: "/img/sports/hokey.webp",
+    title: "Hokey",
+    description:
+      "Primary school hockey, for ages 6 to 12, emphasizes fundamental skills in a dynamic team setting. With simplified rules, it promotes physical activity, teamwork, and fair play, fostering a love for sports and social skills.",
+  },
+  {
+    image: "/img/sports/athletics.webp",
+    title: "Athletics",
+    description:
+      "Primary school athletics, for ages 6 to 12, includes track and field events, promoting fitness, teamwork, and individual achievement. It encourages fundamental motor skills and a love for physical activity in a supportive environment.",
+  },
+  {
+    image: "/img/sports/swimming.jpg",
+    title: "Swimming",
+    description:
+      "Primary school swimming, for ages 6 to 12, teaches essential swimming skills, water safety, and builds confidence in a supportive environment. It lays the foundation for a lifelong enjoyment of aquatic activities.",
+  },
+  {
+    image: "/img/sports/croscountry.jpg",
+    title: "Netball",
+    description:
+      "Primary school Netball, for ages 6 to 12, is a team sport emphasizing passing, shooting, and teamwork. With simplified rules, it promotes basic ball-handling skills and provides an inclusive environment for kids to enjoy team-based competition.",
+  },
+];
+const ExtraActivitiesCard = [
+  {
+    image: "/img/sports/rugbyteam.jpg",
+    title: "Revue",
+    description:
+      "Primary school revue, for ages 6 to 12, is a lively showcase of student talents, including singing, dancing, and skits. It fosters creativity, teamwork, and confidence in an inclusive and entertaining setting.",
+  },
+  {
+    image: "/img/sports/cricket.webp",
+    title: "Drama",
+    description:
+      "Primary school drama, for ages 6 to 12, lets students explore creativity through acting and performance. It builds communication skills, self-confidence, and a love for the arts in a fun and supportive environment.",
+  },
+  {
+    image: "/img/sports/hokey.webp",
+    title: "Reading week",
+    description:
+      "Primary school Reading Week, for all ages, promotes a love for reading through activities like story sessions and book clubs. It enhances literacy skills and fosters a supportive reading culture in the school community.",
+  },
+  {
+    image: "/img/sports/athletics.webp",
+    title: "Chess",
+    description:
+      "Primary school chess, for ages 6 to 12, teaches the strategic game of chess. It enhances critical thinking and problem-solving skills in a fun, competitive environment, fostering a love for the game.",
+  },
+  {
+    image: "/img/sports/swimming.jpg",
+    title: "Ballet",
+    description:
+      "Primary school ballet, for ages 6 to 12, introduces basic techniques, posture, and movement. It nurtures coordination, flexibility, and a love for dance in a supportive and creative environment.",
+  },
+  {
+    image: "/img/sports/croscountry.jpg",
+    title: "Cross Country",
+    description:
+      "Primary school Cross Country is a lively running event for ages 6 to 12, promoting fitness and endurance. Kids navigate varied terrains, fostering a love for outdoor activities and a healthy, active lifestyle.",
   },
 ];
 
@@ -94,6 +155,149 @@ export default function OurSchool() {
               for Grade R, offering a solid foundation for your child's
               educational journey.
             </p>
+          </div>
+        </div>
+        <div className="grid grid-wrap contentRightSmall">
+          <div
+            className="size_1-of-1 medium-size_1-of-2"
+            style={{ position: "relative", height: "350px" }}
+          >
+            <Image
+              src="/img/subjects/computer.jpg"
+              alt="Computer Science"
+              fill
+            />
+          </div>
+          <div className="size_1-of-1 medium-size_1-of-2">
+            <div
+              className="padding-left_xx-large grid grid-align_vertical-center"
+              style={{ height: "300px" }}
+            >
+              <div>
+                <h1 className="color-white padding-bottom_x-large">
+                  Computer Science
+                </h1>
+                <p className="color-white font-size_x-medium">
+                  Learning computer science in primary school benefits students
+                  by fostering critical thinking, digital literacy, creativity,
+                  and problem-solving skills. It provides early exposure to STEM
+                  (Science, Technology, Engineering, and Mathematics.), prepares
+                  for the future, promotes collaboration, and enhances
+                  adaptability.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="grid grid-wrap contentLeftSmall ">
+          <div className="size_1-of-1 medium-size_1-of-2">
+            <div
+              className="padding-right_xx-large grid grid-align_vertical-center"
+              style={{ height: "300px" }}
+            >
+              <div>
+                <h1 className="color-white padding-bottom_x-large">Robotics</h1>
+                <p className="color-white font-size_x-medium">
+                  A robotics class in primary school introduces students to the
+                  exciting world of designing, building, and programming robots.
+                  It provides a hands-on learning experience that combines
+                  elements of science, technology, engineering, and mathematics
+                  (STEM).
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            className="size_1-of-1 medium-size_1-of-2"
+            style={{ position: "relative", height: "350px" }}
+          >
+            <Image src="/img/subjects/robotics.webp" alt="Robotics" fill />
+          </div>
+        </div>
+        <div className="grid grid-wrap contentRightSmall">
+          <div
+            className="size_1-of-1 medium-size_1-of-2"
+            style={{ position: "relative", height: "350px" }}
+          >
+            <Image
+              src="/img/subjects/farming.jpg"
+              alt="Agricultural Studies"
+              fill
+            />
+          </div>
+          <div className="size_1-of-1 medium-size_1-of-2">
+            <div
+              className="padding-left_xx-large grid grid-align_vertical-center"
+              style={{ height: "300px" }}
+            >
+              <div>
+                <h1 className="color-white padding-bottom_x-large">
+                  Agricultural Studies
+                </h1>
+                <p className="color-white font-size_x-medium">
+                  Learning computer science in primary school benefits students
+                  by fostering critical thinking, digital literacy, creativity,
+                  and problem-solving skills. It provides early exposure to STEM
+                  (Science, Technology, Engineering, and Mathematics.), prepares
+                  for the future, promotes collaboration, and enhances
+                  adaptability.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* Sport */}
+      <div className="section">
+        <div className="section-content padding-top_xxx-large padding-bottom_xxx-large">
+          <h1 className="color-maroon padding-bottom_xxx-large">Sports</h1>
+          <p className="color-maroon font-size_x-medium">
+            Sport forms an integral part of life at Bekker. It provides the
+            learners with the opportunity to show their talents. Laerskool
+            Bekker offers both summer and winter sports. Laerskool Bekker has
+            well maintained sport facilities. Sport is offered at both a
+            competitive and recreational level so that all learners are
+            encouraged to participate. Our emphasis is on the enjoyment of
+            sport. CULTURE : Learners explore their creative talents through
+            art, drama, music and dance. Our learners participate in eisteddfods
+            and enjoy being part of the annual play.
+          </p>
+          <div className="padding-top_xxx-large grid grid-wrap">
+            {SportsCards.map((type) => {
+              return (
+                <div
+                  key={type.title}
+                  className="size_1-of-1 medium-size_1-of-3 grid grid-align_horizontal-center padding-top_small padding-bottom_small"
+                >
+                  <SortsHoverCard
+                    image={type.image}
+                    title={type.title}
+                    description={type.description}
+                  />
+                </div>
+              );
+            })}
+          </div>
+          <div>
+            <h1 className="color-maroon padding-top_xxx-large">
+              Extracurricular activities
+            </h1>
+          </div>
+          <div className="padding-top_xxx-large grid grid-wrap">
+            {ExtraActivitiesCard.map((type) => {
+              return (
+                <div
+                  key={type.title}
+                  className="size_1-of-1 medium-size_1-of-2 grid grid-align_horizontal-center padding-top_large padding-bottom_large"
+                >
+                  <ExtraActivities
+                    image={type.image}
+                    title={type.title}
+                    description={type.description}
+                  />
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
