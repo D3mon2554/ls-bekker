@@ -1,8 +1,10 @@
+import { SchoolImages } from "@/lib/ui/images/images";
+
 export default function Applications() {
   return (
     <>
       <div className="section">
-        <div className="section-content">Banner</div>
+        <div className="section-content"></div>
       </div>
       <div className="section">
         <div className="section-content">Why choose us</div>

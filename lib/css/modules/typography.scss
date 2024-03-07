@@ -20,6 +20,7 @@ $font_sizes: (
   large: pem(30),
   x-large: pem(45),
   xx-large: pem(65),
+  xxx-large: pem(75),
 );
 
 @media screen and (min-width: 768px) {
@@ -164,8 +165,9 @@ p {
   }
 }
 .test {
-  font-size: pem(80);
+  font-size: pem(100);
   background-color: transparent;
+  letter-spacing: 2px;
   @media screen and (max-width: 768px) {
     font-size: pem(95);
   }

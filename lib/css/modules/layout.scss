@@ -257,6 +257,30 @@ $breakpoints: (
     background: rgb(106, 9, 17);
   }
 }
+.cutout-section-white {
+  position: relative;
+  width: 60%;
+  height: 100%;
+  z-index: 1;
+
+  background: linear-gradient(
+    90deg,
+    rgb(255, 255, 255) 20%,
+    rgba(255, 255, 255, 0.918) 40%,
+    rgba(255, 255, 255, 0.822) 50%,
+    rgba(255, 255, 255, 0.849) 60%,
+    rgba(255, 255, 255, 0.671) 70%,
+    rgba(255, 255, 255, 0.548) 90%,
+    rgba(255, 255, 255, 0) 100%
+  );
+
+  @media screen and (max-width: 768px) {
+    height: 600px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.404);
+    text-align: center;
+  }
+}
 .banner {
   min-height: 500px;
 }
@@ -278,5 +302,12 @@ $breakpoints: (
   @media screen and (max-width: 768px) {
     margin-left: 10px;
     margin-right: 10px;
+  }
+}
+.image {
+  position: relative;
+  height: auto;
+  @media screen and (max-width: 768px) {
+    height: 500px;
   }
 }

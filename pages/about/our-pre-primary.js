@@ -1,123 +1,52 @@
 import Image from "next/image";
+import PurposeImages from "@/lib/ui/images/images";
 
 export default function OurPreSchool() {
   return (
     <>
+      {/* Banner */}
       <div className="section prePrimary">
         <div className="cutout-section">
           <div className="section-content grid grid-align_vertical-center">
-            <div>
-              <h1>Welcome To Bekker Bekkies Pre-Primary School,</h1>
-              <p className="padding-top_large size_1-of-1 medium-size_1-of-2">
-                At Bekker Bekkies Pre-Primary School, we learn through play. We
-                follow the CAPS curriculum and our children enjoy a structured
-                day full of music, art, messy play, worksheets, Maths, Language
-                and free play.
-              </p>
+            <PurposeImages color="#FFF" width={450} height={214} />
+            <div style={{ letterSpacing: "2px" }}>
+              <h1 className="font-size_xxx-large font-weight_black">
+                Welcome To
+              </h1>
+              <h1 className="font-size_x-large">
+                Bekkies <span className="color-primary">Pre-primary</span>
+              </h1>
             </div>
           </div>
         </div>
       </div>
-      {/* <div className="section " style={{ backgroundColor: "#fff" }}>
-        <div className="section-content">
-          <h1></h1>
-          <p className="size_3-of-5">
-            At Bekker Bekkies Pre-Primary School, we learn through play. We
-            follow the CAPS curriculum and our children enjoy a structured day
-            full of music, art, messy play, worksheets, Maths, Language and free
-            play.
-          </p>
-        </div>
-      </div> */}
-      {/* <div className="section">
-        <div className="section-content">Clases</div>
-      </div> */}
-      <div className="section" style={{ backgroundColor: "#fff" }}>
-        <div className="section-content padding-bottom_xxx-large padding-top_xxx-large">
-          <div className="padding-bottom_xxx-large padding-top_xxx-large">
-            <h1 className="color-maroon">Our Teachers</h1>
-            <div className="padding-top_xxx-large grid grid-align_horizontal-space">
-              <div>
-                <div className="grid grid-align_center">
-                  <Image
-                    src=""
-                    alt="image"
-                    height={250}
-                    width={250}
-                    style={{
-                      borderRadius: "100%",
-                      backgroundColor: "#707070",
-                    }}
-                  />
-                </div>
-                <div className="padding-top_large grid grid-align_horizontal-center">
-                  <h1 className="color-maroon">Tracy McMahon</h1>
-                </div>
-              </div>
-              <div>
-                <div className="grid grid-align_center">
-                  <Image
-                    src=""
-                    alt="image"
-                    height={250}
-                    width={250}
-                    style={{
-                      borderRadius: "100%",
-                      backgroundColor: "#707070",
-                    }}
-                  />
-                </div>
-                <div className="padding-top_large grid grid-align_horizontal-center">
-                  <h1 className="color-maroon">Christelle Fourie</h1>
-                </div>
-              </div>
-              <div>
-                <div className="grid grid-align_center">
-                  <Image
-                    src=""
-                    alt="image"
-                    height={250}
-                    width={250}
-                    style={{
-                      borderRadius: "100%",
-                      backgroundColor: "#707070",
-                    }}
-                  />
-                </div>
-                <div className="padding-top_large grid grid-align_horizontal-center">
-                  <h1 className="color-maroon">Rebecca Molefe</h1>
-                </div>
-              </div>
+      {/* About */}
+      <div className="section">
+        <div className="grid grid-wrap">
+          <div className="medium-size_3-of-7 size_1-of-1 ">
+            <div
+              className="grid grid-align_vertical-center grid-align_horizontal-center"
+              style={{ height: "500px", position: "relative" }}
+            >
+              <Image src="/img/school/bekkieswall.jpg" alt="Wall" fill />
             </div>
           </div>
-        </div>
-      </div>
-      <div className="section" style={{ backgroundColor: "maroon" }}>
-        <div className="section-content grid grid-align_vertical-center">
-          <div className=" color-white size_1-of-1">
-            <div>
-              <h1>Grade R fees | Graad R Fooi</h1>
-            </div>
-            <div className="padding-top_xxx-large grid grid-wrap">
-              <div className="size_1-of-3 padding-top_large">
-                <h3>REGISTRATION (JAN)</h3>
-                <p className="padding-top_large">
-                  ALL: R300.00 P/CHILD ONCE OFF.
-                </p>
-              </div>
-              <div className="size_1-of-3 padding-left_xxx-large padding-top_large borderLine">
-                <h3>Annual payments</h3>
-                <ul className="line">
-                  <li>GR.RR – R9900.00 P/YEAR</li>
-                  <li>GR.R – R9350.00 P/YEAR</li>
-                </ul>
-              </div>
-              <div className="size_1-of-3  padding-left_xx-large padding-top_large borderLine">
-                <h3>Monthly payments</h3>
-                <ul className="line">GR.RR – R850.00 P/M</ul>
-                <ul className="line">GR.R – R900.00 P/M</ul>
-              </div>
-            </div>
+          <div className="medium-size_3-of-6 size_1-of-1 contentRight medium-padding-left_xxx-large grid grid-wrap grid-align_vertical-center">
+            <h1 className="size_1-of-1 color-maroon font-size_x-large">
+              Where dreams are made
+            </h1>
+            <p className="font-size_x-medium">
+              Laerskool Bekker Primary has a preschool in Magaliesburg, that
+              provides high quality early development for children from 3 to 6
+              years of age. Our classes are divided into age groups to control
+              the number of children per class to make sure that they are cared
+              for and entertained.
+              <br />
+              <br />
+              At Bekker Bekkies, we learn through play. We follow the CAPS
+              curriculum and our children enjoy a structured day full of
+              music,art,messy play,worksheets,Maths,Language and free play.
+            </p>
           </div>
         </div>
       </div>

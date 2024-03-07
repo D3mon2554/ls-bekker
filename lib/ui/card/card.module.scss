@@ -271,8 +271,8 @@
 
 .principalImage {
   position: relative;
-  width: 80%;
-  height: 520px;
+  width: 70%;
+  height: 540px;
   z-index: 5;
   @media screen and (max-width: 768px) {
     width: 450px;
@@ -284,12 +284,20 @@
 .PrincipalImageFeetContainer {
   position: absolute;
   z-index: 2;
-  bottom: 200px;
+  bottom: 80px;
+  width: 120px;
+  height: 220px;
+  rotate: -35deg;
+  left: 65px;
   @media screen and (max-width: 768px) {
     display: none;
   }
   @media screen and (min-width: 1025px) {
-    left: 220px;
+    left: 135px;
+    bottom: 100px;
+    width: 200px;
+    height: 250px;
+    rotate: -45deg;
   }
 }
 
@@ -313,24 +321,32 @@
 }
 .EducationCardTitle {
   color: #ffffff;
-  font-size: 44px;
+  font-size: 54px;
   padding-bottom: 15px;
 }
 .EducationCardSubTitle {
   padding-top: 10px;
   color: #ffc82d;
-  font-size: 20px;
+  font-size: 25px;
 }
 .EducationCardImageFeetContainer {
   position: absolute;
-  z-index: 2;
-  right: 70px;
-  padding-top: 40px;
-  // bottom: 150px;
+  z-index: 0;
+  right: 10px;
+
+  height: 250px;
+  width: 200px;
+  top: 210px;
+  clip: auto;
   @media screen and (max-width: 768px) {
     display: none;
   }
+  @media screen and (min-width: 1025px) {
+    top: 120px;
+    right: 60px;
+  }
 }
+
 .EducationCardImageContainer {
   position: relative;
   display: flex;

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { SortsHoverCard, ExtraActivities } from "@/lib/ui/card/card";
+import { SchoolImages, OurSchoolImage } from "@/lib/ui/images/images";
 
 const SportsCards = [
   {
@@ -85,8 +86,9 @@ export default function OurSchool() {
       <div className="section prefect">
         <div className="cutout-section">
           <div className="section-content grid grid-align_vertical-center">
+            <OurSchoolImage color="#FFFFFF" width={450} height={200} />
             <div>
-              <h1 className="font-size_xx-large">Welcome To</h1>
+              <h1 className="font-size_xxx-large">Welcome To</h1>
               <h1 className="padding-top_medium">
                 the future of <span className="color-primary">education</span>
               </h1>
@@ -125,15 +127,19 @@ export default function OurSchool() {
             </div>
           </div>
           {/* Academics */}
-          <div className="padding-top_xxx-large padding-bottom_x-large">
+          <div className="padding-top_xxx-large ">
             <h1 className="color-maroon font-family_futuraDemi">Academics</h1>
           </div>
         </div>
       </div>
-      <div className="section" style={{ backgroundColor: "#6a0911" }}>
-        <div className="section-content padding-bottom_xxx-large">
-          <div className="padding-top_large padding-bottom_xxx-large ">
-            <p className="color-white size_1-of-1 padding-top_large padding-bottom_large font-size_x-medium font-weight_regular size_4-of-5">
+      <div className="section" style={{ backgroundColor: "#f4eeee" }}>
+        <div className="section-content padding-top_xxx-large">
+          <div className="padding-top_large  ">
+            <div className="grid grid-align_horizontal-end">
+              <SchoolImages color="#FFC82D" width={280} height={280} />
+            </div>
+
+            <p className=" size_1-of-1 padding-top_large padding-bottom_large font-size_x-medium font-weight_regular large-size_4-of-5">
               Distinct English and Afrikaans classes guarantee that your
               children receive education in their preferred language. We adhere
               to the CAPS curriculum, ensuring a comprehensive and structured
@@ -141,13 +147,13 @@ export default function OurSchool() {
               Robotics, reflects our commitment to staying at the forefront of
               education.
             </p>
-            <p className="color-white size_1-of-1 padding-top_large padding-bottom_large font-size_x-medium font-weight_regular size_4-of-5">
+            <p className=" size_1-of-1 padding-top_large padding-bottom_large font-size_x-medium font-weight_regular large-size_4-of-5">
               Our well-equipped classrooms provide an optimal environment for
               your child to thrive, fostering both relaxation and discipline.
               Continuous upgrades to our premises are underway, accompanied by
               exciting projects in the pipeline.
             </p>
-            <p className="color-white size_1-of-1 padding-top_large padding-bottom_large font-size_x-medium font-weight_regular">
+            <p className=" size_1-of-1 padding-top_large padding-bottom_large font-size_x-medium font-weight_regular">
               The state-of-the-art computer center boasts 32 computers,
               employing the latest technology to enhance the learning process.
               Additionally, our Bekker Bekkies Nursery School, situated on the
@@ -157,6 +163,8 @@ export default function OurSchool() {
             </p>
           </div>
         </div>
+      </div>
+      <div className="section" style={{ backgroundColor: "#6a0911" }}>
         <div className="grid grid-wrap contentRightSmall">
           <div
             className="size_1-of-1 medium-size_1-of-2"
@@ -168,11 +176,8 @@ export default function OurSchool() {
               fill
             />
           </div>
-          <div className="size_1-of-1 medium-size_1-of-2">
-            <div
-              className="padding-left_xx-large grid grid-align_vertical-center"
-              style={{ height: "300px" }}
-            >
+          <div className="size_1-of-1 medium-size_1-of-2 grid grid-align_vertical-center padding-top_large medium-padding-top_none">
+            <div className="large-padding-left_xx-large  medium-padding-left_large ">
               <div>
                 <h1 className="color-white padding-bottom_x-large">
                   Computer Science
@@ -190,11 +195,8 @@ export default function OurSchool() {
           </div>
         </div>
         <div className="grid grid-wrap contentLeftSmall ">
-          <div className="size_1-of-1 medium-size_1-of-2">
-            <div
-              className="padding-right_xx-large grid grid-align_vertical-center"
-              style={{ height: "300px" }}
-            >
+          <div className="size_1-of-1 medium-size_1-of-2 grid grid-align_vertical-center padding-top_large medium-padding-top_none">
+            <div className="large-padding-right_xx-large  medium-padding-right_large ">
               <div>
                 <h1 className="color-white padding-bottom_x-large">Robotics</h1>
                 <p className="color-white font-size_x-medium">
@@ -214,7 +216,7 @@ export default function OurSchool() {
             <Image src="/img/subjects/robotics.webp" alt="Robotics" fill />
           </div>
         </div>
-        <div className="grid grid-wrap contentRightSmall">
+        <div className="grid grid-wrap contentRightSmall padding-top_large medium-padding-top_none">
           <div
             className="size_1-of-1 medium-size_1-of-2"
             style={{ position: "relative", height: "350px" }}
@@ -225,11 +227,8 @@ export default function OurSchool() {
               fill
             />
           </div>
-          <div className="size_1-of-1 medium-size_1-of-2">
-            <div
-              className="padding-left_xx-large grid grid-align_vertical-center"
-              style={{ height: "300px" }}
-            >
+          <div className="size_1-of-1 medium-size_1-of-2 grid grid-align_vertical-center padding-top_large medium-padding-top_none">
+            <div className="large-padding-left_xx-large  medium-padding-left_large ">
               <div>
                 <h1 className="color-white padding-bottom_x-large">
                   Agricultural Studies

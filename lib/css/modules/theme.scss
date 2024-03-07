@@ -61,9 +61,9 @@ body {
 
 .landingContainer {
   background-color: #ffffff;
-  background-image: url(/img/banners/homepagebanner.jpg);
+  background-image: url(/img/banners/hostellearners.jpg);
   background-size: cover;
-  // background-position: center;
+  background-position: center;
   background-repeat: no-repeat;
   @media screen and (min-width: 768px) {
     height: 80vh;
@@ -113,7 +113,7 @@ body {
 }
 .prePrimary {
   background-color: #ebecec;
-  background-image: url(/img/banners/preprimary.webp);
+  background-image: url(/img/banners/bekkerbekkies.jpg);
   background-size: cover;
   // background-position: center;
   background-repeat: no-repeat;
@@ -193,4 +193,27 @@ body {
 }
 .testing {
   background-color: #f4eeee;
+}
+.custom-list {
+  list-style-type: none; /* Remove default bullet points */
+  padding-left: 20px; /* Add padding for the custom image */
+}
+
+.custom-list li {
+  position: relative;
+  padding-left: 30px; /* Adjust the padding based on your image size */
+  margin-bottom: 10px; /* Add some space between items */
+}
+
+.custom-list li::before {
+  content: "";
+  position: absolute;
+  background: url("/img/icons/footprints/onefootprintred.png") no-repeat; /* Replace with your image path */
+  width: 200px; /* Set the width of your custom image */
+  height: 200px; /* Set the height of your custom image */
+  left: -110px;
+  top: -60px;
+  transform: translateY(-50%);
+  scale: 0.2;
+  rotate: 50deg;
 }

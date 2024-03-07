@@ -1,22 +1,99 @@
-.eventCard {
+.container {
+  position: relative;
   height: 500px;
-  width: 350px;
-  box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, 0.75);
-  background-color: maroon;
+  width: 100%;
+  @media screen and (max-width: 768px) {
+    height: fit-content;
+  }
+}
+.eventCard {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    height: 50%;
+  }
+}
+.content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.title {
+  height: 10%;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  text-align: center;
+  color: #6a0911;
+  font-size: 5rem;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    font-size: 4rem;
+  }
 }
 .eventImage {
   position: relative;
-  height: 200px;
-  width: 350px;
+  height: 100%;
 }
-.content {
-  padding: 10px;
-  color: #ffff00;
-}
-.link {
-  color: #ffff00;
-  text-decoration: none;
-  &:hover {
-    text-decoration: underline;
+.eventDescription {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    height: 50%;
   }
+}
+.descriptionContainer {
+  height: 84%;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    height: 60%;
+  }
+}
+.description {
+  padding-top: 80px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  @media screen and (max-width: 768px) {
+    padding-top: 10px;
+  }
+  @media screen and (min-width: 1024px) and (max-width: 1439px) {
+    padding-top: 15px;
+  }
+}
+.countdownContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  @media screen and (max-width: 768px) {
+    padding-top: 20px;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+.countdownSquare {
+  background-color: #6a0911;
+  width: 100px;
+  height: 80px;
+  border-radius: 17px;
+  text-align: center;
+  @media screen and (max-width: 768px) {
+    width: 80px;
+  }
+}
+.countdownValue {
+  color: #ffffff;
+  font-size: 35px;
+}
+.countdownLabel {
+  color: #ffffff;
+  font-size: 15px;
 }

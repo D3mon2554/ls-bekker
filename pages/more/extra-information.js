@@ -1,7 +1,7 @@
 export default function ExtraInformation() {
   return (
     <>
-      <div></div>
+      <div className="section"></div>
     </>
   );
 }

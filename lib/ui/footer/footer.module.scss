@@ -1,6 +1,6 @@
 .container {
   position: relative;
-  background-color: #3f3e3e;
+  background-color: #1d1d1d;
   box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.575);
   z-index: 5;
   display: flex;
@@ -12,17 +12,21 @@
 }
 .logoContainer {
   position: relative;
-  width: 412px;
-  height: 412px;
-  top: 60px;
-  left: 50px;
+  width: 352px;
+  height: 352px;
+  top: 80px;
+  left: 0px;
 }
 .footprintsContainer {
   position: relative;
-  width: 522.77px;
+  width: 600px;
   height: 314.42px;
   z-index: -1;
   top: -210px;
+  left: 10px;
+  @media screen and (max-width: 1024px) {
+    width: 500px;
+  }
 }
 .containerText {
   position: relative;

@@ -5,10 +5,11 @@
   background-color: #6a0911;
   box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.575);
   z-index: 3;
+  // padding: 0 50px;
 }
 .contact {
   height: 150px;
-  width: 150px;
+  width: 120px;
   position: relative;
   justify-content: center;
   align-items: center;
@@ -49,19 +50,19 @@
 }
 
 .navLeft {
+  padding-left: 30px;
   width: 45%;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  z-index: 2;
 }
 .navRight {
   width: 45%;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
 }
 .tabContainer {
-  width: 80%;
+  width: 100%;
   position: relative;
   display: flex;
   align-items: center;
@@ -84,9 +85,10 @@
   cursor: pointer;
   position: relative;
   height: 80px;
+  min-width: 100px;
   display: flex;
   align-items: flex-end;
-  justify-content: flex-end;
+  justify-content: center;
 }
 // .dropdownContainer {
 //   position: relative;

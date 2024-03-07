@@ -1,4 +1,5 @@
 import Image from "next/image";
+import PurposeImages from "@/lib/ui/images/images";
 
 export default function OurPurpose() {
   return (
@@ -8,16 +9,8 @@ export default function OurPurpose() {
         <div className="cutout-sectionLeft">
           <div className="section-content grid grid-align_horizontal-end grid-align_vertical-center">
             <div className="size_1-of-1 large-size_2-of-4 medium-padding-left_xxx-large">
-              <div
-                className="size_1-of-1"
-                style={{ position: "relative", height: "180px" }}
-              >
-                <Image
-                  src=""
-                  alt="Foot Print Images"
-                  fill
-                  style={{ position: "absolute", top: "50px", zIndex: "-1" }}
-                />
+              <div className="size_1-of-1" style={{ height: "180px" }}>
+                <PurposeImages color="#FFC82D" width={450} height={214} />
               </div>
               <div className="size_1-of-1 padding-bottom_xx-large ">
                 <h1 className="font-size_xx-large font-family_futuraDemi">
@@ -83,7 +76,7 @@ export default function OurPurpose() {
           </div>
           <div className="padding-left_large padding-right_large medium-padding-left_xxx-large medium-padding-right_xxx-large padding-top_xxx-large">
             <h1 className="color-maroon font-size_x-large">Mission</h1>
-            <ul className="color-maroon font-size_x-medium">
+            <ul className="color-maroon font-size_x-medium custom-list">
               <li>Creating a happy, positive and safe learning environment.</li>
               <li>
                 Strive for positive partnerships between parents, teachers,
@@ -125,7 +118,7 @@ export default function OurPurpose() {
           <div className="size_1-of-1 medium-size_1-of-5 grid grid-wrap padding-top_x-large">
             <div className="size_1-of-1 grid grid-align_horizontal-center">
               <Image
-                src="/img/logos/Bekker-crest.png"
+                src="/img/icons/values/respect.png"
                 alt="Respect"
                 height={150}
                 width={150}
@@ -138,7 +131,7 @@ export default function OurPurpose() {
           <div className="size_1-of-1 medium-size_1-of-5 grid grid-wrap padding-top_x-large">
             <div className="size_1-of-1 grid grid-align_horizontal-center">
               <Image
-                src="/img/logos/Bekker-crest.png"
+                src="/img/icons/values/honesty.png"
                 alt="Honesty"
                 height={150}
                 width={150}
@@ -151,7 +144,7 @@ export default function OurPurpose() {
           <div className="size_1-of-1 medium-size_1-of-5 grid grid-wrap padding-top_x-large">
             <div className="size_1-of-1 grid grid-align_horizontal-center">
               <Image
-                src="/img/logos/Bekker-crest.png"
+                src="/img/icons/values/accountability.png"
                 alt="Accountability"
                 height={150}
                 width={150}
@@ -164,7 +157,7 @@ export default function OurPurpose() {
           <div className="size_1-of-1 medium-size_1-of-5 grid grid-wrap padding-top_x-large">
             <div className="size_1-of-1 grid grid-align_horizontal-center">
               <Image
-                src="/img/logos/Bekker-crest.png"
+                src="/img/icons/values/attitude.png"
                 alt="Attitude"
                 height={150}
                 width={150}
@@ -177,7 +170,7 @@ export default function OurPurpose() {
           <div className="size_1-of-1 medium-size_1-of-5 grid grid-wrap padding-top_x-large">
             <div className="size_1-of-1 grid grid-align_horizontal-center">
               <Image
-                src="/img/logos/Bekker-crest.png"
+                src="/img/icons/values/loyalty.png"
                 alt="Loyalty"
                 height={150}
                 width={150}
