@@ -173,14 +173,18 @@ export default function Home() {
               </div>
             </div>
             <div className="size_1-of-1 medium-size_1-of-2 image">
-              <Image src="/img/hostel/dinner.jpg" alt="Dinner" fill />
+              <Image
+                src="/img/hostel/hostelluange.PNG"
+                alt="hostel luange"
+                fill
+              />
             </div>
           </div>
         </div>
         <div className="medium-padding-right_xx-large">
           <div className="grid grid-wrap padding-bottom_xx-large">
             <div className="size_1-of-1 medium-size_1-of-2 image">
-              <Image src="/img/banners/school.webp" alt="Dinner" fill />
+              <Image src="/img/school/classroom.jpg" alt="class room" fill />
             </div>
             <div className="size_1-of-1 medium-size_1-of-2 grid grid-wrap grid-align_vertical-space medium-padding-left_xxx-large padding-bottom_xx-large medium-padding-bottom_none padding-left_small padding-right_small">
               <div className="size_1-of-1 padding-top_large medium-padding-top_none">

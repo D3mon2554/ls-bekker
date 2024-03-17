@@ -162,7 +162,7 @@ $breakpoints: (
 
 // hide elements on mobile
 .hide-mobile {
-  @media screen and (min-width: 200px) and (max-width: 768px) {
+  @media screen and (min-width: 200px) and (max-width: 767px) {
     display: none;
     width: 0;
     height: 0;
@@ -170,7 +170,7 @@ $breakpoints: (
 }
 
 .hide-desktop {
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 767px) {
     display: none;
     width: 0;
     height: 0;
@@ -234,8 +234,8 @@ $breakpoints: (
   @media screen and (max-width: 768px) {
     height: 600px;
     width: 100%;
-
-    background: rgb(106, 9, 17);
+    background: rgba(106, 9, 17, 0.292);
+    text-align: center;
   }
 }
 .cutout-sectionLeft {
@@ -251,10 +251,10 @@ $breakpoints: (
 
   color: #ffffff; /* Set text color for better visibility */
   @media screen and (max-width: 768px) {
-    height: 100%;
+    height: 600px;
     width: 100%;
-
-    background: rgb(106, 9, 17);
+    background: rgba(106, 9, 17, 0.292);
+    text-align: center;
   }
 }
 .cutout-section-white {

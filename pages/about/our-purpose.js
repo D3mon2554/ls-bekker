@@ -7,11 +7,9 @@ export default function OurPurpose() {
       {/* Banner */}
       <div className=" section aboutBanner">
         <div className="cutout-sectionLeft">
-          <div className="section-content grid grid-align_horizontal-end grid-align_vertical-center">
-            <div className="size_1-of-1 large-size_2-of-4 medium-padding-left_xxx-large">
-              <div className="size_1-of-1" style={{ height: "180px" }}>
-                <PurposeImages color="#FFC82D" width={450} height={214} />
-              </div>
+          <div className="section-content grid grid-align_horizontal-end grid-align_vertical-end">
+            <div className="size_1-of-1 large-size_2-of-4 medium-padding-left_xx-large  medium-padding-bottom_xx-large">
+              <PurposeImages color="#FFC82D" width={380} height={180} />
               <div className="size_1-of-1 padding-bottom_xx-large ">
                 <h1 className="font-size_xx-large font-family_futuraDemi">
                   WELCOME TO
@@ -21,7 +19,7 @@ export default function OurPurpose() {
                   Primary
                 </h2>
               </div>
-              <div className="size_1-of-1 padding-bottom_large medium-padding-bottom_none">
+              <div className="size_1-of-1 padding-bottom_large">
                 <p className="font-size_x-medium">
                   At Bekker, we invite you to embrace a higher echelon of
                   education. Beyond academic proficiency, we are dedicated to
@@ -37,7 +35,7 @@ export default function OurPurpose() {
       <div className="section">
         <div className="grid grid-wrap">
           <div
-            className="banner size_1-of-1 medium-size_2-of-4 "
+            className="size_1-of-1  medium-size_2-of-4 "
             style={{ backgroundColor: "#6a0911" }}
           >
             <div className="contentLeft padding-top_xx-large medium-padding-right_xxx-large">
@@ -45,7 +43,7 @@ export default function OurPurpose() {
                 Laerskool Bekker: Nurturing Excellence in Education and
                 Character Development
               </h1>
-              <p className="color-white font-size_x-medium font-weight_regular padding-top_xxx-large">
+              <p className="color-white font-size_x-medium font-weight_regular padding-top_xxx-large ">
                 At Bekker, we invite you to embrace a higher echelon of
                 education. Beyond academic proficiency, we are dedicated to
                 Cultivating a foundation of essential
@@ -57,11 +55,7 @@ export default function OurPurpose() {
             className="banner size_1-of-1 medium-size_3-of-6"
             style={{ position: "relative" }}
           >
-            <Image
-              src="/img/school/back2school.webp"
-              alt="back to school"
-              fill
-            />
+            <Image src="/img/school/excellence.png" alt="back to school" fill />
           </div>
         </div>
       </div>

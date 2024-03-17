@@ -54,6 +54,10 @@
 .links {
   text-decoration: none;
   color: #ffffff;
+  &:hover {
+    color: #ffc82d;
+    text-decoration: underline;
+  }
 }
 .socials {
   position: relative;

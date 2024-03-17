@@ -75,7 +75,7 @@ body {
 }
 .aboutBanner {
   background-color: #ebecec;
-  background-image: url(/img/banners/fundraiser.webp);
+  background-image: url(/img/banners/purposebanner.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -99,7 +99,21 @@ body {
 }
 .hostel {
   background-color: #ebecec;
-  background-image: url(/img/hostel/hostel2.webp);
+  background-image: url(/img/hostel/hostelluange.PNG);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  @media screen and (min-width: 768px) {
+    height: 80vh;
+  }
+  @media screen and (max-width: 1200px) {
+    // push the image to the right on a smaller screen
+    // background-image: none;
+  }
+}
+.transport {
+  background-color: #ebecec;
+  background-image: url(/img/banners/schoolbus.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -125,7 +139,20 @@ body {
     // background-image: none;
   }
 }
-
+.events {
+  background-color: #ebecec;
+  background-image: url(/img/sports/teamspirirt2.jpg);
+  background-size: cover;
+  // background-position: center;
+  background-repeat: no-repeat;
+  @media screen and (min-width: 768px) {
+    height: 80vh;
+  }
+  @media screen and (max-width: 1200px) {
+    // push the image to the right on a smaller screen
+    // background-image: none;
+  }
+}
 .welcomeMessage {
   width: 700px;
   height: 300px;
@@ -216,4 +243,14 @@ body {
   transform: translateY(-50%);
   scale: 0.2;
   rotate: 50deg;
+}
+.line {
+  width: 50px;
+  border-bottom: #6a0911 4px solid;
+}
+.cursor {
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
 }

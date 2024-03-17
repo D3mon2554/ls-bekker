@@ -34,7 +34,7 @@ const SportsCards = [
       "Primary school swimming, for ages 6 to 12, teaches essential swimming skills, water safety, and builds confidence in a supportive environment. It lays the foundation for a lifelong enjoyment of aquatic activities.",
   },
   {
-    image: "/img/sports/croscountry.jpg",
+    image: "/img/sports/netball.jpeg",
     title: "Netball",
     description:
       "Primary school Netball, for ages 6 to 12, is a team sport emphasizing passing, shooting, and teamwork. With simplified rules, it promotes basic ball-handling skills and provides an inclusive environment for kids to enjoy team-based competition.",
@@ -42,31 +42,31 @@ const SportsCards = [
 ];
 const ExtraActivitiesCard = [
   {
-    image: "/img/sports/rugbyteam.jpg",
+    image: "/img/sports/revue.JPG",
     title: "Revue",
     description:
       "Primary school revue, for ages 6 to 12, is a lively showcase of student talents, including singing, dancing, and skits. It fosters creativity, teamwork, and confidence in an inclusive and entertaining setting.",
   },
   {
-    image: "/img/sports/cricket.webp",
+    image: "/img/sports/drama.jpg",
     title: "Drama",
     description:
       "Primary school drama, for ages 6 to 12, lets students explore creativity through acting and performance. It builds communication skills, self-confidence, and a love for the arts in a fun and supportive environment.",
   },
   {
-    image: "/img/sports/hokey.webp",
+    image: "/img/sports/readingweek4.jpg",
     title: "Reading week",
     description:
       "Primary school Reading Week, for all ages, promotes a love for reading through activities like story sessions and book clubs. It enhances literacy skills and fosters a supportive reading culture in the school community.",
   },
   {
-    image: "/img/sports/athletics.webp",
+    image: "/img/sports/chess.png",
     title: "Chess",
     description:
       "Primary school chess, for ages 6 to 12, teaches the strategic game of chess. It enhances critical thinking and problem-solving skills in a fun, competitive environment, fostering a love for the game.",
   },
   {
-    image: "/img/sports/swimming.jpg",
+    image: "/img/sports/Ballet.png",
     title: "Ballet",
     description:
       "Primary school ballet, for ages 6 to 12, introduces basic techniques, posture, and movement. It nurtures coordination, flexibility, and a love for dance in a supportive and creative environment.",
@@ -266,7 +266,7 @@ export default function OurSchool() {
               return (
                 <div
                   key={type.title}
-                  className="size_1-of-1 medium-size_1-of-3 grid grid-align_horizontal-center padding-top_small padding-bottom_small"
+                  className="size_1-of-1 medium-size_1-of-3 grid grid-align_horizontal-center padding-around_large"
                 >
                   <SortsHoverCard
                     image={type.image}
@@ -287,7 +287,7 @@ export default function OurSchool() {
               return (
                 <div
                   key={type.title}
-                  className="size_1-of-1 medium-size_1-of-2 grid grid-align_horizontal-center padding-top_large padding-bottom_large"
+                  className="size_1-of-1 medium-size_1-of-3 grid grid-align_horizontal-center padding-around_large"
                 >
                   <ExtraActivities
                     image={type.image}
@@ -300,6 +300,12 @@ export default function OurSchool() {
           </div>
         </div>
       </div>
+      {/* School Application & Contact Us
+      <div className="section">
+        <div className="section-content">
+          <h1>If you have any questions please feel free to contact us</h1>
+        </div>
+      </div> */}
     </>
   );
 }
