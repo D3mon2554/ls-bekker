@@ -121,16 +121,64 @@
   border: 1px #6a0911 solid;
 }
 //mobile view
+/* Styles for the mobile container */
 .mobileContainer {
-  display: inline-flex;
-}
-.mobileLogoContainer {
   position: relative;
-  height: 80px;
-  width: 80px;
+}
+.mobileLogo {
+  position: absolute;
+  z-index: 2;
+  left: 20px;
+  top: 10px;
+}
+/* Styles for the burger menu icon */
+.burgerMenu {
+  position: absolute;
+  top: 30px; /* Adjust the positioning as needed */
+  right: 20px; /* Adjust the positioning as needed */
+  cursor: pointer;
+  z-index: 2;
 }
 .mobileMenuButton {
   position: relative;
-  width: 80px;
-  height: 80px;
+  width: 30px;
+  height: 30px;
+}
+/* Styles for the close icon */
+.closeIcon {
+  position: absolute;
+  top: 20px; /* Adjust the positioning as needed */
+  right: 20px; /* Adjust the positioning as needed */
+  cursor: pointer;
+  z-index: 1; /* Ensure the close icon is above the mobile menu */
+}
+
+/* Styles for the mobile menu */
+.mobileMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 255, 255); /* Semi-transparent black background */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 15; /* Ensure the mobile menu is behind the close icon */
+}
+
+/* Styles for the mobile links */
+.mobileLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+}
+
+/* Styles for individual links */
+.mobileSingleLinks {
+  text-decoration: none;
+  font-size: 18px; /* Adjust the font size as needed */
+  color: #6a0911;
 }
