@@ -70,19 +70,10 @@ export default function Applications() {
       <div className="background">
         <div style={{ position: "relative" }}>
           {/* Application Hostel + fees */}
-          <div className="section">
-            <div className="color-maroon padding-top_xxx-large padding-bottom_xxx-large medium-padding-left_xxx-large padding-left_medium">
-              <h1>Our Hostel</h1>
-            </div>
+          <div className="section padding-top_xxx-large">
             <div className="grid grid-wrap">
               <div className="size_1-of-1 medium-size_1-of-2">
-                <div
-                  style={{
-                    width: "100%",
-                    height: "500px",
-                    position: "relative",
-                  }}
-                >
+                <div className="pictureHeight">
                   <Image
                     src="/img/registration/hostel_applications.jpg"
                     alt="Hostel Applications"
@@ -91,7 +82,7 @@ export default function Applications() {
                 </div>
               </div>
               <div className="size_1-of-1 medium-size_1-of-2">
-                <div className="medium-padding-left_xxx-large padding-left_medium padding-right_medium color-maroon">
+                <div className="medium-padding-left_xxx-large padding-left_medium padding-right_medium color-maroon padding-bottom_xx-large">
                   <div className="padding-top_xx-large padding-bottom_large">
                     <h1>Hostel fees</h1>
                   </div>
@@ -129,13 +120,13 @@ export default function Applications() {
           </div>
 
           {/* Application School + fees */}
-          <div className="section">
-            <div className="color-maroon padding-top_xxx-large padding-bottom_xxx-large medium-padding-left_xxx-large padding-left_medium">
-              <h1>Our School</h1>
-            </div>
+          <div className="section padding-top_xxx-large">
             <div className="grid grid-wrap">
               <div className="size_1-of-1 medium-size_1-of-2 padding-bottom_large medium-padding-bottom_none">
                 <div className="medium-padding-left_xxx-large padding-left_medium padding-right_medium color-maroon">
+                  <div className="padding-top_xx-large padding-bottom_large">
+                    <h1>School fees</h1>
+                  </div>
                   <div className="padding-top_xx-large padding-bottom_large">
                     <h3>Annual Fees R 12 540.00</h3>
                   </div>
@@ -166,7 +157,7 @@ export default function Applications() {
                       each month
                     </p>
                   </div>
-                  <div className="padding-top_large">
+                  <div className="padding-top_large padding-bottom_large">
                     <Link href="">
                       <Button label="Apply Now" variant="submit" />
                     </Link>
@@ -174,13 +165,7 @@ export default function Applications() {
                 </div>
               </div>
               <div className="size_1-of-1 medium-size_1-of-2">
-                <div
-                  style={{
-                    width: "100%",
-                    height: "600px",
-                    position: "relative",
-                  }}
-                >
+                <div className="pictureHeight">
                   <Image
                     src="/img/school/bekkies.jpg"
                     alt="School Applications"
@@ -192,19 +177,10 @@ export default function Applications() {
           </div>
 
           {/* Application Grade R + fees */}
-          <div className="section">
-            <div className="color-maroon padding-top_xxx-large padding-bottom_xxx-large medium-padding-left_xxx-large padding-left_medium">
-              <h1>Our Pre-Primary</h1>
-            </div>
+          <div className="section padding-top_xxx-large">
             <div className="grid grid-wrap">
               <div className="size_1-of-1 medium-size_1-of-2">
-                <div
-                  style={{
-                    width: "100%",
-                    height: "500px",
-                    position: "relative",
-                  }}
-                >
+                <div className="pictureHeight">
                   <Image
                     src="/img/banners/bekkerbekkies.jpg"
                     alt="Pre-Primary Applications"
@@ -213,7 +189,7 @@ export default function Applications() {
                 </div>
               </div>
               <div className="size_1-of-1 medium-size_1-of-2">
-                <div className="medium-padding-left_xxx-large padding-left_medium padding-right_medium color-maroon">
+                <div className="medium-padding-left_xxx-large padding-left_medium padding-right_medium color-maroon padding-bottom_xx-large">
                   <div className="padding-top_xx-large padding-bottom_large">
                     <h1>Grade R fees</h1>
                   </div>
@@ -244,22 +220,100 @@ export default function Applications() {
       {/* Banking Details */}
       <div className="section">
         <div className="color-maroon padding-top_xxx-large padding-bottom_xxx-large medium-padding-left_xxx-large padding-left_medium">
-          <h1>Backing Details</h1>
+          <h1>Banking Details</h1>
         </div>
         <div className="grid grid-wrap">
+          {/* School */}
           <div className="size_1-of-1 medium-size_1-of-3 medium-padding-around_xx-large padding-top_large padding-bottom_large">
             <div className="" style={{ backgroundColor: "#707070" }}>
-              Testing
+              <div className="padding-left_medium padding-right_medium medium-padding-left_x-large medium-padding-right_x-large">
+                <div className="padding-top_xx-large padding-bottom_xx-large">
+                  <h3
+                    className="color-white padding-top_small padding-bottom_small text-align_center"
+                    style={{ backgroundColor: "#6a0911" }}
+                  >
+                    SCHOOL FEES BANKING DETAILS
+                  </h3>
+                </div>
+                <div className="color-white">
+                  <h3 className="">Bank Information</h3>
+                  <p className="padding-bottom_large">PRIMARY BEKKER</p>
+                  <h3>Bank:</h3>
+                  <p className="padding-bottom_large">ABSA</p>
+                  <h3>Type of Account:</h3>
+                  <p className="padding-bottom_large">Cheque Account</p>
+                  <h3>Account Number:</h3>
+                  <p className="padding-bottom_large">101 5800 158</p>
+                  <h3>Branch code:</h3>
+                  <p className="padding-bottom_large">630241</p>
+                  <h3>Reference Information:</h3>
+                  <p className="padding-bottom_large">
+                    State the learners Name, Surname and Grade.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
+          {/* Hostel */}
           <div className="size_1-of-1 medium-size_1-of-3 medium-padding-around_xx-large padding-top_large padding-bottom_large">
             <div className="" style={{ backgroundColor: "#707070" }}>
-              Testing
+              <div className="padding-left_medium padding-right_medium medium-padding-left_x-large medium-padding-right_x-large">
+                <div className="padding-top_xx-large padding-bottom_xx-large">
+                  <h3
+                    className="color-white padding-top_small padding-bottom_small text-align_center"
+                    style={{ backgroundColor: "#6a0911" }}
+                  >
+                    HOSTEL FEES BANKING DETAILS
+                  </h3>
+                </div>
+                <div className="color-white">
+                  <h3 className="">Bank Information</h3>
+                  <p className="padding-bottom_large">PRIMARY BEKKER</p>
+                  <h3>Bank:</h3>
+                  <p className="padding-bottom_large">ABSA</p>
+                  <h3>Type of Account:</h3>
+                  <p className="padding-bottom_large">Cheque Account</p>
+                  <h3>Account Number:</h3>
+                  <p className="padding-bottom_large">101 5800 158</p>
+                  <h3>Branch code:</h3>
+                  <p className="padding-bottom_large">630241</p>
+                  <h3>Reference Information:</h3>
+                  <p className="padding-bottom_large">
+                    State the learners Name, Surname and Grade.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
-          <div className="size_1-of-1 medium-size_1-of-3 medium-padding-around_xx-large padding-top_large padding-bottom_large">
+          {/* GR.R */}
+          <div className="size_1-of-1 medium-size_1-of-3 medium-padding-around_xx-large padding-top_large ">
             <div className="" style={{ backgroundColor: "#707070" }}>
-              Testing
+              <div className="padding-left_medium padding-right_medium medium-padding-left_x-large medium-padding-right_x-large">
+                <div className="padding-top_xx-large padding-bottom_xx-large">
+                  <h3
+                    className="color-white padding-top_small padding-bottom_small text-align_center"
+                    style={{ backgroundColor: "#6a0911" }}
+                  >
+                    GR. R FEES BANKING DETAILS
+                  </h3>
+                </div>
+                <div className="color-white">
+                  <h3 className="">Bank Information</h3>
+                  <p className="padding-bottom_large">PRIMARY BEKKER</p>
+                  <h3>Bank:</h3>
+                  <p className="padding-bottom_large">ABSA</p>
+                  <h3>Type of Account:</h3>
+                  <p className="padding-bottom_large">Cheque Account</p>
+                  <h3>Account Number:</h3>
+                  <p className="padding-bottom_large">101 5800 158</p>
+                  <h3>Branch code:</h3>
+                  <p className="padding-bottom_large">630241</p>
+                  <h3>Reference Information:</h3>
+                  <p className="padding-bottom_large">
+                    State the learners Name, Surname and Grade.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Global styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        /* Specific styles */
+        .container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .body {
+            width: 90%;
+            background-color: #707070;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 3px 12px 13px 9px rgba(0,0,0,0.6);
+        }
+        .header {
+            background-color: #6a0911;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+
+        }
+        .contentContainer {
+            display: flex;
+            align-items: center;
+            height: 80px;
+        }
+        .content {
+            flex: 1;
+            text-align: center;
+            text-decoration: none;
+            color: #fff;
+        }
+        .content strong {
+            font-weight: bold;
+        }
+        .email {
+            text-decoration: none !important;
+    color: #000; /* Change color as desired */
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <table class="body">
+            <tr >
+                <td class="header" colspan="2">
+                    <strong>You Have a New Email</strong>
+                </td>
+            </tr>
+            <tr class="contentContainer">
+                <td class="content"><strong>Name:</strong></td>
+                <td class="content">{{name}}</td>
+            </tr>
+            <tr class="contentContainer">
+                <td class="content"><strong>Email:</strong></td>
+                <td class="content" >{{email}}</td>
+            </tr>
+            <tr class="contentContainer">
+                <td class="content"><strong>Message:</strong></td>
+                <td class="content">{{message}}</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
