@@ -67,7 +67,7 @@ export default function Contact() {
               className="grid grid-wrap grid-align_horizontal-space grid-align_vertical-space"
               style={{ height: "100%" }}
             >
-              <div className="size_1-of-1 medium-size_1-of-2 grid grid-align_horizontal-center grid-align_vertical-center padding-top_large padding-bottom_large padding-right_medium">
+              <div className="size_1-of-1 medium-size_1-of-2 grid grid-align_horizontal-center grid-align_vertical-center padding-top_large padding-bottom_large ">
                 <div
                   className="grid grid-wrap grid-align_horizontal-center grid-align_vertical-center text-align_center color-white"
                   style={{
@@ -79,11 +79,15 @@ export default function Contact() {
                 >
                   <h2 className="size_1-of-1">School Hours</h2>
                   <p className="size_1-of-1 font-size_x-medium">
-                    08:00 - 15:00
+                    07:20 - 14:30
+                  </p>
+                  <h2 className="size_1-of-1">Office Hours</h2>
+                  <p className="size_1-of-1 font-size_x-medium">
+                    07:00 - 14:30
                   </p>
                 </div>
               </div>
-              <div className="size_1-of-1 medium-size_1-of-2 grid grid-align_horizontal-center grid-align_vertical-center padding-top_large padding-bottom_large padding-right_medium">
+              <div className="size_1-of-1 medium-size_1-of-2 grid grid-align_horizontal-center grid-align_vertical-center padding-top_large padding-bottom_large ">
                 <div
                   className="grid grid-wrap grid-align_horizontal-center grid-align_vertical-center text-align_center color-white"
                   style={{
@@ -97,7 +101,7 @@ export default function Contact() {
                   <p className="size_1-of-1 font-size_x-medium">014 577 1129</p>
                 </div>
               </div>
-              <div className="size_1-of-1 medium-size_1-of-2 grid grid-align_horizontal-center grid-align_vertical-center padding-top_large padding-bottom_large padding-right_medium">
+              <div className="size_1-of-1 medium-size_1-of-2 grid grid-align_horizontal-center grid-align_vertical-center padding-top_large padding-bottom_large ">
                 <div
                   className="grid grid-wrap grid-align_horizontal-center grid-align_vertical-center text-align_center color-white"
                   style={{
@@ -113,7 +117,7 @@ export default function Contact() {
                   </p>
                 </div>
               </div>
-              <div className="size_1-of-1 medium-size_1-of-2 grid grid-align_horizontal-center grid-align_vertical-center padding-top_large padding-bottom_large padding-right_medium">
+              <div className="size_1-of-1 medium-size_1-of-2 grid grid-align_horizontal-center grid-align_vertical-center padding-top_large padding-bottom_large ">
                 <div
                   className="grid grid-wrap grid-align_horizontal-center grid-align_vertical-center text-align_center color-white"
                   style={{
@@ -138,7 +142,7 @@ export default function Contact() {
       </div>
 
       {/* Contact Form */}
-      <div className="section">
+      <div className="section padding-top_xx-large">
         <div className="section-content padding-bottom_xxx-large">
           <div>
             <h1 className="color-maroon">Send us a message</h1>
@@ -172,6 +176,14 @@ export default function Contact() {
               {
                 label: "New School Applications",
                 value: "New School Applications",
+              },
+              {
+                label: "Exemptions",
+                value: "Exemptions",
+              },
+              {
+                label: "Other",
+                value: "Other",
               },
             ]}
           ></Select>

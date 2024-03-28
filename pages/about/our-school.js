@@ -182,7 +182,7 @@ export default function OurSchool() {
                 <h1 className="color-white padding-bottom_x-large">
                   Computer Science
                 </h1>
-                <p className="color-white font-size_x-medium">
+                <p className="color-white font-size_x-medium padding-bottom_large">
                   Learning computer science in primary school benefits students
                   by fostering critical thinking, digital literacy, creativity,
                   and problem-solving skills. It provides early exposure to STEM
@@ -194,7 +194,7 @@ export default function OurSchool() {
             </div>
           </div>
         </div>
-        <div className="grid grid-wrap contentLeftSmall ">
+        <div className="grid grid-wrap contentLeftSmall hide-mobile">
           <div className="size_1-of-1 medium-size_1-of-2 grid grid-align_vertical-center padding-top_large medium-padding-top_none">
             <div className="large-padding-right_xx-large  medium-padding-right_large ">
               <div>
@@ -216,10 +216,32 @@ export default function OurSchool() {
             <Image src="/img/subjects/robotics.webp" alt="Robotics" fill />
           </div>
         </div>
-        <div className="grid grid-wrap contentRightSmall padding-top_large medium-padding-top_none">
+        <div className="grid grid-wrap contentLeftSmall hide-desktop">
           <div
             className="size_1-of-1 medium-size_1-of-2"
             style={{ position: "relative", height: "350px" }}
+          >
+            <Image src="/img/subjects/robotics.webp" alt="Robotics" fill />
+          </div>
+          <div className="size_1-of-1 medium-size_1-of-2 grid grid-align_vertical-center padding-top_large medium-padding-top_none">
+            <div className="large-padding-right_xx-large  medium-padding-right_large ">
+              <div>
+                <h1 className="color-white padding-bottom_x-large">Robotics</h1>
+                <p className="color-white font-size_x-medium">
+                  A robotics class in primary school introduces students to the
+                  exciting world of designing, building, and programming robots.
+                  It provides a hands-on learning experience that combines
+                  elements of science, technology, engineering, and mathematics
+                  (STEM).
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="grid grid-wrap contentRightSmall padding-top_large medium-padding-top_none">
+          <div
+            className="size_1-of-1 medium-size_1-of-2"
+            style={{ position: "relative", height: "400px" }}
           >
             <Image
               src="/img/subjects/farming.jpg"
@@ -234,12 +256,16 @@ export default function OurSchool() {
                   Agricultural Studies
                 </h1>
                 <p className="color-white font-size_x-medium">
-                  Learning computer science in primary school benefits students
-                  by fostering critical thinking, digital literacy, creativity,
-                  and problem-solving skills. It provides early exposure to STEM
-                  (Science, Technology, Engineering, and Mathematics.), prepares
-                  for the future, promotes collaboration, and enhances
-                  adaptability.
+                  Introducing Agricultural Studies, a dynamic and hands-on
+                  subject designed for Grade 7 students as an additional
+                  offering. This innovative curriculum is part of a piloted
+                  project in collaboration with the Department of Education,
+                  aimed at fostering a deeper understanding of agriculture's
+                  vital role in our lives. Through engaging lessons and
+                  practical activities, students explore topics such as crop
+                  cultivation, animal husbandry, and environmental
+                  sustainability, empowering them with essential knowledge for a
+                  sustainable future.
                 </p>
               </div>
             </div>
