@@ -65,7 +65,7 @@ export default async function handler(req, res) {
 
     // Setup email data
     const mailOptions = {
-      from: "jonathan@sandboxlogic.com",
+      from: EmailFrom,
       to: toEmail,
       subject: nature,
       html: replacedEmailBody,

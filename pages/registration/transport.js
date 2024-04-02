@@ -7,11 +7,25 @@ import Map from "@/lib/ui/map/map";
 
 export default function Transport() {
   const initialAddress = "Laerskool Bekker Primary";
-  const [address, setAddress] = useState(initialAddress); // State to store the address for the map
+  const [address, setAddress] = useState(initialAddress);
+  const [pdfUrl, setPdfUrl] = useState(null);
 
   // Handler function to update the address when a span tag is clicked
   const handleSpanClick = (newAddress) => {
     setAddress(newAddress);
+  };
+
+  const handleDayBusTariffsClick = () => {
+    window.open(process.env.AWS_FILE_URL_DAY, "_blank", "noopener noreferrer");
+    console.log("AWS_FILE_URL_DAY:", process.env.AWS_FILE_URL_DAY);
+  };
+
+  const handleWeekendBusTariffsClick = () => {
+    window.open(
+      process.env.AWS_FILE_URL_WEEKEND,
+      "_blank",
+      "noopener noreferrer"
+    );
   };
 
   return (
@@ -212,22 +226,18 @@ export default function Transport() {
             </div>
             <div className="grid grid-wrap size_1-of-1 padding-bottom_large padding-top_large">
               <div className="size_1-of-1 medium-size_1-of-2">
-                <a
-                  href={process.env.AWS_FILE_URL_DAY}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Button variant="submit" label="Day Bus Tariffs" />
-                </a>
+                <Button
+                  variant="submit"
+                  label="Day Bus Tariffs"
+                  onClick={handleDayBusTariffsClick}
+                />
               </div>
               <div className="size_1-of-1 medium-size_1-of-2 padding-top_large medium-padding-top_none">
-                <a
-                  href={process.env.AWS_FILE_URL_WEEKEND}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Button variant="submit" label="Weekend Bus Tariffs" />
-                </a>
+                <Button
+                  variant="submit"
+                  label="Weekend Bus Tariffs"
+                  onClick={handleWeekendBusTariffsClick}
+                />
               </div>
             </div>
           </div>
