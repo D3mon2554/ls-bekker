@@ -4,6 +4,14 @@ import Button from "@/lib/ui/button/button";
 import Link from "next/link";
 
 export default function Applications() {
+  const handleHostelClick = () => {
+    window.open(
+      process.env.AWS_FILE_URL_HOSTEL_APPLICATION,
+      "_blank",
+      "noopener noreferrer"
+    );
+  };
+
   return (
     <>
       {/* Banner */}
@@ -110,9 +118,11 @@ export default function Applications() {
                     </p>
                   </div>
                   <div className="padding-top_large">
-                    <Link href="">
-                      <Button label="Apply Now" variant="submit" />
-                    </Link>
+                    <Button
+                      variant="submit"
+                      label="Apply Now"
+                      onClick={handleHostelClick}
+                    />
                   </div>
                 </div>
               </div>
@@ -158,9 +168,11 @@ export default function Applications() {
                     </p>
                   </div>
                   <div className="padding-top_large padding-bottom_large">
-                    <Link href="">
-                      <Button label="Apply Now" variant="submit" />
-                    </Link>
+                    <Button
+                      variant="submit"
+                      label="Apply Now"
+                      onClick={handleHostelClick}
+                    />
                   </div>
                 </div>
               </div>
@@ -207,9 +219,11 @@ export default function Applications() {
                     <ul>GR.R – R900.00 P/M</ul>
                   </div>
                   <div className="padding-top_large">
-                    <Link href="">
-                      <Button label="Apply Now" variant="submit" />
-                    </Link>
+                    <Button
+                      variant="submit"
+                      label="Apply Now"
+                      onClick={handleHostelClick}
+                    />
                   </div>
                 </div>
               </div>

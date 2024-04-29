@@ -8,16 +8,15 @@ import Map from "@/lib/ui/map/map";
 export default function Transport() {
   const initialAddress = "Laerskool Bekker Primary";
   const [address, setAddress] = useState(initialAddress);
-  const [pdfUrl, setPdfUrl] = useState(null);
 
-  // Handler function to update the address when a span tag is clicked
   const handleSpanClick = (newAddress) => {
     setAddress(newAddress);
   };
 
   const handleDayBusTariffsClick = () => {
-    window.open(process.env.AWS_FILE_URL_DAY, "_blank", "noopener noreferrer");
-    console.log("AWS_FILE_URL_DAY:", process.env.AWS_FILE_URL_DAY);
+    const url = process.env.AWS_FILE_URL_DAY;
+    console.log("AWS_FILE_URL_DAY", url);
+    window.open(url, "_blank", "noopener noreferrer");
   };
 
   const handleWeekendBusTariffsClick = () => {
@@ -209,19 +208,19 @@ export default function Transport() {
               <div className="font-size_x-medium font-weight_medium padding-top_large padding-bottom_medium">
                 <Link
                   style={{ textDecoration: "none", color: "#6a0911" }}
-                  href="mailto:${johan@hsbekker.co.za}"
+                  href={`mailto:johan@hsbekker.co.za`}
                 >
                   johan@hsbekker.co.za
                 </Link>
               </div>
 
               <div className="font-size_x-medium font-weight_medium">
-                <a
+                <Link
                   style={{ textDecoration: "none", color: "#6a0911" }}
-                  href="tel:${0828513745}"
+                  href={`tel:0828513745`}
                 >
                   082 851 3745
-                </a>
+                </Link>
               </div>
             </div>
             <div className="grid grid-wrap size_1-of-1 padding-bottom_large padding-top_large">

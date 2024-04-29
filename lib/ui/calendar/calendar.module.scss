@@ -152,12 +152,13 @@
   width: 2em; /* Adjust width for smaller screens */
   height: 2em; /* Adjust height for smaller screens */
   background: none;
-  border: none;
+  border: 1px solid #6a0911;
+  border-radius: 10px;
   font-size: 1.5rem;
   &:hover {
     background: #6a0911;
     color: #ffc82d;
-    border-radius: 10px;
+
     transition: ease-in-out 0.5s;
   }
 }
