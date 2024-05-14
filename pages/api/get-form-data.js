@@ -16,25 +16,25 @@ export default async function handler(req, res) {
       // Create S3 instance
       const s3 = new AWS.S3();
 
-      // Prepare params for getObject method
+      // Prepare params to list objects in the specified folder
       const params = {
         Bucket: process.env.AWS_BUCKET_NAME,
-        Key: `forms/day-scholar/${id}.json`, // Use ID to fetch the corresponding form data
+        Prefix: `forms/day-scholar/${id}/`, // Folder path based on ID
       };
 
-      // Fetch data from S3
-      const data = await s3.getObject(params).promise();
+      // Fetch list of objects (files) from S3
+      const data = await s3.listObjectsV2(params).promise();
 
-      // Parse the JSON data
-      const formData = JSON.parse(data.Body.toString("utf-8"));
+      // Extract file names from the list of objects
+      const fileNames = data.Contents.map((obj) => obj.Key.split("/").pop());
 
-      // Respond with the fetched form data
-      res.status(200).json(formData);
+      // Respond with the list of file names
+      res.status(200).json({ fileNames });
     } catch (error) {
-      console.error("Error fetching form data:", error);
+      console.error("Error fetching file names:", error);
       res
         .status(500)
-        .json({ success: false, message: "Failed to fetch form data" });
+        .json({ success: false, message: "Failed to fetch file names" });
     }
   } else {
     res.status(405).end(); // Method Not Allowed

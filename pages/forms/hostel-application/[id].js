@@ -7,6 +7,7 @@ import LearnerInformation from "@/lib/ui/day-scholar-form-components/learnerInfo
 import ContactPresentSchool from "@/lib/ui/day-scholar-form-components/learnerInformation/contactpresentschool";
 import MedicalInformation from "@/lib/ui/day-scholar-form-components/medical_information/medical_information";
 import Acknowledgement from "@/lib/ui/day-scholar-form-components/acknoledgement/acknowledgement";
+import HostelQuestions from "@/lib/ui/day-scholar-form-components/hostel-questions/hostel-questions";
 import { OurSchoolImage } from "@/lib/ui/images/images";
 import AWS from "aws-sdk";
 import Button from "@/lib/ui/button/button";
@@ -21,7 +22,7 @@ const FormDisplay = () => {
     const fetchFormData = async () => {
       try {
         const response = await fetch(
-          `https://lsbekker.s3.eu-north-1.amazonaws.com/forms/day-scholar/${id}/${id}.json`
+          `https://lsbekker.s3.eu-north-1.amazonaws.com/forms/hostel-application/${id}/${id}.json`
         );
         if (!response.ok) {
           throw new Error("Failed to fetch form data");
@@ -49,14 +50,14 @@ const FormDisplay = () => {
 
       const params = {
         Bucket: process.env.AWS_BUCKET_NAME,
-        Prefix: `forms/day-scholar/${id}/`,
+        Prefix: `forms/hostel-application/${id}/`,
       };
 
       const response = await s3.listObjectsV2(params).promise();
 
       if (response.Contents) {
         const urls = response.Contents.filter(
-          (obj) => obj.Key !== `forms/day-scholar/${id}/${id}.json`
+          (obj) => obj.Key !== `forms/hostel-application/${id}/${id}.json`
         ).map((obj) => {
           return `https://lsbekker.s3.eu-north-1.amazonaws.com/${obj.Key}`;
         });
@@ -123,7 +124,7 @@ const FormDisplay = () => {
       <div id="pdf-content" className="section">
         <div className="section-content grid grid-wrap grid-align_vertical-center">
           {/* Parent Details Mother */}
-          <div className="size_1-of-1  pdf-section">
+          <div className="size_1-of-1">
             <h1 className="color-maroon padding-top_large padding-bottom_large medium-padding-left_large ">
               Parent/Legal Guardian/Proxy Information
             </h1>
@@ -137,34 +138,53 @@ const FormDisplay = () => {
             />
           </div>
           {/* Parent Details Father */}
-          <div className="size_1-of-1 ">
+          <div>
             {formData.ParentDetailsMother.Information &&
-              (formData.ParentDetailsMother.Information.Status === "Parent" ||
-              formData.ParentDetailsMother.Information.IfNotParent === "Yes" ? (
-                <div className="pdf-section-before">
+              ((formData.ParentDetailsMother.Information.Status === "Parent" &&
+                formData.ParentDetailsMother.Information.MaterialStatus ===
+                  "Married") ||
+              formData.ParentDetailsMother.Information.IfNotParent === "Yes" ||
+              (formData.ParentDetailsMother.Information.Status === "Parent" &&
+                formData.ParentDetailsMother.Information.MaterialStatus ===
+                  "Divorced") ? (
+                <div>
                   <h1 className="color-maroon padding-top_large padding-bottom_large medium-padding-left_large ">
                     Parent Details
                   </h1>
                   <ParentDetailsFather
-                    data={formData.ParentDetailsFather.information}
-                    disabled={isFieldDisabled}
+                    data={formData.ParentDetailsFather}
+                    onDataChange={(field, value) =>
+                      handleFormChange(
+                        "ParentDetailsFather",
+                        "information",
+                        field,
+                        value
+                      )
+                    }
                   />
                   <AddressInformation
                     data={formData.ParentDetailsFather.AddressInformation}
-                    disabled={isFieldDisabled}
+                    onDataChange={(field, value) =>
+                      handleFormChange(
+                        "ParentDetailsFather",
+                        "AddressInformation",
+                        field,
+                        value
+                      )
+                    }
                   />
                 </div>
               ) : null)}
           </div>
           {/* LearnerInformation */}
-          <div className="size_1-of-1">
+          <div className="size_1-of-1 pdf-section">
             <LearnerInformation
               data={formData.LearnerInformation}
               disabled={isFieldDisabled}
             />
           </div>
           {/* MedicalInformation */}
-          <div className="size_1-of-1 pdf-section pdf-section-before">
+          <div className="size_1-of-1 pdf-section">
             <h1 className="color-maroon padding-top_xx-large">
               Medical Information
             </h1>
@@ -172,6 +192,17 @@ const FormDisplay = () => {
               data={formData.MedicalInformation.information}
               disabled={isFieldDisabled}
             />
+          </div>
+          <div className="">
+            <div className="size_1-of-1 padding-bottom_xx-large pdf-section">
+              <h1 className="color-maroon padding-top_large padding-bottom_large medium-padding-left_large ">
+                Additional Information
+              </h1>
+              <HostelQuestions
+                data={formData.HostelQuestions.information}
+                disabled={isFieldDisabled}
+              />
+            </div>
           </div>
           {/* ContactPresentSchool */}
           <div className="size_1-of-1">
@@ -181,7 +212,7 @@ const FormDisplay = () => {
             />
           </div>
           {/* Files */}
-          <div className="padding-bottom_xxx-large pdf-section-before pdf-section">
+          <div className="padding-bottom_xxx-large">
             <h1 className="color-maroon padding-top_xx-large">Files</h1>
             {fileUrls.map((url, index) => (
               <div className="padding-top_large" key={index}>

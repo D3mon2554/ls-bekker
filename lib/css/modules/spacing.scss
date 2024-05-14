@@ -70,3 +70,7 @@ $spacing_sizes: (
   list-style: none;
   padding: 0;
 }
+.pdf-section {
+  page-break-before: always;
+  page-break-after: always;
+}

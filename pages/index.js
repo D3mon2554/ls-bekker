@@ -44,7 +44,7 @@ export default function Home() {
             </div>
           </div>
           <div className="medium-padding-left_xx-large medium-padding-right_xx-large padding-right_large padding-left_large padding-top_x-large medium-size_4-of-8 grid grid-wrap grid-align_vertical-center">
-            <p className="color-secondary font-size_x-medium font-weight_regular">
+            <p className="color-secondary font-size-medium font-weight_regular">
               Welcome to Bekker Primary School!
               <br />
               <br />

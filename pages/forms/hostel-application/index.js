@@ -11,8 +11,9 @@ import AWS from "aws-sdk";
 import axios from "axios";
 import FileUpload from "@/lib/ui/form-elements/file-upload/file-upload";
 import { OurSchoolImage } from "@/lib/ui/images/images";
+import HostelQuestions from "@/lib/ui/day-scholar-form-components/hostel-questions/hostel-questions";
 
-export default function DayScholarApplication() {
+export default function HostelApplication() {
   const [fileNames, setFileNames] = useState([]);
   const [selectedFiles, setSelectedFiles] = useState([]);
   const [formData, setFormData] = useState({
@@ -146,7 +147,21 @@ export default function DayScholarApplication() {
         date: "",
       },
     },
+    HostelQuestions: {
+      information: {
+        academicachievements: "",
+        extramuralactivities: "",
+        object: "",
+        reasonforplacingchild: "",
+        medicalcontitions: "",
+        bedwetting: "",
+        medicine: "",
+        allergicmedicine: "",
+        allergicfood: "",
+      },
+    },
   });
+
   const handleFilesChange = (files) => {
     setSelectedFiles(files);
     const names = files.map((file) => file.name);
@@ -169,7 +184,7 @@ export default function DayScholarApplication() {
       // Prepare params for putObject method for saving form data
       const formDataParams = {
         Bucket: process.env.AWS_BUCKET_NAME,
-        Key: `forms/day-scholar/${id}/${id}.json`,
+        Key: `forms/hostel-application/${id}/${id}.json`,
         Body: JSON.stringify(data),
         ContentType: "application/json",
         ACL: "public-read",
@@ -184,7 +199,7 @@ export default function DayScholarApplication() {
       for (const file of files) {
         const fileParams = {
           Bucket: process.env.AWS_BUCKET_NAME,
-          Key: `forms/day-scholar/${id}/${file.name}`, // Use ID as part of the folder name
+          Key: `forms/hostel-application/${id}/${file.name}`, // Use ID as part of the folder name
           Body: file,
           ACL: "public-read",
         };
@@ -199,7 +214,7 @@ export default function DayScholarApplication() {
 
   // Function to generate the link
   const generateLink = (id) => {
-    return `${process.env.NEXT_PUBLIC_BASE_URL}/forms/day-scholar/${id}`;
+    return `${process.env.NEXT_PUBLIC_BASE_URL}/forms/hostel-application/${id}`;
   };
 
   const generateLinkAndSave = async () => {
@@ -464,6 +479,17 @@ export default function DayScholarApplication() {
                   field,
                   value
                 )
+              }
+            />
+          </div>
+          <div className="size_1-of-1 padding-bottom_xx-large">
+            <h1 className="color-maroon padding-top_large padding-bottom_large medium-padding-left_large ">
+              Additional Information
+            </h1>
+            <HostelQuestions
+              data={formData.HostelQuestions}
+              onDataChange={(field, value) =>
+                handleFormChange("HostelQuestions", "information", field, value)
               }
             />
           </div>

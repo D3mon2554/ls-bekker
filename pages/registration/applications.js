@@ -5,13 +5,11 @@ import Link from "next/link";
 
 export default function Applications() {
   const handleHostelClick = () => {
-    window.open(
-      process.env.AWS_FILE_URL_HOSTEL_APPLICATION,
-      "_blank",
-      "noopener noreferrer"
-    );
+    window.open("/forms/day-scholar");
   };
-
+  const handleSchoolClick = () => {
+    window.open("/forms/day-scholar");
+  };
   return (
     <>
       {/* Banner */}
@@ -118,11 +116,9 @@ export default function Applications() {
                     </p>
                   </div>
                   <div className="padding-top_large">
-                    <Button
-                      variant="submit"
-                      label="Apply Now"
-                      onClick={handleHostelClick}
-                    />
+                    <Link href="/forms/hostel-application">
+                      <Button variant="submit" label="Apply Now" />
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -168,11 +164,9 @@ export default function Applications() {
                     </p>
                   </div>
                   <div className="padding-top_large padding-bottom_large">
-                    <Button
-                      variant="submit"
-                      label="Apply Now"
-                      onClick={handleHostelClick}
-                    />
+                    <Link href="/forms/day-scholar">
+                      <Button variant="submit" label="Apply Now" />
+                    </Link>
                   </div>
                 </div>
               </div>
