@@ -80,11 +80,12 @@
 .calendarContainer {
   background-color: #ffffff;
   position: relative;
+  width: 100%;
 }
 
 .heading {
   text-align: left;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: bold;
   padding: 1rem;
 }
@@ -94,6 +95,11 @@
   grid-template-columns: repeat(7, 1fr);
   gap: 1rem;
   padding: 1rem;
+  @media screen and (max-width: 767px) {
+    width: 100%;
+    gap: 5px;
+    padding: 5px;
+  }
 }
 
 .weekday {
@@ -104,6 +110,12 @@
   align-items: center;
   display: flex;
   justify-content: center;
+  font-size: x-large;
+  @media screen and (max-width: 767px) {
+    width: 45px;
+    height: 45px;
+    font-size: xx-small;
+  }
 }
 
 .calendarDay {
@@ -112,7 +124,13 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  height: 5em; /* Adjust height for smaller screens */
+  height: 5em;
+  @media screen and (max-width: 767px) {
+    width: 45px;
+    height: 45px;
+    font-size: small;
+    padding: 0.2rem;
+  }
 }
 
 .dayNumber {
@@ -149,8 +167,8 @@
 
 .button {
   cursor: pointer;
-  width: 2em; /* Adjust width for smaller screens */
-  height: 2em; /* Adjust height for smaller screens */
+  width: 2.5em; /* Adjust width for smaller screens */
+  height: 2.5em; /* Adjust height for smaller screens */
   background: none;
   border: 1px solid #6a0911;
   border-radius: 10px;
@@ -160,11 +178,5 @@
     color: #ffc82d;
 
     transition: ease-in-out 0.5s;
-  }
-}
-@media screen and (max-width: 768px) {
-  .calendarContainer {
-    overflow: scroll;
-    scrollbar-width: 3px;
   }
 }

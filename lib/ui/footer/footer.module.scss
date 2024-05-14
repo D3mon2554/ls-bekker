@@ -67,3 +67,30 @@
   justify-content: center;
   align-items: center;
 }
+.info {
+  color: #ffffff;
+}
+.email {
+  &:hover {
+    cursor: pointer;
+    color: #ffc82d;
+    text-decoration: underline;
+  }
+}
+.footer {
+  position: relative;
+  background-color: #1d1d1d;
+  display: flex;
+  justify-content: center;
+}
+.mobileLogoContainer {
+  position: relative;
+  height: 200px;
+  width: 200px;
+}
+.mobileContent {
+  height: 200px;
+  width: 100%;
+  padding-top: 20px;
+  padding: 15px;
+}

@@ -2,7 +2,7 @@
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: ["drive.google.com"],
+    domains: ["drive.google.com", "lsbekker.s3.eu-north-1.amazonaws.com"],
   },
   env: {
     AWS_FILE_URL_DAY: process.env.AWS_FILE_URL_DAY,

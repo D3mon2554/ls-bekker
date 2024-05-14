@@ -282,7 +282,11 @@ $breakpoints: (
   }
 }
 .banner {
-  min-height: 500px;
+  position: relative;
+  height: 440px;
+  @media screen and (max-width: 768px) {
+    height: 300px;
+  }
 }
 .contentRightSmall {
   box-sizing: border-box;
@@ -308,6 +312,31 @@ $breakpoints: (
   position: relative;
   height: auto;
   @media screen and (max-width: 768px) {
+    height: 500px;
+  }
+}
+.BoardingSchool {
+  position: relative;
+  @media screen and (max-width: 768px) {
+    height: 400px;
+  }
+  @media screen and (min-width: 1023px) {
+    height: 750px;
+  }
+  @media screen and (min-width: 1440px) {
+    height: 550px;
+  }
+}
+.staff {
+  width: 100%;
+  position: relative;
+  @media screen and (max-width: 768px) {
+    height: 400px;
+  }
+  @media screen and (min-width: 1023px) {
+    height: 550px;
+  }
+  @media screen and (min-width: 1439px) {
     height: 500px;
   }
 }

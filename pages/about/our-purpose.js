@@ -51,10 +51,7 @@ export default function OurPurpose() {
               </p>
             </div>
           </div>
-          <div
-            className="banner size_1-of-1 medium-size_3-of-6"
-            style={{ position: "relative" }}
-          >
+          <div className="banner size_1-of-1 medium-size_3-of-6">
             <Image src="/img/school/excellence.png" alt="back to school" fill />
           </div>
         </div>

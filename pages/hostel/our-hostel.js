@@ -56,7 +56,7 @@ export default function OurHostel() {
             </p>
           </div>
         </div>
-        <div style={{ position: "relative", height: "400px" }}>
+        <div style={{ position: "relative", height: "300px" }}>
           <Image src="/img/hostel/hostelbathroom.PNG" alt="Bathroom" fill />
         </div>
       </div>
@@ -67,7 +67,7 @@ export default function OurHostel() {
             <h1 className="color-maroon padding-bottom_xx-large padding-top_large medium-padding-top_large">
               Why Choose Boarding School
             </h1>
-            <p className="font-size_x-medium">
+            <p className="font-size_x-medium padding-bottom_large medium-padding-bottom_none">
               There is a number of positive things to consider when making this
               decision The picturesque Magaliesburg Mountains allows our
               children to learn in a tranquil and safe environment. Our learners
@@ -89,18 +89,15 @@ export default function OurHostel() {
               honest and above reproach.
             </p>
           </div>
-          <div
-            className="size_1-of-1 medium-size_1-of-2 medium-padding-left_xxx-large"
-            style={{ position: "relative", minHeight: "600px" }}
-          >
+          <div className="size_1-of-1 medium-size_1-of-2 medium-padding-left_xxx-large BoardingSchool">
             <Image src="/img/hostel/hostellearners.jpg" alt="Hostel" fill />
           </div>
         </div>
       </div>
       {/* Staff */}
-      <div className="section grid grid-wrap grid-align_vertical-center">
+      <div className="section grid grid-wrap grid-align_vertical-center hide-mobile">
         <div className="medium-size_1-of-2 size_1-of-1 grid grid-align_horizontal-end">
-          <div style={{ width: "100%", height: "500px", position: "relative" }}>
+          <div className="staff">
             <Image
               src="/img/school/teachers/kitchenStaff.jpg"
               alt="Kitchen Staff"
@@ -128,6 +125,39 @@ export default function OurHostel() {
               chef adds a touch of sophistication to every meal prepared in our
               boarding school kitchen.
             </p>
+          </div>
+        </div>
+      </div>
+      <div className="section grid grid-wrap grid-align_vertical-center hide-desktop">
+        <div className=" size_1-of-1 medium-size_1-of-2">
+          <div className="medium-padding-left_xxx-large padding-left_medium padding-right_medium">
+            <h1 className="color-maroon padding-top_xxx-large padding-bottom_large">
+              Our Staff
+            </h1>
+            <p className="padding-bottom_large font-size_x-medium">
+              Welcome to the heart of our boarding school's culinary realm,
+              where an exceptional kitchen staff, led by a seasoned chef
+              recruited from a prestigious lodge, crafts a dining experience
+              like no other. The kitchen is not just a place to prepare meals;
+              it's a haven of culinary expertise and creativity.
+              <br />
+              <br />
+              At the helm of our kitchen is our esteemed chef, whose expertise
+              has been honed in the distinguished setting of a lodge known for
+              its gastronomic excellence. Bringing a wealth of experience,
+              innovative techniques, and a passion for high-quality cuisine, the
+              chef adds a touch of sophistication to every meal prepared in our
+              boarding school kitchen.
+            </p>
+          </div>
+        </div>
+        <div className="medium-size_1-of-2 size_1-of-1 grid grid-align_horizontal-end">
+          <div className="staff">
+            <Image
+              src="/img/school/teachers/kitchenStaff.jpg"
+              alt="Kitchen Staff"
+              fill
+            />
           </div>
         </div>
       </div>
