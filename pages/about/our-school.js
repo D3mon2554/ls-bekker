@@ -89,7 +89,7 @@ export default function OurSchool() {
           <div className="section-content grid grid-align_vertical-center">
             <OurSchoolImage color="#FFFFFF" width={450} height={200} />
             <div>
-              <h1 className="font-size_xxx-large">Welcome To</h1>
+              <h1 className="font-size_xx-large">Welcome To</h1>
               <h1 className="padding-top_medium">
                 the future of <span className="color-primary">education</span>
               </h1>

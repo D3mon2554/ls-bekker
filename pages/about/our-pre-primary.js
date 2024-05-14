@@ -28,7 +28,7 @@ export default function OurPreSchool() {
           <div className="section-content grid grid-align_vertical-center">
             <PurposeImages color="#FFF" width={450} height={214} />
             <div style={{ letterSpacing: "2px" }}>
-              <h1 className="font-size_xxx-large font-weight_black">
+              <h1 className="font-size_xx-large font-weight_black">
                 Welcome To
               </h1>
               <h1 className="font-size_x-large">

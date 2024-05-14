@@ -18,7 +18,7 @@ export default function Applications() {
           <div className="section-content grid grid-align_vertical-center">
             <PurposeImages color="#ffc82d" width={430} height={200} />
             <div style={{ letterSpacing: "1px" }}>
-              <h1 className="font-size_xxx-large font-weight_black padding-bottom_large">
+              <h1 className="font-size_xx-large font-weight_black padding-bottom_large">
                 Applications
               </h1>
               <p className="font-size_x-medium">

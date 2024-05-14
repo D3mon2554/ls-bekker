@@ -35,7 +35,7 @@ export default function Transport() {
           <div className="section-content grid grid-align_vertical-center">
             <PurposeImages color="#ffc82d" width={430} height={154} />
             <div style={{ letterSpacing: "2px" }}>
-              <h1 className="font-size_xxx-large font-weight_black padding-bottom_large">
+              <h1 className="font-size_xx-large font-weight_black padding-bottom_large">
                 Transport
               </h1>
               <p className="font-size_x-medium">

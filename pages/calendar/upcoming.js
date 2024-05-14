@@ -12,7 +12,7 @@ export default function Upcoming() {
           <div className="section-content grid grid-align_vertical-center">
             <PurposeImages color="#ffc82d" width={430} height={164} />
             <div style={{ letterSpacing: "2px" }}>
-              <h1 className="font-size_xxx-large font-weight_black">Events</h1>
+              <h1 className="font-size_xx-large font-weight_black">Events</h1>
               <p className="font-size_x-medium padding-top_xx-large">
                 For everything that is happening in our school, from holidays to
                 outdoor activities, we would like to keep you updated right here

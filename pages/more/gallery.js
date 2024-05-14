@@ -9,7 +9,7 @@ export default function Fees() {
           <div className="section-content grid grid-align_vertical-center">
             <NewsLetterImage color="#ffc82d" width={500} height={180} />
             <div style={{ letterSpacing: "1px" }}>
-              <h1 className="font-size_xxx-large font-weight_black padding-bottom_large">
+              <h1 className="font-size_xx-large font-weight_black padding-bottom_large">
                 Gallery
               </h1>
             </div>

@@ -52,7 +52,7 @@ export default function Contact() {
           <div className="section-content grid grid-align_vertical-center">
             <PurposeImages color="#ffc82d" width={400} height={224} />
             <div style={{ letterSpacing: "2px" }}>
-              <h1 className="font-size_xxx-large font-weight_black padding-bottom_large padding-left_xxx-large">
+              <h1 className="font-size_xx-large font-weight_black padding-bottom_large padding-left_xxx-large">
                 Contact Us
               </h1>
             </div>
