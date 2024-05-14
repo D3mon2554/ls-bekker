@@ -48,7 +48,8 @@ const ExtraActivitiesCard = [
       "Primary school revue, for ages 6 to 12, is a lively showcase of student talents, including singing, dancing, and skits. It fosters creativity, teamwork, and confidence in an inclusive and entertaining setting.",
   },
   {
-    image: "/img/sports/drama.jpg",
+    image:
+      "https://lsbekker.s3.eu-north-1.amazonaws.com/Files/img/sports/drama.JPG",
     title: "Drama",
     description:
       "Primary school drama, for ages 6 to 12, lets students explore creativity through acting and performance. It builds communication skills, self-confidence, and a love for the arts in a fun and supportive environment.",
