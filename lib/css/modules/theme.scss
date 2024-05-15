@@ -15,7 +15,7 @@ $default_theme: "light";
   --input-background-color: #ffffff;
   --input-color: #7e7f7f;
   --input-border: 1px solid #bbbbbb;
-  --color-input-error: #6a0911;
+  --color-input-error: #e20b1d;
   --input-border-radius: 1rem;
   --input-placeholder-color: #bbbbbb;
   --input-height: calc(var(--font-size-base) * 3);
@@ -57,6 +57,9 @@ body {
   &-white {
     color: var(--color-theme);
   }
+  &-error {
+    color: var(--color-input-error);
+  }
 }
 
 .landingContainer {
@@ -87,9 +90,23 @@ body {
     // background-image: none;
   }
 }
+.form {
+  background-color: #ebecec;
+  background-image: url(/img/registration/application.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  @media screen and (min-width: 768px) {
+    height: 80vh;
+  }
+  @media screen and (max-width: 1200px) {
+    // push the image to the right on a smaller screen
+    // background-image: none;
+  }
+}
 .prefect {
   background-color: #ebecec;
-  background-image: url(/img/banners/prefects1.jpg);
+  background-image: url(https://lsbekker.s3.eu-north-1.amazonaws.com/Files/img/banners/prefects.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

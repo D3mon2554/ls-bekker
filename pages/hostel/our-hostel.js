@@ -69,7 +69,7 @@ export default function OurHostel() {
             </h1>
             <p className="font-size_x-medium padding-bottom_large medium-padding-bottom_none">
               There is a number of positive things to consider when making this
-              decision The picturesque Magaliesburg Mountains allows our
+              decision. The picturesque Magaliesburg Mountains allows our
               children to learn in a tranquil and safe environment. Our learners
               are encouraged to be independent and self disciplined. A hostel is
               a place where strong, positive friendships are formed for life.

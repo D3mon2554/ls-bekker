@@ -10,7 +10,7 @@ import Button from "@/lib/ui/button/button";
 import AWS from "aws-sdk";
 import axios from "axios";
 import FileUpload from "@/lib/ui/form-elements/file-upload/file-upload";
-import { OurSchoolImage } from "@/lib/ui/images/images";
+import PurposeImages from "@/lib/ui/images/images";
 import HostelQuestions from "@/lib/ui/day-scholar-form-components/hostel-questions/hostel-questions";
 
 export default function HostelApplication() {
@@ -217,10 +217,59 @@ export default function HostelApplication() {
     return `${process.env.NEXT_PUBLIC_BASE_URL}/forms/hostel-application/${id}`;
   };
 
+  const generateEmailBody = (formData, link, formType) => {
+    const parentDetailsMotherInfo = formData.ParentDetailsMother?.Information;
+    const firstName = parentDetailsMotherInfo?.firstName;
+    const lastName = parentDetailsMotherInfo?.lastName;
+    const emailImageURL =
+      "https://lsbekker.s3.eu-north-1.amazonaws.com/Files/Email+.png";
+    const subject = "Hostel application Form";
+
+    // Construct the email body with HTML content and inline CSS styles
+    const emailBody = `
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Email Template</title>
+        <style>
+          body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+          }
+          .container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
+          }
+          img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 20px;
+          }
+        </style>
+      </head>
+      <body>
+        <div class="container">
+          <p>Good Day ${firstName} ${lastName},</p>
+          <p>Here is the link to your Form: <a href="${link}">${link}</a></p>
+          <p>If you have any questions, please feel free to contact us.</p>
+          <img src="${emailImageURL}" alt="email">
+        </div>
+      </body>
+      </html>
+    `;
+
+    return { subject, emailBody };
+  };
+
   const generateLinkAndSave = async () => {
     const parentDetailsMotherInfo = formData.ParentDetailsMother?.Information;
     const emailFromForm = parentDetailsMotherInfo?.Email;
-
     const id = parentDetailsMotherInfo?.IDNumber || "defaultId";
     const link = generateLink(id);
 
@@ -230,28 +279,33 @@ export default function HostelApplication() {
       generatedLink: link,
       fileNames: fileNames,
     };
-    await saveToS3(dataToSave, id, selectedFiles); // Pass the selected files here
 
     try {
+      // Save data to S3
+      await saveToS3(dataToSave, id, selectedFiles);
+
+      // Generate email subject and body using the function
+      const { subject, emailBody } = generateEmailBody(
+        formData,
+        link,
+        "Hostel"
+      );
+
       // Send email to API endpoint
       await axios.post("/api/send-email", {
         name: parentDetailsMotherInfo?.firstName,
         email: emailFromForm,
-        message: `Here is the link to the submitted form: ${link}`,
-        nature: "Submitted Form Link",
+        message: emailBody,
+        nature: subject,
         fileNames: fileNames,
       });
 
-      // Log the generated link and data
+      // Log the generated link
       console.log("Generated link:", link);
     } catch (error) {
       console.error("Error sending email:", error);
     }
   };
-
-  useEffect(() => {
-    console.log("Data to be saved:", formData);
-  }, [formData]);
 
   const handleFormChange = (parent, category, field, value, index) => {
     setFormData((prevFormData) => {
@@ -354,15 +408,23 @@ export default function HostelApplication() {
   };
   return (
     <>
-      <div className="section prefect">
-        <div className="cutout-section">
-          <div className="section-content grid grid-align_vertical-center">
-            <OurSchoolImage color="#FFFFFF" width={450} height={200} />
-            <div>
-              <h1 className="font-size_xxx-large">Welcome To</h1>
-              <h1 className="padding-top_medium">
-                the future of <span className="color-primary">education</span>
-              </h1>
+      <div className=" section form">
+        <div className="cutout-sectionLeft">
+          <div className="section-content grid grid-align_horizontal-end grid-align_vertical-center">
+            <div className="size_1-of-1 large-size_2-of-4 medium-padding-left_xx-large  medium-padding-bottom_xx-large">
+              <PurposeImages color="#FFC82D" width={380} height={180} />
+              <div className="size_1-of-1 padding-bottom_xx-large ">
+                <h1 className="font-size_xx-large font-family_futuraDemi">
+                  Apply Now
+                </h1>
+                <h2 className="font-size_x-large">for Hostel</h2>
+              </div>
+              <div className="size_1-of-1 padding-bottom_large">
+                <p className="padding-top_medium">
+                  Experience the future of{" "}
+                  <span className="color-primary">education</span> with us!
+                </p>
+              </div>
             </div>
           </div>
         </div>

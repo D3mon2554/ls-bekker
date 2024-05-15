@@ -21,8 +21,8 @@ export default async function handler(req, res) {
     const mailOptions = {
       from: process.env.FROM_EMAIL,
       to: [constantEmail, dynamicEmail],
-      subject: "Submitted Form Link",
-      text: message,
+      subject: nature,
+      html: message, // Use the HTML content for the email body
     };
 
     try {

@@ -8,7 +8,7 @@ import ContactPresentSchool from "@/lib/ui/day-scholar-form-components/learnerIn
 import MedicalInformation from "@/lib/ui/day-scholar-form-components/medical_information/medical_information";
 import Acknowledgement from "@/lib/ui/day-scholar-form-components/acknoledgement/acknowledgement";
 import HostelQuestions from "@/lib/ui/day-scholar-form-components/hostel-questions/hostel-questions";
-import { OurSchoolImage } from "@/lib/ui/images/images";
+import PurposeImages from "@/lib/ui/images/images";
 import AWS from "aws-sdk";
 import Button from "@/lib/ui/button/button";
 
@@ -109,14 +109,23 @@ const FormDisplay = () => {
   return (
     <>
       {/* Banner */}
-      <div className="section prefect">
-        <div className="cutout-section">
-          <div className="section-content grid grid-align_vertical-center">
-            <OurSchoolImage color="#FFFFFF" width={550} height={200} />
-            <div>
-              <h1 className="font-size_xx-large">
-                APPLICATION FOR ADMISSION TO SCHOOL
-              </h1>
+      <div className=" section form">
+        <div className="cutout-sectionLeft">
+          <div className="section-content grid grid-align_horizontal-end grid-align_vertical-center">
+            <div className="size_1-of-1 large-size_2-of-4 medium-padding-left_xx-large  medium-padding-bottom_xx-large">
+              <PurposeImages color="#FFC82D" width={380} height={180} />
+              <div className="size_1-of-1 padding-bottom_xx-large ">
+                <h1 className="font-size_xx-large font-family_futuraDemi">
+                  Apply Now
+                </h1>
+                <h2 className="font-size_x-large">for Hostel</h2>
+              </div>
+              <div className="size_1-of-1 padding-bottom_large">
+                <p className="padding-top_medium">
+                  Experience the future of{" "}
+                  <span className="color-primary">education</span> with us!
+                </p>
+              </div>
             </div>
           </div>
         </div>
