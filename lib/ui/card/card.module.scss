@@ -303,14 +303,14 @@
 
 .principalImage {
   position: relative;
-  width: 70%;
+  width: 90%;
   height: 500px;
   z-index: 5;
   @media screen and (max-width: 768px) {
     width: 100%;
   }
   @media screen and (min-width: 1025px) {
-    width: 50%;
+    width: 60%;
   }
 }
 .PrincipalImageFeetContainer {
@@ -320,12 +320,12 @@
   width: 120px;
   height: 220px;
   rotate: -35deg;
-  left: 65px;
+  left: 5px;
   @media screen and (max-width: 768px) {
     display: none;
   }
   @media screen and (min-width: 1025px) {
-    left: 215px;
+    left: 125px;
     bottom: 100px;
     width: 180px;
     height: 250px;

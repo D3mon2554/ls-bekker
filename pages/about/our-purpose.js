@@ -33,9 +33,9 @@ export default function OurPurpose() {
       </div>
       {/* About School */}
       <div className="section">
-        <div className="grid grid-wrap">
+        <div className="grid grid-wrap grid-align_horizontal-spread">
           <div
-            className="size_1-of-1  medium-size_2-of-4 "
+            className="size_1-of-1  medium-size_4-of-7 "
             style={{ backgroundColor: "#6a0911" }}
           >
             <div className="contentLeft padding-top_xx-large medium-padding-right_xxx-large">
@@ -51,7 +51,7 @@ export default function OurPurpose() {
               </p>
             </div>
           </div>
-          <div className="banner size_1-of-1 medium-size_3-of-6">
+          <div className="banner size_1-of-1 medium-size_3-of-7">
             <Image src="/img/school/excellence.png" alt="back to school" fill />
           </div>
         </div>

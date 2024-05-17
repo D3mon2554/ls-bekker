@@ -134,32 +134,32 @@ export default function Applications() {
                     <h1>School fees</h1>
                   </div>
                   <div className="padding-top_xx-large padding-bottom_large">
-                    <h3>Annual Fees R 12 540.00</h3>
+                    <h3>Annual Fees R 12 870.00</h3>
                   </div>
                   <div className="padding-bottom_large">
                     <p>
-                      Annually (before the end of Feb 2023) R 11 400. (10 %
+                      Annually (before the end of Feb 2024) R 11 700. (10 %
                       discount for advance payment)
                     </p>
                   </div>
                   <div>
                     <h3>Quarterly payments</h3>
-                    <ul>1st Quarter – R 3 420.00</ul>
-                    <ul>2nd Quarter – R 3 420.00</ul>
-                    <ul>3rd Quarter – R 3 420.00</ul>
-                    <ul>4th Quarter – R 2 280.00</ul>
+                    <ul>1st Quarter – R 3 510.00</ul>
+                    <ul>2nd Quarter – R 3 510.00</ul>
+                    <ul>3rd Quarter – R 3 510.00</ul>
+                    <ul>4th Quarter – R 2 340.00</ul>
                   </div>
-                  <div>
+                  {/* <div>
                     <h3 className="padding-bottom_large">Bi-Annually</h3>
                     <p className="padding-bottom_large">
                       R 6 270.00 payable 11 Jan. (Discount included)
                       <br />R 6 270.00 payable 7 June. (Discount included)
                     </p>
-                  </div>
+                  </div> */}
                   <div>
                     <h3 className="padding-bottom_large">Monthly payments</h3>
                     <p>
-                      Monthly payments of R 1 140.00 by EFT before the 7th of
+                      Monthly payments of R 1 170.00 by EFT before the 7th of
                       each month
                     </p>
                   </div>
@@ -213,11 +213,9 @@ export default function Applications() {
                     <ul>GR.R – R900.00 P/M</ul>
                   </div>
                   <div className="padding-top_large">
-                    <Button
-                      variant="submit"
-                      label="Apply Now"
-                      onClick={handleHostelClick}
-                    />
+                    <Link href="https://lsbekker.s3.eu-north-1.amazonaws.com/Files/ENROLMENT+FORM_2025.pdf">
+                      <Button variant="submit" label="Apply Now" />
+                    </Link>
                   </div>
                 </div>
               </div>

@@ -182,3 +182,32 @@
   font-size: 18px; /* Adjust the font size as needed */
   color: #6a0911;
 }
+.bannerContainer {
+  background-color: #6a0911;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bannerLink {
+  text-decoration: none;
+  padding: 20px;
+  color: #ffffff;
+  font-size: xx-large;
+  animation: flashColor 2s infinite;
+  &:hover {
+    color: #ffd70e;
+    text-decoration: underline;
+  }
+}
+@keyframes flashColor {
+  0% {
+    color: #ffffff; /* Start with white color */
+  }
+  50% {
+    color: #ffd70e; /* Flash to yellow color */
+  }
+  100% {
+    color: #ffffff; /* Return to white color */
+  }
+}

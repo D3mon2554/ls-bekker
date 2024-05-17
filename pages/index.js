@@ -36,14 +36,14 @@ export default function Home() {
           style={{ position: "relative" }}
         >
           <div
-            className="size_1-of-1 medium-size_1-of-2"
+            className="size_1-of-1 medium-size_3-of-7"
             style={{ backgroundColor: "#6a0911" }}
           >
             <div className="medium-padding-left_xx-large">
               <PrincipalCard />
             </div>
           </div>
-          <div className="medium-padding-left_xx-large medium-padding-right_xx-large padding-right_large padding-left_large padding-top_x-large medium-size_4-of-8 grid grid-wrap grid-align_vertical-center">
+          <div className="medium-padding-left_xx-large medium-padding-right_xx-large padding-right_large padding-left_large padding-top_x-large medium-size_4-of-7 grid grid-wrap grid-align_vertical-center">
             <p className="color-secondary font-size_x-medium font-weight_regular">
               Welcome to Bekker Primary School!
               <br />
@@ -144,7 +144,7 @@ export default function Home() {
       {/* school */}
       <div className="section">
         <div className=" medium-padding-left_xx-large">
-          <div className="grid grid-wrap padding-bottom_xx-large padding-top_xx-large ">
+          <div className="grid grid-wrap grid-align_horizontal-spread padding-bottom_xx-large padding-top_xx-large ">
             <div className="size_1-of-1 medium-size_1-of-2 grid grid-wrap grid-align_vertical-spread medium-padding-right_xxx-large padding-bottom_xx-large medium-padding-bottom_none padding-left_small padding-right_small">
               <div className="size_1-of-1 padding-top_xx-large">
                 <h1 className="font-size_x-large color-maroon">
@@ -172,7 +172,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="size_1-of-1 medium-size_1-of-2 image">
+            <div className=" images">
               <Image
                 src="/img/hostel/hostelluange.PNG"
                 alt="hostel luange"

@@ -85,9 +85,10 @@
 
 .heading {
   text-align: left;
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: bold;
   padding: 1rem;
+  color: #6a0911;
 }
 
 .gridContainer {
@@ -119,6 +120,7 @@
 }
 
 .calendarDay {
+  cursor: pointer;
   border: 1px solid #757575;
   padding: 1rem;
   display: flex;
@@ -130,6 +132,13 @@
     height: 45px;
     font-size: small;
     padding: 0.2rem;
+  }
+  &:hover {
+    background-color: #6a0911;
+    color: #fff;
+    .event {
+      color: #fff;
+    }
   }
 }
 
@@ -143,12 +152,8 @@
 }
 
 .event {
-  cursor: pointer;
   color: #6a0911;
   font-size: 1.5rem;
-  &:hover {
-    color: #ffc82d;
-  }
 }
 
 .navigation {

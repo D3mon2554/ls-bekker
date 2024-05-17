@@ -104,7 +104,6 @@ const FormDisplay = () => {
       console.error("html2pdf.js can only be used in the browser environment");
     }
   };
-  console.log(formData);
   return (
     <>
       {/* Banner */}
@@ -129,8 +128,33 @@ const FormDisplay = () => {
           </div>
         </div>
       </div>
+      {/* Form */}
       <div id="pdf-content" className="section">
         <div className="section-content grid grid-wrap grid-align_vertical-center">
+          {/* LearnerInformation */}
+          <div className="size_1-of-1">
+            <LearnerInformation
+              data={formData.LearnerInformation}
+              disabled={isFieldDisabled}
+            />
+          </div>
+          {/* MedicalInformation */}
+          <div className="size_1-of-1 pdf-section pdf-section-before">
+            <h1 className="color-maroon padding-top_xx-large">
+              Medical Information
+            </h1>
+            <MedicalInformation
+              data={formData.MedicalInformation.information}
+              disabled={isFieldDisabled}
+            />
+          </div>
+          {/* ContactPresentSchool */}
+          <div className="size_1-of-1">
+            <ContactPresentSchool
+              data={formData.ContactPresentSchool.Information}
+              disabled={isFieldDisabled}
+            />
+          </div>
           {/* Parent Details Mother */}
           <div className="size_1-of-1  pdf-section">
             <h1 className="color-maroon padding-top_large padding-bottom_large medium-padding-left_large ">
@@ -169,30 +193,6 @@ const FormDisplay = () => {
                   />
                 </div>
               ) : null)}
-          </div>
-          {/* LearnerInformation */}
-          <div className="size_1-of-1">
-            <LearnerInformation
-              data={formData.LearnerInformation}
-              disabled={isFieldDisabled}
-            />
-          </div>
-          {/* MedicalInformation */}
-          <div className="size_1-of-1 pdf-section pdf-section-before">
-            <h1 className="color-maroon padding-top_xx-large">
-              Medical Information
-            </h1>
-            <MedicalInformation
-              data={formData.MedicalInformation.information}
-              disabled={isFieldDisabled}
-            />
-          </div>
-          {/* ContactPresentSchool */}
-          <div className="size_1-of-1">
-            <ContactPresentSchool
-              data={formData.ContactPresentSchool.Information}
-              disabled={isFieldDisabled}
-            />
           </div>
           {/* Files */}
           <div className="padding-bottom_xxx-large pdf-section-before pdf-section">

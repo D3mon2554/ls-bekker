@@ -15,6 +15,7 @@ import PurposeImages from "@/lib/ui/images/images";
 export default function DayScholarApplication() {
   const [fileNames, setFileNames] = useState([]);
   const [selectedFiles, setSelectedFiles] = useState([]);
+  const [formErrors, setFormErrors] = useState({});
   const [formData, setFormData] = useState({
     ParentDetailsMother: {
       Information: {
@@ -153,7 +154,9 @@ export default function DayScholarApplication() {
     const firstName = parentDetailsMotherInfo?.firstName;
     const lastName = parentDetailsMotherInfo?.lastName;
     const emailImageURL =
-      "https://lsbekker.s3.eu-north-1.amazonaws.com/Files/Email+.png";
+      "https://lsbekker.s3.eu-north-1.amazonaws.com/Files/dayscholar_email.PNG";
+    const emailFooterUrl =
+      "https://lsbekker.s3.eu-north-1.amazonaws.com/Files/dayscholar_email_foot.PNG";
     const subject = "Day-Scholar application Form";
 
     // Construct the email body with HTML content and inline CSS styles
@@ -186,10 +189,12 @@ export default function DayScholarApplication() {
       </head>
       <body>
         <div class="container">
+        <img src="${emailImageURL}" alt="email">
           <p>Good Day ${firstName} ${lastName},</p>
+          <p>Thank you for your application.</p>
           <p>Here is the link to your Form: <a href="${link}">${link}</a></p>
-          <p>If you have any questions, please feel free to contact us.</p>
-          <img src="${emailImageURL}" alt="email">
+          <p>Please note that we will contact you within the next 48 hours to arrange an individual open day for you and your child.</p>
+          <img src="${emailFooterUrl}" alt="email">
         </div>
       </body>
       </html>
@@ -202,7 +207,6 @@ export default function DayScholarApplication() {
     setSelectedFiles(files);
     const names = files.map((file) => file.name);
     setFileNames(names);
-    console.log("File Names", fileNames);
   };
   // Function to save data to S3
   const saveToS3 = async (data, id, files) => {
@@ -229,8 +233,6 @@ export default function DayScholarApplication() {
       // Upload form data to S3
       await s3.putObject(formDataParams).promise();
 
-      console.log("Form data saved to S3 successfully.");
-
       // Iterate over each file and save it to S3
       for (const file of files) {
         const fileParams = {
@@ -241,7 +243,6 @@ export default function DayScholarApplication() {
         };
 
         await s3.putObject(fileParams).promise();
-        console.log(file);
       }
     } catch (error) {
       console.error("Error saving data to S3:", error);
@@ -291,9 +292,6 @@ export default function DayScholarApplication() {
         nature: subject,
         fileNames: fileNames,
       });
-
-      // Log the generated link
-      console.log("Generated link:", link);
     } catch (error) {
       console.error("Error sending email:", error);
     }
@@ -402,8 +400,21 @@ export default function DayScholarApplication() {
     // Define an array of required fields in the form
     const requiredFields = [
       "Acknowledgement.information.Name",
-
-      // Add more required fields here
+      "Acknowledgement.information.Surname",
+      "Acknowledgement.information.hereby",
+      "ParentDetailsMother.Information.firstName",
+      "ParentDetailsMother.Information.lastName",
+      "ParentDetailsMother.Information.RSACitizen",
+      "ParentDetailsMother.Information.IDNumber",
+      "ParentDetailsMother.Information.Email",
+      "ParentDetailsMother.Information.MaterialStatus",
+      "ParentDetailsMother.Information.Status",
+      "ParentDetailsMother.AddressInformation.HomePostal",
+      "ParentDetailsMother.AddressInformation.HomeCountry",
+      "ParentDetailsMother.AddressInformation.HomeProvince",
+      "ParentDetailsMother.AddressInformation.HomeCity",
+      "ParentDetailsMother.AddressInformation.HomeApartment",
+      "ParentDetailsMother.AddressInformation.homeAddress",
     ];
 
     let isValid = true;
@@ -428,14 +439,41 @@ export default function DayScholarApplication() {
         }));
 
         isValid = false;
+      } else {
+        // Clear error message if field is valid
+        setFormData((prevFormData) => ({
+          ...prevFormData,
+          [parent]: {
+            ...prevFormData[parent],
+            [category]: {
+              ...prevFormData[parent][category],
+              [`${field}_error`]: "", // Clear error message
+            },
+          },
+        }));
       }
     });
+
+    // Check if files are selected and the amount is not less than 4
+    if (selectedFiles.length < 4) {
+      setFormErrors((prevErrors) => ({
+        ...prevErrors,
+        selectedFiles: "Please upload at least 4 files.",
+      }));
+      isValid = false;
+    } else {
+      setFormErrors((prevErrors) => ({
+        ...prevErrors,
+        selectedFiles: "", // Clear error message if files are sufficient
+      }));
+    }
 
     return isValid;
   };
 
   return (
     <>
+      {/* Banner */}
       <div className=" section form">
         <div className="cutout-sectionLeft">
           <div className="section-content grid grid-align_horizontal-end grid-align_vertical-center">
@@ -457,10 +495,11 @@ export default function DayScholarApplication() {
           </div>
         </div>
       </div>
-      {/* ParentDetailsMother */}
+      {/* Form */}
       <div className="section">
         <div className="section-content grid grid-wrap grid-align_vertical-center">
-          <div className="">
+          {/* Learner Information */}
+          <div className="padding-top_xx-large">
             <LearnerInformation
               data={formData.LearnerInformation}
               onDataChange={(index, field, value) =>
@@ -476,7 +515,22 @@ export default function DayScholarApplication() {
               onRemoveLearner={removeLearner}
             />
           </div>
-          <div className="padding-top_xxx-large">
+          {/* Contact Present School  */}
+          <div className="size_1-of-1">
+            <ContactPresentSchool
+              data={formData.ContactPresentSchool}
+              onDataChange={(field, value) =>
+                handleFormChange(
+                  "ContactPresentSchool",
+                  "Information",
+                  field,
+                  value
+                )
+              }
+            />
+          </div>
+          {/* Medical Information */}
+          <div className="">
             <h1 className="color-maroon padding-top_large padding-bottom_large medium-padding-left_large ">
               Medical Information
             </h1>
@@ -492,12 +546,13 @@ export default function DayScholarApplication() {
               }
             />
           </div>
-          <div>
+          {/* Parent/Legal Guardian/Proxy Information */}
+          <div className="padding-top_xx-large">
             <h1 className="color-maroon padding-top_large padding-bottom_large medium-padding-left_large ">
               Parent/Legal Guardian/Proxy Information
             </h1>
             <ParentDetailsMother
-              data={formData.ParentDetailsMother}
+              data={formData.ParentDetailsMother.Information}
               onDataChange={(field, value) =>
                 handleFormChange(
                   "ParentDetailsMother",
@@ -519,9 +574,8 @@ export default function DayScholarApplication() {
               }
             />
           </div>
+          {/* Parent details father */}
           <div>
-            {/* Parent details father */}
-
             {formData.ParentDetailsMother.Information &&
               ((formData.ParentDetailsMother.Information.Status === "Parent" &&
                 formData.ParentDetailsMother.Information.MaterialStatus ===
@@ -559,24 +613,12 @@ export default function DayScholarApplication() {
                 </div>
               ) : null)}
           </div>
-          <div className="size_1-of-1">
-            <ContactPresentSchool
-              data={formData.ContactPresentSchool}
-              onDataChange={(field, value) =>
-                handleFormChange(
-                  "ContactPresentSchool",
-                  "Information",
-                  field,
-                  value
-                )
-              }
-            />
-          </div>
         </div>
       </div>
       <div className="section">
         <div className="section-content">
-          <div>
+          {/* Documents */}
+          <div className="padding-top_large">
             <h1 className="color-maroon padding-bottom_large">
               Please submit the following documents
             </h1>
@@ -584,9 +626,12 @@ export default function DayScholarApplication() {
             <li>Copy of Birth Certificate.</li>
             <li>Progress Report from Previous School.</li>
             <li>Transfer Letter from Previous School</li>
-
-            <FileUpload label="" onFilesChange={handleFilesChange} />
+            {formErrors.selectedFiles && (
+              <div style={{ color: "red" }}>{formErrors.selectedFiles}</div>
+            )}
+            <FileUpload onFilesChange={handleFilesChange} />
           </div>
+          {/* Acknowledgement */}
           <div className="size_1-of-1">
             <Acknowledgement
               data={formData.Acknowledgement.information}

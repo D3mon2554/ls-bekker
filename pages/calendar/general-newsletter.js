@@ -10,7 +10,7 @@ export default function NewsLetter() {
             <NewsLetterImage color="#ffc82d" width={500} height={180} />
             <div style={{ letterSpacing: "1px" }}>
               <h1 className="font-size_xx-large font-weight_black padding-bottom_large">
-                News Letter
+                Newsletter
               </h1>
               <p>
                 We are thrilled to welcome you to our monthly newsletter, where

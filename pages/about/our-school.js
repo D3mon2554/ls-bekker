@@ -141,12 +141,12 @@ export default function OurSchool() {
             </div>
 
             <p className=" size_1-of-1 padding-top_large padding-bottom_large font-size_x-medium font-weight_regular large-size_4-of-5">
-              Distinct English and Afrikaans classes guarantee that your
-              children receive education in their preferred language. We adhere
-              to the CAPS curriculum, ensuring a comprehensive and structured
-              learning experience. Introducing innovative subjects, such as
-              Robotics, reflects our commitment to staying at the forefront of
-              education.
+              We offer English and Afrikaans classes, and provide parallel
+              medium education for Grade 1 to 3, with dual medium education for
+              Grade 4 to 7. We adhere to the CAPS curriculum, ensuring a
+              comprehensive and structured learning experience. Introducing
+              innovative subjects, such as Robotics, reflects our commitment to
+              staying at the forefront of education.
             </p>
             <p className=" size_1-of-1 padding-top_large padding-bottom_large font-size_x-medium font-weight_regular large-size_4-of-5">
               Our well-equipped classrooms provide an optimal environment for
@@ -166,9 +166,9 @@ export default function OurSchool() {
         </div>
       </div>
       <div className="section" style={{ backgroundColor: "#6a0911" }}>
-        <div className="grid grid-wrap contentRightSmall">
+        <div className="grid grid-wrap grid-align_horizontal-spread contentRightSmall">
           <div
-            className="size_1-of-1 medium-size_1-of-2"
+            className="size_1-of-1 medium-size_3-of-7"
             style={{ position: "relative", height: "350px" }}
           >
             <Image
@@ -195,7 +195,7 @@ export default function OurSchool() {
             </div>
           </div>
         </div>
-        <div className="grid grid-wrap contentLeftSmall hide-mobile">
+        <div className="grid grid-wrap grid-align_horizontal-spread contentLeftSmall hide-mobile">
           <div className="size_1-of-1 medium-size_1-of-2 grid grid-align_vertical-center padding-top_large medium-padding-top_none">
             <div className="large-padding-right_xx-large  medium-padding-right_large ">
               <div>
@@ -212,7 +212,7 @@ export default function OurSchool() {
           </div>
           <div
             className="size_1-of-1 medium-size_1-of-2"
-            style={{ position: "relative", height: "350px" }}
+            style={{ position: "relative", height: "400px" }}
           >
             <Image
               src="https://lsbekker.s3.eu-north-1.amazonaws.com/Files/img/subjects/Robotics.jpg"

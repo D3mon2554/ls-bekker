@@ -9,8 +9,8 @@ const HostelNewsletterPage = () => {
           <div className="section-content grid grid-align_vertical-center">
             <NewsLetterImage color="#ffc82d" width={500} height={170} />
             <div style={{ letterSpacing: "1px" }}>
-              <h1 className="font-size_xx-large font-weight_black padding-bottom_large">
-                Hostel News Letter
+              <h1 className="font-size_xx-large font-weight_black padding-bottom_large padding-top_x-large">
+                Hostel Newsletter
               </h1>
               <p>
                 We are thrilled to welcome you to our monthly newsletter, where

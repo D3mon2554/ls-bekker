@@ -4,6 +4,7 @@ import Image from "next/image";
 import Button from "@/lib/ui/button/button";
 import Link from "next/link";
 import Map from "@/lib/ui/map/map";
+import TaxiDetails from "@/lib/ui/taxiRoutes/taxi-details";
 
 export default function Transport() {
   const initialAddress = "Laerskool Bekker Primary";
@@ -49,7 +50,7 @@ export default function Transport() {
       {/* Who provides the service */}
       <div className="section  grid grid-wrap grid-align_vertical-center">
         <div className=" medium-padding-left_xxx-large medium-padding-right_xxx-large padding-left_medium padding-right_medium">
-          <div className=" size_1-of-1  padding-bottom_xxx-large color-maroon">
+          <div className=" size_1-of-1  padding-bottom_xxx-large color-maroon padding-top_xxx-large">
             <h1>
               BEKKER PRIMARY BUS SERVICES ARE BEING ADMINISTRATED BY BEKKER HIGH
               SCHOOL
@@ -191,6 +192,15 @@ export default function Transport() {
             </div>
           </div>
         </div>
+      </div>
+      {/* Taxi Routes and Contact Details */}
+      <div className="section">
+        <div className="section-content">
+          <div className="padding-top_xx-large padding-bottom_xx-large">
+            <h1 className="color-maroon">Taxi Details and Routes</h1>
+          </div>
+        </div>
+        <TaxiDetails />
       </div>
       {/* Route Enquiries */}
       <div className="size_1-of-1 medium-padding-left_xxx-large ">
