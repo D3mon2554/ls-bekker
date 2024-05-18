@@ -280,7 +280,7 @@ export default function Applications() {
                   <h3>Type of Account:</h3>
                   <p className="padding-bottom_large">Cheque Account</p>
                   <h3>Account Number:</h3>
-                  <p className="padding-bottom_large">101 5800 158</p>
+                  <p className="padding-bottom_large">101 5780 157</p>
                   <h3>Branch code:</h3>
                   <p className="padding-bottom_large">630241</p>
                   <h3>Reference Information:</h3>
