@@ -5,7 +5,7 @@ export default async function handler(req, res) {
     const { name, email, message, nature } = req.body;
 
     // Email addresses
-    const constantEmail = "school@lsbekker.co.za";
+    const constantEmail = "info@lsbekker.co.za";
     const dynamicEmail = email;
 
     // Create a Nodemailer transporter
