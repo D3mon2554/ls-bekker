@@ -17,6 +17,7 @@ export default function HostelApplication() {
   const [fileNames, setFileNames] = useState([]);
   const [selectedFiles, setSelectedFiles] = useState([]);
   const [formErrors, setFormErrors] = useState({});
+  const [submissionStatus, setSubmissionStatus] = useState("");
   const [formData, setFormData] = useState({
     ParentDetailsMother: {
       Information: {
@@ -299,15 +300,17 @@ export default function HostelApplication() {
       );
 
       // Send email to API endpoint
-      await axios.post("/api/send-email", {
+      await axios.post("/api/send-email-hostel", {
         name: parentDetailsMotherInfo?.firstName,
         email: emailFromForm,
         message: emailBody,
         nature: subject,
         fileNames: fileNames,
       });
+      setSubmissionStatus("success");
     } catch (error) {
       console.error("Error sending email:", error);
+      setSubmissionStatus("error");
     }
   };
 
@@ -676,6 +679,20 @@ export default function HostelApplication() {
             onClick={generateLinkAndSave}
           />
         </div>
+        {submissionStatus === "success" && (
+          <div className="section-content padding-around_large padding-top_xx-large padding-bottom_xx-large">
+            <p className="font-size_large" style={{ color: "green" }}>
+              Form submitted successfully!
+            </p>
+          </div>
+        )}
+        {submissionStatus === "error" && (
+          <div className="section-content padding-around_large padding-top_xx-large padding-bottom_xx-large">
+            <p className="font-size_large" style={{ color: "red" }}>
+              Failed to submit form. Please try again.
+            </p>
+          </div>
+        )}
       </div>
     </>
   );
