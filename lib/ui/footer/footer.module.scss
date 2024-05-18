@@ -1,17 +1,96 @@
-.footer {
-  background-color: #131313;
+.container {
+  position: relative;
+  background-color: #1d1d1d;
+  box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.575);
+  z-index: 5;
+  display: flex;
 }
-
-.home {
+.containerContent {
+  position: relative;
+  height: 520px;
+  width: 50%;
+}
+.logoContainer {
+  position: relative;
+  width: 352px;
+  height: 352px;
+  top: 80px;
+  left: 0px;
+}
+.footprintsContainer {
+  position: relative;
+  width: 600px;
+  height: 314.42px;
+  z-index: -1;
+  top: -210px;
+  left: 10px;
+  @media screen and (max-width: 1024px) {
+    width: 500px;
+  }
+}
+.containerText {
+  position: relative;
+  width: 50%;
+  display: flex;
+}
+.infoContainer {
+  position: relative;
+  width: 50%;
+  height: 405px;
+  top: 114px;
+  border-right: 2px #ffc82d solid;
+}
+.linksContainer {
+  position: relative;
+  width: 50%;
+  top: 114px;
+  padding-left: 50px;
+  height: 405px;
+}
+.link {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.links {
   text-decoration: none;
   color: #ffffff;
   &:hover {
-    color: #206fa1;
+    color: #ffc82d;
+    text-decoration: underline;
   }
-  &:active {
-    color: #206fa1;
+}
+.socials {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.info {
+  color: #ffffff;
+}
+.email {
+  &:hover {
+    cursor: pointer;
+    color: #ffc82d;
+    text-decoration: underline;
   }
-  &:focus {
-    color: #206fa1;
-  }
+}
+.footer {
+  position: relative;
+  background-color: #1d1d1d;
+  display: flex;
+  justify-content: center;
+}
+.mobileLogoContainer {
+  position: relative;
+  height: 200px;
+  width: 200px;
+}
+.mobileContent {
+  height: 200px;
+  width: 100%;
+  padding-top: 20px;
+  padding: 15px;
 }

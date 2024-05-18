@@ -4,8 +4,8 @@
 }
 
 .addressContainer .input {
-  background-color: none;
-  border: none;
+  background-color: var(--input-background-color);
+  border: var(--input-border);
   border-radius: var(--input-border-radius);
   color: var(--input-color);
   display: block;

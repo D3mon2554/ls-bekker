@@ -26,14 +26,14 @@
       "@multiselect-dropdown/*":["./lib/ui/form-elements/multiselect-dropdown/*"],
       "@number":["./lib/ui/form-elements/number"],
       "@number/*":["./lib/ui/form-elements/number/*"],
-      "@select-dropdown":["./lib/ui/form-elements/select-dropdown"],
-      "@select-dropdown/*":["./lib/ui/form-elements/select-dropdown/*"],
       "@submit":["./lib/ui/form-elements/submit"],
       "@submit/*":["./lib/ui/form-elements/submit/*"],
-      "@text-input":["./lib/ui/form-elements/text-input"],
-      "@text-input/*":["./lib/ui/form-elements/text-input/*"],
+      "@text":["./lib/ui/form-elements/text"],
+      "@text/*":["./lib/ui/form-elements/text/*"],
       "@textarea":["./lib/ui/form-elements/textarea"],
       "@textarea/*":["./lib/ui/form-elements/textarea/*"],
+      "@select":["././lib/ui/form-elements/select"],
+      "@select/*":["././lib/ui/form-elements/select/*"]
     }
   }
 }

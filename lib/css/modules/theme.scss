@@ -1,11 +1,11 @@
 $default_theme: "light";
 @mixin colorVariables($color_scheme: $default_theme) {
   @if $color_scheme == "light" {
-    --color-primary: #1ca1da;
-    --color-secondary: #206fa1;
-    --color-font-default: #7e7f7f;
-    --color-font-test: #5b5b5b;
-    --color-font-secondary: #bbbbbb;
+    --color-primary: #6a0911;
+    --color-secondary: #ffc82d;
+    --color-font-default: #5d5d5d;
+    --color-font-test: #707070;
+    --color-font-secondary: #3f3e3e;
     --color-theme: #ffffff;
     --color-theme-inverse: #121315;
   }
@@ -15,7 +15,7 @@ $default_theme: "light";
   --input-background-color: #ffffff;
   --input-color: #7e7f7f;
   --input-border: 1px solid #bbbbbb;
-  --color-input-error: #990223;
+  --color-input-error: #e20b1d;
   --input-border-radius: 1rem;
   --input-placeholder-color: #bbbbbb;
   --input-height: calc(var(--font-size-base) * 3);
@@ -35,7 +35,7 @@ $default_theme: "light";
 html,
 body {
   background-color: var(--page-background-color);
-  color: var(--color-font-test);
+  color: var(--color-font-default);
   height: 100%;
   transition: background-color 0.1s linear;
   width: 100%;
@@ -49,7 +49,7 @@ body {
     color: var(--color-font-default);
   }
   &-maroon {
-    color: var(--color-input-error);
+    color: var(--color-primary);
   }
   &-darkGray {
     color: var(--color-font-test);
@@ -57,13 +57,16 @@ body {
   &-white {
     color: var(--color-theme);
   }
+  &-error {
+    color: var(--color-input-error);
+  }
 }
 
 .landingContainer {
-  background-color: #ebecec;
-  background-image: url(/img/banners/school.webp);
+  background-color: #ffffff;
+  background-image: url(/img/banners/hostellearners.jpg);
   background-size: cover;
-  // background-position: center;
+  background-position: center;
   background-repeat: no-repeat;
   @media screen and (min-width: 768px) {
     height: 80vh;
@@ -75,7 +78,21 @@ body {
 }
 .aboutBanner {
   background-color: #ebecec;
-  background-image: url(/img/banners/fundraiser.webp);
+  background-image: url(/img/banners/purposebanner.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  @media screen and (min-width: 768px) {
+    height: 80vh;
+  }
+  @media screen and (max-width: 1200px) {
+    // push the image to the right on a smaller screen
+    // background-image: none;
+  }
+}
+.form {
+  background-color: #ebecec;
+  background-image: url(/img/registration/application.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -89,9 +106,19 @@ body {
 }
 .prefect {
   background-color: #ebecec;
-  background-image: url(/img/banners/prefect.webp);
+  background-image: url(https://lsbekker.s3.eu-north-1.amazonaws.com/Files/img/banners/prefects.jpg);
   background-size: cover;
-  // background-position: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  @media screen and (min-width: 768px) {
+    height: 80vh;
+  }
+}
+.hostel {
+  background-color: #ebecec;
+  background-image: url(/img/hostel/hostelluange.PNG);
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   @media screen and (min-width: 768px) {
     height: 80vh;
@@ -103,7 +130,21 @@ body {
 }
 .hostel {
   background-color: #ebecec;
-  background-image: url(/img/hostel/hostel2.webp);
+  background-image: url(/img/hostel/wheredreams.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  @media screen and (min-width: 768px) {
+    height: 80vh;
+  }
+  @media screen and (max-width: 1200px) {
+    // push the image to the right on a smaller screen
+    // background-image: none;
+  }
+}
+.transport {
+  background-color: #ebecec;
+  background-image: url(/img/banners/schoolbus.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -117,7 +158,7 @@ body {
 }
 .prePrimary {
   background-color: #ebecec;
-  background-image: url(/img/banners/preprimary.webp);
+  background-image: url(/img/banners/bekkerbekkies.jpg);
   background-size: cover;
   // background-position: center;
   background-repeat: no-repeat;
@@ -129,7 +170,20 @@ body {
     // background-image: none;
   }
 }
-
+.events {
+  background-color: #ebecec;
+  background-image: url(/img/sports/teamspirirt2.jpg);
+  background-size: cover;
+  // background-position: center;
+  background-repeat: no-repeat;
+  @media screen and (min-width: 768px) {
+    height: 80vh;
+  }
+  @media screen and (max-width: 1200px) {
+    // push the image to the right on a smaller screen
+    // background-image: none;
+  }
+}
 .welcomeMessage {
   width: 700px;
   height: 300px;
@@ -141,10 +195,16 @@ body {
     height: 160px;
   }
 }
-.image {
+.images {
   position: relative;
   height: 450px;
-  width: 100%;
+  width: 50%;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+  @media screen and (min-width: 1439px) {
+    width: 40%;
+  }
 }
 .image2 {
   position: relative;
@@ -153,15 +213,90 @@ body {
 }
 .image3 {
   position: relative;
-  height: 500px;
-  width: 100%;
+  height: 480px;
+  width: 420px;
+  margin-left: 30%;
   @media screen and (max-width: 768px) {
-    height: 400px;
+    margin-left: 0%;
   }
 }
 .borderLine {
   border-left: #ffffff 2px solid;
+  @media screen and (max-width: 768px) {
+    border: none;
+  }
 }
 .carousel {
   border-radius: 20px;
+}
+.background {
+  position: relative;
+  background-color: #ffffff;
+}
+.background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(/img/banners/footprints.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.2;
+  background-color: #ffffff;
+}
+.FormContainer {
+  background-color: #ebecec;
+  background-image: url(/img/logos/logobanner.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #6a0911;
+}
+.testing {
+  background-color: #f4eeee;
+}
+.custom-list {
+  list-style-type: none; /* Remove default bullet points */
+  padding-left: 20px; /* Add padding for the custom image */
+}
+
+.custom-list li {
+  position: relative;
+  padding-left: 30px; /* Adjust the padding based on your image size */
+  margin-bottom: 10px; /* Add some space between items */
+}
+
+.custom-list li::before {
+  content: "";
+  position: absolute;
+  background: url("/img/icons/footprints/onefootprintred.png") no-repeat; /* Replace with your image path */
+  width: 200px; /* Set the width of your custom image */
+  height: 200px; /* Set the height of your custom image */
+  left: -110px;
+  top: -60px;
+  transform: translateY(-50%);
+  scale: 0.2;
+  rotate: 50deg;
+}
+.line {
+  width: 50px;
+  border-bottom: #6a0911 4px solid;
+}
+.cursor {
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.pictureHeight {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  @media screen and (max-width: 768px) {
+    height: 500px;
+  }
 }

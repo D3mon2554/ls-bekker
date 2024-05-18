@@ -1,0 +1,27 @@
+.tableContainer {
+  position: relative;
+  width: 100%;
+}
+.tableHead {
+  width: 100%;
+  background-color: #6a0911;
+  height: 85px;
+}
+.headContent {
+  text-align: center;
+  color: #fff;
+  font-size: larger;
+  @media screen and (max-width: 768px) {
+    font-size: medium;
+  }
+}
+.tableBody {
+  background-color: #707070;
+}
+.list {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  list-style-type: none;
+  margin: 0px;
+  padding-left: 0px;
+}

@@ -65,7 +65,7 @@
   background-color: #ffffff;
   border-radius: 20px;
   box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, 0.39);
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     width: 100%;
     height: 700px;
   }
@@ -74,79 +74,124 @@
   position: relative;
   width: 50%;
   height: 350px;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     width: 100%;
     height: 300px;
   }
 }
 .cardContent {
   width: 50%;
-  height: 300px;
-  @media screen and (max-width: 768px) {
+
+  @media screen and (max-width: 1024px) {
     width: 100%;
     padding-top: 50px;
     height: 400px;
   }
 }
 .cardTitle {
-  align-items: center;
-  display: flex;
-  height: 20%;
   color: maroon;
 }
 
 .image {
   border-bottom-left-radius: 20px;
   border-top-left-radius: 20px;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 0px;
   }
 }
+.cardDescription {
+  width: 100%;
+  font-size: small;
+}
 
 //SportsCards
 .SportshoverCardContainer {
   position: relative;
-  height: 450px;
-  width: 400px;
+  height: 300px;
+  width: 300px;
   box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, 0.5);
   overflow: hidden;
   border-radius: 30px;
+  cursor: pointer;
   @media screen and (max-width: 768px) {
     width: 100%;
 
     .SportshoverCardImageContainer {
-      height: 70%;
+      height: 100%;
+      opacity: 0.7;
+      transition: ease-out 0.5s;
+      position: relative;
+      top: 0%;
+      z-index: -1;
     }
+
     .SportshoverCardContent {
-      height: 30%;
+      height: 100%;
+      opacity: 1;
+      transition: ease-in 0.5s;
+      position: absolute;
+      z-index: 1;
+      background-color: #19191973;
+    }
+  }
+  @media screen and (min-width: 1026px) {
+    height: 300px;
+    width: 440px;
+  }
+  &:hover {
+    .SportshoverCardImageContainer {
+      height: 100%;
+      opacity: 0.7;
+      transition: ease-out 0.5s;
+      position: relative;
+      top: 0%;
+      z-index: -1;
+    }
+
+    .SportshoverCardContent {
+      height: 100%;
+      opacity: 1;
+      transition: ease-in 0.5s;
+      position: absolute;
+      z-index: 1;
+      background-color: #19191973;
     }
   }
 }
+
 .SportshoverCardImageContainer {
   position: relative;
   width: 100%;
-  height: 70%;
+  height: 100%;
 }
+
 .SportshoverCardContent {
-  padding: 10px;
-  background-color: #ffffff;
+  padding: 15px;
+
   position: relative;
   width: 100%;
-  height: 30%;
+
   text-align: center;
-  top: 40px;
+  top: 0px;
+
   @media screen and (max-width: 768px) {
     padding: 10px;
     padding-left: none;
   }
 }
+
 .SportshoverCardImage {
   height: 100%;
   width: 100%;
   border-top-right-radius: 30px;
   border-top-left-radius: 30px;
+}
+
+.sortsHoverCardDescription {
+  padding-top: 5%;
+  transition: ease-in-out 1s;
 }
 
 //MessageCard
@@ -192,20 +237,292 @@
 
 // Teacher Card
 .teacherContainer {
-  width: 200px;
-  height: 250px;
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+.teacherImageContainer {
+  position: relative;
+  border-radius: 20px;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (min-width: 1025px) {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
 }
 .teacherImage {
   position: relative;
-  border-radius: 100%;
-  width: 150px;
-  height: 150px;
-
-  background-size: cover;
-  background-repeat: no-repeat;
+  border-radius: 20px;
+  width: 80%;
+  height: 300px;
+  @media screen and (min-width: 1025px) {
+    width: 250px;
+  }
 }
-.teacherSlogan {
-  display: block;
-  justify-content: center;
-  align-items: center;
+
+.teacherFootprintImageContainer {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  right: 10px;
+  bottom: 50px;
+  @media screen and (max-width: 426px) {
+    bottom: 50px;
+  }
+  @media screen and (min-width: 1025px) {
+    right: 80px;
+  }
+}
+.teacherFootprintImage {
+  width: 70px;
+  height: 70px;
+}
+.contentContainer {
+  width: 100%;
+}
+
+// PrincipalCard
+.principalCardContainer {
+  height: 100%;
+  width: 100%;
+}
+.principalTitleContainer {
+  padding-top: 28px;
+  padding-bottom: 20px;
+  @media screen and (max-width: 768px) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.principalImage {
+  position: relative;
+  width: 90%;
+  height: 500px;
+  z-index: 5;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+  @media screen and (min-width: 1025px) {
+    width: 60%;
+  }
+}
+.PrincipalImageFeetContainer {
+  position: absolute;
+  z-index: 2;
+  bottom: 80px;
+  width: 120px;
+  height: 220px;
+  rotate: -35deg;
+  left: 5px;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+  @media screen and (min-width: 1025px) {
+    left: 125px;
+    bottom: 100px;
+    width: 180px;
+    height: 250px;
+    rotate: -45deg;
+  }
+}
+
+//EducationalCard
+.EducationCardCardContainer {
+  position: relative;
+  display: flex;
+}
+.EducationCardTitleContainer {
+  padding-left: 30px;
+  padding-top: 20px;
+  padding-right: 40px;
+  padding-bottom: 120px;
+  @media screen and (max-width: 768px) {
+    padding-bottom: 0px;
+  }
+  @media screen and (min-width: 1025px) {
+    padding-bottom: 0px;
+    padding-top: 50px;
+  }
+}
+.EducationCardTitle {
+  color: #ffffff;
+  font-size: 54px;
+  padding-bottom: 15px;
+}
+.EducationCardSubTitle {
+  padding-top: 10px;
+  color: #ffc82d;
+  font-size: 25px;
+}
+.EducationCardImageFeetContainer {
+  position: absolute;
+  z-index: 0;
+  right: 10px;
+
+  height: 250px;
+  width: 200px;
+  top: 210px;
+  clip: auto;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+  @media screen and (min-width: 1025px) {
+    top: 120px;
+    right: 60px;
+  }
+}
+
+.EducationCardImageContainer {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  height: 375px;
+  align-items: flex-end;
+}
+.EducationCardImage {
+  width: 100%;
+  height: 285px;
+}
+
+// ExtraActivities
+.ExtraActivitiesCardContainer {
+  position: relative;
+  height: 300px;
+  width: 450px;
+  box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  border-radius: 30px;
+  cursor: pointer;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+
+    .ExtraActivitiesCardImageContainer {
+      height: 100%;
+      opacity: 0.7;
+      transition: ease-out 0.5s;
+      position: relative;
+      top: 0%;
+      z-index: -1;
+    }
+
+    .ExtraActivitiesCardContent {
+      height: 100%;
+      opacity: 1;
+      transition: ease-in 0.5s;
+      position: absolute;
+      z-index: 1;
+      background-color: #19191973;
+    }
+  }
+  @media screen and (min-width: 1026px) {
+    height: 300px;
+    width: 600px;
+  }
+  &:hover {
+    .ExtraActivitiesCardImageContainer {
+      height: 100%;
+      opacity: 0.7;
+      transition: ease-out 0.5s;
+      position: relative;
+      top: 0%;
+      z-index: -1;
+    }
+
+    .ExtraActivitiesCardContent {
+      height: 100%;
+      opacity: 1;
+      transition: ease-in 0.5s;
+      position: absolute;
+      z-index: 1;
+      background-color: #19191973;
+    }
+  }
+}
+.ExtraActivitiesCardImageContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.ExtraActivitiesCardImage {
+  height: 100%;
+  width: 100%;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+}
+.ExtraActivitiesCardContent {
+  padding: 15px;
+
+  position: relative;
+  width: 100%;
+
+  text-align: center;
+  top: 0px;
+
+  @media screen and (max-width: 768px) {
+    padding: 10px;
+    padding-left: none;
+  }
+}
+.ExtraActivitiesCardDescription {
+  padding-top: 5%;
+  transition: ease-in-out 1s;
+}
+//Staff
+.staffCardContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.staffCardImageContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.staffCardImage {
+  padding-right: 50px;
+  width: 400px;
+  height: 500px;
+  z-index: 2;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    padding-right: 0px;
+  }
+}
+
+.staffCardImageFootprints {
+  position: absolute;
+  width: 200px;
+  height: 350px;
+  z-index: 0;
+  left: 25%;
+  top: 20%;
+  rotate: -35deg;
+  @media screen and (max-width: 1025px) and (min-width: 768px) {
+    width: 100px;
+    height: 150px;
+    top: 50%;
+    left: 5%;
+  }
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+.staffCardsContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+.staffCardsImage {
+  width: 100%;
+  height: 300px;
 }

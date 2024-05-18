@@ -1,1 +1,191 @@
+// .calendarContainer {
+//   background-color: #ffffff;
+//   position: relative;
+// }
 
+// .heading {
+//   text-align: left;
+//   font-size: 6rem;
+//   font-weight: bold;
+//   padding: 1.5rem;
+// }
+
+// .gridContainer {
+//   display: grid;
+//   grid-template-columns: repeat(7, 1fr);
+//   gap: 1rem;
+//   padding: 1rem;
+// }
+
+// .weekday {
+//   padding: 0.5rem;
+//   background-color: #6a0911;
+//   color: white;
+//   height: 50px;
+//   align-items: center;
+//   display: flex;
+//   justify-content: center;
+// }
+
+// .calendarDay {
+//   border: 1px solid #757575;
+//   padding: 1rem;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: flex-start;
+//   height: 100px;
+// }
+
+// .dayNumber {
+//   font-weight: bold;
+// }
+// .eventContainer {
+//   width: 100%;
+//   height: 80%;
+// }
+// .event {
+//   cursor: pointer;
+//   color: #6a0911;
+//   font-size: 2rem;
+//   &:hover {
+//     color: #ffc82d;
+//   }
+// }
+// .navigation {
+//   width: 100%;
+//   display: flex;
+//   justify-content: space-between;
+// }
+// .buttonContainer {
+//   padding-right: 1.5rem;
+//   display: flex;
+//   align-items: center;
+//   width: 200px;
+//   justify-content: space-evenly;
+// }
+// .button {
+//   cursor: pointer;
+//   width: 50px;
+//   height: 50px;
+//   background: none;
+//   border: none;
+//   font-size: 3rem;
+//   &:hover {
+//     background: #6a0911;
+//     color: #ffc82d;
+//     border-radius: 10px;
+//     transition: ease-in-out 0.5s;
+//   }
+// }
+.calendarContainer {
+  background-color: #ffffff;
+  position: relative;
+  width: 100%;
+}
+
+.heading {
+  text-align: left;
+  font-size: 3rem;
+  font-weight: bold;
+  padding: 1rem;
+  color: #6a0911;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+  @media screen and (max-width: 767px) {
+    width: 100%;
+    gap: 5px;
+    padding: 5px;
+  }
+}
+
+.weekday {
+  padding: 0.5rem;
+  background-color: #6a0911;
+  color: white;
+  height: 3em; /* Adjust height for smaller screens */
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-size: x-large;
+  @media screen and (max-width: 767px) {
+    width: 45px;
+    height: 45px;
+    font-size: xx-small;
+  }
+}
+
+.calendarDay {
+  cursor: pointer;
+  border: 1px solid #757575;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 7em;
+  overflow: hidden;
+  @media screen and (max-width: 767px) {
+    width: 45px;
+    height: 45px;
+    font-size: small;
+    padding: 0.2rem;
+  }
+  &:hover {
+    background-color: #6a0911;
+    color: #fff;
+    .event {
+      color: #fff;
+    }
+  }
+}
+
+.dayNumber {
+  font-weight: bold;
+}
+
+.eventContainer {
+  width: 100%;
+  height: 60%; /* Adjust height for smaller screens */
+}
+
+.event {
+  color: #6a0911;
+  font-size: 1.5rem;
+  @media screen and (max-width: 767px) {
+    font-size: 1.2rem;
+  }
+}
+
+.navigation {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttonContainer {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  width: 50%; /* Adjust width for smaller screens */
+  justify-content: space-evenly;
+}
+
+.button {
+  cursor: pointer;
+  width: 2.5em; /* Adjust width for smaller screens */
+  height: 2.5em; /* Adjust height for smaller screens */
+  background: none;
+  border: 1px solid #6a0911;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  &:hover {
+    background: #6a0911;
+    color: #ffc82d;
+
+    transition: ease-in-out 0.5s;
+  }
+}

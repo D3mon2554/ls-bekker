@@ -162,7 +162,7 @@ $breakpoints: (
 
 // hide elements on mobile
 .hide-mobile {
-  @media screen and (min-width: 200px) and (max-width: 768px) {
+  @media screen and (min-width: 200px) and (max-width: 767px) {
     display: none;
     width: 0;
     height: 0;
@@ -170,7 +170,7 @@ $breakpoints: (
 }
 
 .hide-desktop {
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 767px) {
     display: none;
     width: 0;
     height: 0;
@@ -180,40 +180,163 @@ $breakpoints: (
   min-height: 500px;
   width: 100%;
 
-  .section-content {
-    box-sizing: border-box;
-    height: 100%;
-    margin-left: 100px;
-    margin-right: 100px;
-    min-height: 500px;
-    @media screen and (max-width: 768px) {
-      margin-left: 10px;
-      margin-right: 10px;
-    }
-
-    // Additional styling for section-content goes here
+  // Additional styling for section goes here
+}
+.section-content {
+  box-sizing: border-box;
+  margin-left: 40px;
+  margin-right: 40px;
+  min-height: 100%;
+  @media screen and (max-width: 768px) {
+    margin-left: 10px;
+    margin-right: 10px;
   }
 
-  // Additional styling for section goes here
+  // Additional styling for section-content goes here
+}
+.contentLeft {
+  box-sizing: border-box;
+  margin-left: 40px;
+  min-height: 400px;
+
+  @media screen and (max-width: 768px) {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+.contentRight {
+  box-sizing: border-box;
+  margin-right: 70px;
+  min-height: 500px;
+
+  @media screen and (max-width: 768px) {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }
 .cutout-section {
   position: relative;
-  top: 0;
-  left: 0;
-  width: 80%;
+  width: 50%;
   height: 100%;
-  clip-path: circle(60% at 10% 50%);
-  background-color: rgba(
-    128,
-    0,
-    0,
-    0.815
+  z-index: 1;
+  // clip-path: circle(100% at 100% 50%);
+  background: linear-gradient(
+    90deg,
+    rgba(106, 9, 17, 0.89) 20%,
+    rgba(106, 9, 17, 0.822) 30%,
+    rgba(106, 9, 17, 0.849) 40%,
+    rgba(106, 9, 17, 0.671) 70%,
+    rgba(106, 9, 17, 0.548) 90%,
+    rgba(106, 9, 17, 0) 100%
   ); /* Inherit the background color from the parent */
 
-  color: #fdfc26; /* Set text color for better visibility */
+  color: #ffffff; /* Set text color for better visibility */
+  @media screen and (max-width: 768px) {
+    height: 500px;
+    width: 100%;
+    background: rgba(106, 9, 17, 0.292);
+    text-align: center;
+  }
+}
+.cutout-sectionLeft {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  right: 0px;
+  // clip-path: circle(100% at 100% 50%);
+  background: transparent
+    linear-gradient(90deg, #6a091100 0%, #6a0911a1 65%, #6a0911 100%) 0% 0%
+    no-repeat padding-box; /* Inherit the background color from the parent */
+
+  color: #ffffff; /* Set text color for better visibility */
   @media screen and (max-width: 768px) {
     height: 600px;
     width: 100%;
-    clip-path: fill-box;
+    background: rgba(106, 9, 17, 0.292);
+    text-align: center;
+  }
+}
+.cutout-section-white {
+  position: relative;
+  width: 60%;
+  height: 100%;
+  z-index: 1;
+
+  background: linear-gradient(
+    90deg,
+    rgb(255, 255, 255) 20%,
+    rgba(255, 255, 255, 0.918) 40%,
+    rgba(255, 255, 255, 0.822) 50%,
+    rgba(255, 255, 255, 0.849) 60%,
+    rgba(255, 255, 255, 0.671) 70%,
+    rgba(255, 255, 255, 0.548) 90%,
+    rgba(255, 255, 255, 0) 100%
+  );
+
+  @media screen and (max-width: 768px) {
+    height: 600px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.404);
+    text-align: center;
+  }
+}
+.banner {
+  position: relative;
+  height: 440px;
+  @media screen and (max-width: 768px) {
+    height: 300px;
+  }
+}
+.contentRightSmall {
+  box-sizing: border-box;
+  margin-right: 40px;
+  min-height: 300px;
+
+  @media screen and (max-width: 768px) {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+.contentLeftSmall {
+  box-sizing: border-box;
+  margin-left: 40px;
+  min-height: 300px;
+
+  @media screen and (max-width: 768px) {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+.image {
+  position: relative;
+  height: auto;
+  @media screen and (max-width: 768px) {
+    height: 500px;
+  }
+}
+.BoardingSchool {
+  position: relative;
+  @media screen and (max-width: 768px) {
+    height: 400px;
+  }
+  @media screen and (min-width: 1023px) {
+    height: 800px;
+  }
+  @media screen and (min-width: 1440px) {
+    height: 550px;
+  }
+}
+.staff {
+  width: 100%;
+  position: relative;
+  @media screen and (max-width: 768px) {
+    height: 400px;
+  }
+  @media screen and (min-width: 1023px) {
+    height: 560px;
+  }
+  @media screen and (min-width: 1439px) {
+    height: 560px;
   }
 }

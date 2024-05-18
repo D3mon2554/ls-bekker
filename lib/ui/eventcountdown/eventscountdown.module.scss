@@ -1,0 +1,50 @@
+.eventCard {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.eventImage {
+  position: relative;
+  height: 410px;
+  width: 100%;
+  @media screen and (min-width: 1025px) {
+    height: 280px;
+  }
+}
+.content {
+  position: relative;
+  text-align: center;
+}
+.countdownContainer {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  @media screen and (max-width: 768px) {
+    padding-top: 20px;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+.countdownSquare {
+  background-color: #6a0911;
+  width: 100px;
+  height: 80px;
+  border-radius: 17px;
+  @media screen and (max-width: 768px) {
+    width: 80px;
+  }
+}
+.countdownValue {
+  color: #ffffff;
+  font-size: 35px;
+}
+.countdownLabel {
+  color: #ffffff;
+  font-size: 15px;
+}
+.title {
+  font-size: 40px;
+  color: #6a0911;
+}

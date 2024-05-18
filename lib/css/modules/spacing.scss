@@ -10,6 +10,7 @@ $spacing_sizes: (
   "x-large": 2rem,
   "xx-large": 3rem,
   "xxx-large": 4.5rem,
+  "xxxx-large": 12rem,
   "none": 0,
 );
 
@@ -68,4 +69,8 @@ $spacing_sizes: (
 .line {
   list-style: none;
   padding: 0;
+}
+.pdf-section {
+  page-break-before: always;
+  page-break-after: always;
 }
