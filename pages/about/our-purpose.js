@@ -62,7 +62,7 @@ export default function OurPurpose() {
           <div className="padding-left_large padding-right_large medium-padding-left_xxx-large medium-padding-right_xxx-large">
             <h1 className="color-maroon font-size_x-large">Vision</h1>
             <p className="color-maroon font-size_x-medium padding-top_x-large">
-              A value drive school striving towards excellence.
+              A value driven school striving towards excellence.
             </p>
           </div>
           <div className="padding-left_large padding-right_large medium-padding-left_xxx-large medium-padding-right_xxx-large padding-top_xxx-large">

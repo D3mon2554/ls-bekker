@@ -218,9 +218,9 @@ export default function Transport() {
               <div className="font-size_x-medium font-weight_medium padding-top_large padding-bottom_medium">
                 <Link
                   style={{ textDecoration: "none", color: "#6a0911" }}
-                  href={`mailto:johan@hsbekker.co.za`}
+                  href={`mailto:general@bekkerhs.co.za`}
                 >
-                  johan@hsbekker.co.za
+                  general@bekkerhs.co.za
                 </Link>
               </div>
 
