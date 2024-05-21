@@ -2,7 +2,6 @@ import "@css/bundle.scss";
 import "@css/nextjs-override.css";
 import Navigation from "@ui/navigation";
 import Footer from "@ui/footer";
-import { Analytics } from "@vercel/analytics/react";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -10,7 +9,6 @@ function MyApp({ Component, pageProps }) {
       {<Navigation />}
       <main>
         <Component {...pageProps} />
-        <Analytics />
       </main>
       <Footer />
     </>
