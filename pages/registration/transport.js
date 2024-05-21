@@ -5,6 +5,7 @@ import Button from "@/lib/ui/button/button";
 import Link from "next/link";
 import Map from "@/lib/ui/map/map";
 import TaxiDetails from "@/lib/ui/taxiRoutes/taxi-details";
+import Head from "next/head";
 
 export default function Transport() {
   const initialAddress = "Laerskool Bekker Primary";
@@ -30,6 +31,18 @@ export default function Transport() {
 
   return (
     <>
+      {/* Head */}
+      <Head>
+        <title>Transport</title>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="UTF-8" />
+        <meta property="og:title" content="Transport" />
+        <link
+          rel="canonical"
+          href="https://lsbekker.com/registration/transport"
+        />
+      </Head>
       {/* Banner */}
       <div className="section transport">
         <div className="cutout-section">

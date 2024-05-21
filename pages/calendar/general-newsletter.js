@@ -4,6 +4,17 @@ import { NewsLetterImage } from "@/lib/ui/images/images";
 export default function NewsLetter() {
   return (
     <>
+      <Head>
+        <title>Newsletter</title>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="UTF-8" />
+        <meta property="og:title" content="Newsletter" />
+        <link
+          rel="canonical"
+          href="https://lsbekker.com/calendar/general-newsletter"
+        />
+      </Head>
       <div className="section hostel">
         <div className="cutout-section">
           <div className="section-content grid grid-align_vertical-center">

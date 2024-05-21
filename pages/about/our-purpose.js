@@ -1,9 +1,19 @@
 import Image from "next/image";
 import PurposeImages from "@/lib/ui/images/images";
+import Head from "next/head";
 
 export default function OurPurpose() {
   return (
     <>
+      {/* Head */}
+      <Head>
+        <title>Our Purpose</title>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="UTF-8" />
+        <meta property="og:title" content="Our Purpose" />
+        <link rel="canonical" href="https://lsbekker.com/about/our-purpose" />
+      </Head>
       {/* Banner */}
       <div className=" section aboutBanner">
         <div className="cutout-sectionLeft">

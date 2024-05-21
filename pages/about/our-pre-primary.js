@@ -1,6 +1,7 @@
 import Image from "next/image";
 import PurposeImages from "@/lib/ui/images/images";
 import { TeachersCard, SortsHoverCard } from "@/lib/ui/card/card";
+import Head from "next/head";
 
 const teachers = [
   {
@@ -22,6 +23,17 @@ const teachers = [
 export default function OurPreSchool() {
   return (
     <>
+      <Head>
+        <title>Our Pre-Primary</title>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="UTF-8" />
+        <meta property="og:title" content="Our Pre-Primary" />
+        <link
+          rel="canonical"
+          href="https://lsbekker.com/about/our-pre-primary"
+        />
+      </Head>
       {/* Banner */}
       <div className="section prePrimary">
         <div className="cutout-section">
