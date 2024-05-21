@@ -1,5 +1,6 @@
 import SchoolFacebookPosts from "@/lib/ui/facebook-posts/facebookpostschool";
 import { NewsLetterImage } from "@/lib/ui/images/images";
+import Head from "next/head";
 
 export default function NewsLetter() {
   return (
