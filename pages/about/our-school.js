@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { SortsHoverCard, ExtraActivities } from "@/lib/ui/card/card";
 import { SchoolImages, OurSchoolImage } from "@/lib/ui/images/images";
+import Head from "next/head";
 
 const SportsCards = [
   {
@@ -83,6 +84,16 @@ const ExtraActivitiesCard = [
 export default function OurSchool() {
   return (
     <>
+      {/* Head */}
+      <Head>
+        <title>Our School</title>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="UTF-8" />
+        <meta property="og:title" content="Our School" />
+        <link rel="canonical" href="https://lsbekker.com/about/our-school" />
+      </Head>
+
       {/* Banner */}
       <div className="section prefect">
         <div className="cutout-section">

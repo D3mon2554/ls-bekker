@@ -5,6 +5,7 @@ import Button from "@/lib/ui/button/button";
 import TextArea from "@/lib/ui/form-elements/textarea/textarea";
 import Select from "@/lib/ui/form-elements/select/select";
 import Text from "@/lib/ui/form-elements/text/text";
+import Head from "next/head";
 
 const Name = createRef();
 const Email = createRef();
@@ -46,6 +47,14 @@ export default function Contact() {
 
   return (
     <>
+      <Head>
+        <title>Contact Us</title>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="UTF-8" />
+        <meta property="og:title" content="Contact Us" />
+        <link rel="canonical" href="https://lsbekker.com/contact" />
+      </Head>
       {/* Banner */}
       <div className="section hostel">
         <div className="cutout-section">

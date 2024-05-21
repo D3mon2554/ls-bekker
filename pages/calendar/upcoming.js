@@ -2,10 +2,19 @@ import Events from "@/lib/ui/eventes/events";
 import Image from "next/image";
 import GoogleCalendar from "@/lib/ui/calendar/calendar";
 import PurposeImages from "@/lib/ui/images/images";
+import Head from "next/head";
 
 export default function Upcoming() {
   return (
     <>
+      <Head>
+        <title>Events</title>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="UTF-8" />
+        <meta property="og:title" content="Events" />
+        <link rel="canonical" href="https://lsbekker.com/calendar/upcomming" />
+      </Head>
       {/* Banner */}
       <div className="section events">
         <div className="cutout-section">

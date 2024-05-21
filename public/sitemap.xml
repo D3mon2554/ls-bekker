@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Home Page -->
+  <url>
+    <loc>https://lsbekker.com/</loc>
+    <lastmod>2024-21-05</lastmod>
+  </url>
+<!--About us-->
+  <url>
+    <loc>https://lsbekker.com/about/our-purpose</loc>
+    <lastmod>2024-21-05</lastmod>
+  </url>
+  <!--Our School-->
+  <url>
+    <loc>https://lsbekker.com/about/our-school</loc>
+    <lastmod>2024-21-05</lastmod>
+  </url>
+  <!--Our Pre-Primary-->
+  <url>
+    <loc>https://lsbekker.com/about/our-pre-rpimary</loc>
+    <lastmod>2024-21-05</lastmod>
+  </url>
+  <!--Our Hostel-->
+  <url>
+    <loc>https://lsbekker.com/hostel/our-hostel</loc>
+    <lastmod>2024-21-05</lastmod>
+  </url>
+  <!--Hostel-Newsletter-->
+  <url>
+    <loc>https://lsbekker.com/hostel/newsletter</loc>
+    <lastmod>2024-21-05</lastmod>
+  </url>
+  <!--Calendar-->
+  <url>
+    <loc>https://lsbekker.com/calendar/upcoming</loc>
+    <lastmod>2024-21-05</lastmod>
+  </url>
+  <!--General Newsletter-->
+  <url>
+    <loc>https://lsbekker.com/calendar/general-newsletter</loc>
+    <lastmod>2024-21-05</lastmod>
+  </url>
+  <!--Transport-->
+  <url>
+    <loc>https://lsbekker.com/registration/transport</loc>
+    <lastmod>2024-21-05</lastmod>
+  </url>
+  <!--Applications-->
+  <url>
+    <loc>https://lsbekker.com/registration/applications</loc>
+    <lastmod>2024-21-05</lastmod>
+  </url>
+  <!--Gallery-->
+  <url>
+    <loc>https://lsbekker.com/more/gallery</loc>
+    <lastmod>2024-21-05</lastmod>
+  </url>
+  <!--Contact Us-->
+  <url>
+    <loc>https://lsbekker.com/contact</loc>
+    <lastmod>2024-21-05</lastmod>
+  </url>
+</urlset>

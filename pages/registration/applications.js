@@ -2,6 +2,7 @@ import PurposeImages from "@/lib/ui/images/images";
 import Image from "next/image";
 import Button from "@/lib/ui/button/button";
 import Link from "next/link";
+import Head from "next/head";
 
 export default function Applications() {
   const handleHostelClick = () => {
@@ -12,6 +13,18 @@ export default function Applications() {
   };
   return (
     <>
+      {/* Head */}
+      <Head>
+        <title>Applications</title>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="UTF-8" />
+        <meta property="og:title" content="Applications" />
+        <link
+          rel="canonical"
+          href="https://lsbekker.com/registration/applications"
+        />
+      </Head>
       {/* Banner */}
       <div className="section hostel">
         <div className="cutout-section">

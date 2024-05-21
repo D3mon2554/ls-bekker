@@ -1,8 +1,7 @@
 import Link from "next/link";
-
+import Head from "next/head";
 import Button from "@/lib/ui/button/button";
 import Image from "next/image";
-import CarouselImage from "@/lib/ui/carousels/carousel-image";
 import { PrincipalCard, EducationCard } from "@/lib/ui/card/card";
 import EventCountdown from "@/lib/ui/eventcountdown/evetscountdown";
 import { FootprintsGroup } from "@/lib/ui/images/images";
@@ -10,6 +9,15 @@ import { FootprintsGroup } from "@/lib/ui/images/images";
 export default function Home() {
   return (
     <>
+      {/* Head */}
+      <Head>
+        <title>Laerskool Bekker Primary</title>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="UTF-8" />
+        <meta property="og:title" content="Laerskool Bekker Primary" />
+        <link rel="canonical" href="https://lsbekker.com" />
+      </Head>
       {/* Banner */}
       <div className="section landingContainer">
         <div className="cutout-section-white">
