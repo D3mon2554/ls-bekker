@@ -40,6 +40,41 @@ export default function Upcoming() {
       {/* Calendar */}
       <div className="section" style={{ backgroundColor: "#fff" }}>
         <div className="section-content">
+          <div className="grid grid-wrap padding-top_xxx-large ">
+            <div className="size_1-of-1 medium-size_1-of-2">
+              <h1 className="color-maroon">
+                How to download events of the day:
+              </h1>
+              <ul>
+                <li>Click on the day with the events you want.</li>
+                <li>An ICS file will start downloading.</li>
+                <li>Once downloaded, go to your Downloads folder.</li>
+                <li>Double-click the downloaded file.</li>
+                <li>Your device's default calendar will open.</li>
+                <li>Add the event to your calendar from there.</li>
+              </ul>
+            </div>
+            <div className="size_1-of-1 medium-size_1-of-2">
+              <h1 className="color-maroon">How to download the calendar:</h1>
+              <ul>
+                <li>Click on the "Download Calendar Button".</li>
+                <li>
+                  An ICS file containing all events for the whole year will
+                  download.
+                </li>
+                <li>
+                  Once the download is complete, locate the file in your
+                  Downloads folder.
+                </li>
+                <li>Double-click the downloaded file to open it.</li>
+                <li>Your device's default calendar application will launch.</li>
+                <li>
+                  You can then view and add the events to your calendar as
+                  needed.
+                </li>
+              </ul>
+            </div>
+          </div>
           <div className="padding-top_xxx-large padding-bottom_xxx-large">
             <GoogleCalendar />
           </div>

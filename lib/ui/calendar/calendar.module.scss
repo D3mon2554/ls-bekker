@@ -142,9 +142,21 @@
     }
   }
 }
+.today {
+  .dayNumber {
+    background-color: #6a0911;
+    color: #ffffff;
+  }
+}
 
 .dayNumber {
   font-weight: bold;
+  width: 28px; /* Adjust the size of the circle */
+  height: 28px; /* Adjust the size of the circle */
+  border-radius: 50%; /* Use 50% to create a perfect circle */
+  text-align: center;
+  line-height: 28px; /* Should match the height to vertically center the text */
+  display: inline-block; /* Ensures that text-align:center works */
 }
 
 .eventContainer {
