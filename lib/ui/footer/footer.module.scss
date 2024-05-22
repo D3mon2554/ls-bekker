@@ -71,6 +71,8 @@
   color: #ffffff;
 }
 .email {
+  text-decoration: none;
+  color: #ffffff;
   &:hover {
     cursor: pointer;
     color: #ffc82d;
@@ -93,4 +95,8 @@
   width: 100%;
   padding-top: 20px;
   padding: 15px;
+}
+.owner {
+  text-align: center;
+  color: #ffffff;
 }
