@@ -13,6 +13,7 @@ export default function Fees() {
         <meta property="og:title" content="Gallery" />
         <link rel="canonical" href="https://lsbekker.com/more/gallery" />
       </Head>
+      {/* Banner */}
       <div className="section hostel">
         <div className="cutout-section">
           <div className="section-content grid grid-align_vertical-center">
@@ -25,15 +26,33 @@ export default function Fees() {
           </div>
         </div>
       </div>
+      {/* Hostel weekend Fun */}
       <div className="section">
         <div className="section-content padding-top_xxx-large">
-          <h1 className="padding-bottom_xxx-large">Sports Gallery</h1>
+          <h1 className="padding-bottom_x-large color-maroon">
+            Hostel Weekend Fun
+          </h1>
+          <p className="padding-bottom_xxx-large">
+            This weekend was blast with fun activities and laughter, as the
+            hostel kids build friendships and made memories that will last a
+            life time.
+          </p>
+          <Gallery folder="Hostel-weekends-fun" />
+        </div>
+      </div>
+      <div className="section">
+        <div className="section-content padding-top_xxx-large">
+          <h1 className="padding-bottom_xxx-large color-maroon">
+            Sports Gallery
+          </h1>
           <Gallery folder="sports" />
         </div>
       </div>
       <div className="section">
         <div className="section-content padding-top_xxx-large padding-bottom_xxx-large">
-          <h1 className="padding-bottom_xxx-large">Grade 1's Gallery</h1>
+          <h1 className="padding-bottom_xxx-large color-maroon">
+            Grade 1's Gallery
+          </h1>
           <Gallery folder="grade1" />
         </div>
       </div>
