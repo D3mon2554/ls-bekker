@@ -33,9 +33,9 @@ export default function Fees() {
             Hostel Weekend Fun
           </h1>
           <p className="padding-bottom_xxx-large">
-            This weekend was blast with fun activities and laughter, as the
-            hostel kids build friendships and made memories that will last a
-            life time.
+            This weekend was filled with fun activities and laughter as the
+            hostel kids built friendships and created memories that will last a
+            lifetime.
           </p>
           <Gallery folder="Hostel-weekends-fun" />
         </div>
