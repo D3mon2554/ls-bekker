@@ -1,6 +1,7 @@
 import HostelFacebookPosts from "@/lib/ui/facebook-posts/facebookposthostel";
 import { NewsLetterImage } from "@/lib/ui/images/images";
 import Head from "next/head";
+import Gallery from "@/lib/ui/gallery/gallery";
 
 const HostelNewsletterPage = () => {
   return (
@@ -30,6 +31,20 @@ const HostelNewsletterPage = () => {
               </p>
             </div>
           </div>
+        </div>
+      </div>
+      {/* Hostel weekend Fun */}
+      <div className="section">
+        <div className="section-content padding-top_xxx-large">
+          <h1 className="padding-bottom_x-large color-maroon">
+            Hostel Weekend Fun
+          </h1>
+          <p className="padding-bottom_xxx-large">
+            This weekend was filled with fun activities and laughter as the
+            hostel kids built friendships and created memories that will last a
+            lifetime.
+          </p>
+          <Gallery folder="Hostel-weekends-fun" />
         </div>
       </div>
       <div className="section">

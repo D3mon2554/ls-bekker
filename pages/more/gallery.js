@@ -40,6 +40,7 @@ export default function Fees() {
           <Gallery folder="Hostel-weekends-fun" />
         </div>
       </div>
+      {/* Sports Gallery */}
       <div className="section">
         <div className="section-content padding-top_xxx-large">
           <h1 className="padding-bottom_xxx-large color-maroon">
@@ -48,6 +49,7 @@ export default function Fees() {
           <Gallery folder="sports" />
         </div>
       </div>
+      {/* Grade 1's Gallery */}
       <div className="section">
         <div className="section-content padding-top_xxx-large padding-bottom_xxx-large">
           <h1 className="padding-bottom_xxx-large color-maroon">
