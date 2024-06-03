@@ -18,6 +18,7 @@ export default function HostelApplication() {
   const [selectedFiles, setSelectedFiles] = useState([]);
   const [formErrors, setFormErrors] = useState({});
   const [submissionStatus, setSubmissionStatus] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     ParentDetailsMother: {
       Information: {
@@ -270,18 +271,17 @@ export default function HostelApplication() {
   };
 
   const generateLinkAndSave = async () => {
-    const isValidForm = validateForm();
+    if (isSubmitting) return; // Prevent multiple submissions
 
-    if (!isValidForm) {
-      // Form validation failed, do not proceed
-      return;
-    }
+    const isValidForm = validateForm();
+    if (!isValidForm) return;
+
+    setIsSubmitting(true); // Set submission state to true
     const parentDetailsMotherInfo = formData.ParentDetailsMother?.Information;
     const emailFromForm = parentDetailsMotherInfo?.Email;
     const id = parentDetailsMotherInfo?.IDNumber || "defaultId";
     const link = generateLink(id);
 
-    // Save to S3
     const dataToSave = {
       ...formData,
       generatedLink: link,
@@ -289,17 +289,13 @@ export default function HostelApplication() {
     };
 
     try {
-      // Save data to S3
       await saveToS3(dataToSave, id, selectedFiles);
-
-      // Generate email subject and body using the function
       const { subject, emailBody } = generateEmailBody(
         formData,
         link,
         "Hostel"
       );
 
-      // Send email to API endpoint
       await axios.post("/api/send-email-hostel", {
         name: parentDetailsMotherInfo?.firstName,
         email: emailFromForm,
@@ -311,6 +307,8 @@ export default function HostelApplication() {
     } catch (error) {
       console.error("Error sending email:", error);
       setSubmissionStatus("error");
+    } finally {
+      setIsSubmitting(false); // Reset submission state
     }
   };
 
@@ -674,9 +672,10 @@ export default function HostelApplication() {
       <div>
         <div className="section-content padding-around_large padding-top_xx-large padding-bottom_xx-large">
           <Button
-            label="Submit"
-            variant="submit"
             onClick={generateLinkAndSave}
+            disabled={isSubmitting}
+            label={isSubmitting ? "Submitting..." : "Submit"}
+            variant="submit"
           />
         </div>
         {submissionStatus === "success" && (
