@@ -70,7 +70,21 @@ $spacing_sizes: (
   list-style: none;
   padding: 0;
 }
-.pdf-section {
+.pdf-section-before {
   page-break-before: always;
+}
+.pdf-section-after {
   page-break-after: always;
+}
+.pdf-section-padding-x-Small {
+  padding-top: 40px;
+}
+.pdf-section-padding-Small {
+  padding-top: 80px;
+}
+.pdf-section-padding-Medium {
+  padding-top: 180px;
+}
+.pdf-section-padding-Large {
+  padding-top: 280px;
 }

@@ -130,17 +130,20 @@ const FormDisplay = () => {
           </div>
         </div>
       </div>
-      <div id="pdf-content" className="section">
-        <div className="section-content grid grid-wrap grid-align_vertical-center">
+      <div className="section">
+        <div
+          id="pdf-content"
+          className="section-content grid grid-wrap grid-align_vertical-center"
+        >
           {/* LearnerInformation */}
-          <div className="size_1-of-1 pdf-section">
+          <div className="size_1-of-1 pdf-section-after">
             <LearnerInformation
               data={formData.LearnerInformation}
               disabled={isFieldDisabled}
             />
           </div>
           {/* Additional Information */}
-          <div className="">
+          <div className=" pdf-section-padding-Small">
             <div className="size_1-of-1 padding-bottom_xx-large pdf-section">
               <h1 className="color-maroon padding-top_large padding-bottom_large medium-padding-left_large ">
                 Additional Information
@@ -152,7 +155,7 @@ const FormDisplay = () => {
             </div>
           </div>
           {/* MedicalInformation */}
-          <div className="size_1-of-1 pdf-section">
+          <div className=" pdf-section-padding-x-Small">
             <h1 className="color-maroon padding-top_xx-large">
               Medical Information
             </h1>
@@ -162,7 +165,7 @@ const FormDisplay = () => {
             />
           </div>
           {/* ContactPresentSchool */}
-          <div className="size_1-of-1">
+          <div className="size_1-of-1 pdf-section-padding-x-Small">
             <ContactPresentSchool
               data={formData.ContactPresentSchool.Information}
               disabled={isFieldDisabled}
@@ -183,7 +186,7 @@ const FormDisplay = () => {
             />
           </div>
           {/* Parent Details Father */}
-          <div>
+          <div className="pdf-section-before pdf-section-after">
             {formData.ParentDetailsMother.Information &&
               ((formData.ParentDetailsMother.Information.Status === "Parent" &&
                 formData.ParentDetailsMother.Information.MaterialStatus ===
@@ -222,7 +225,7 @@ const FormDisplay = () => {
               ) : null)}
           </div>
           {/* Files */}
-          <div className="padding-bottom_xxx-large">
+          <div className=" pdf-section-padding-Small ">
             <h1 className="color-maroon padding-top_xx-large">Files</h1>
             {fileUrls.map((url, index) => (
               <div className="padding-top_large" key={index}>
@@ -239,7 +242,7 @@ const FormDisplay = () => {
             ))}
           </div>
           {/* Acknowledgement */}
-          <div className="size_1-of-1">
+          <div className="size_1-of-1  pdf-section-padding-Small">
             <Acknowledgement
               data={formData.Acknowledgement.information}
               disabled={isFieldDisabled}
