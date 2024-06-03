@@ -17,6 +17,7 @@ export default function DayScholarApplication() {
   const [selectedFiles, setSelectedFiles] = useState([]);
   const [formErrors, setFormErrors] = useState({});
   const [submissionStatus, setSubmissionStatus] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     ParentDetailsMother: {
       Information: {
@@ -256,12 +257,15 @@ export default function DayScholarApplication() {
   };
 
   const generateLinkAndSave = async () => {
+    if (isSubmitting) return; // Prevent multiple submissions
+
     const isValidForm = validateForm();
 
     if (!isValidForm) {
       // Form validation failed, do not proceed
       return;
     }
+    setIsSubmitting(true); // Set submission state to true
     const parentDetailsMotherInfo = formData.ParentDetailsMother?.Information;
     const emailFromForm = parentDetailsMotherInfo?.Email;
     const id = parentDetailsMotherInfo?.IDNumber || "defaultId";
@@ -648,9 +652,10 @@ export default function DayScholarApplication() {
       <div>
         <div className="section-content padding-around_large padding-top_xx-large padding-bottom_xx-large">
           <Button
-            label="Submit"
-            variant="submit"
             onClick={generateLinkAndSave}
+            disabled={isSubmitting}
+            label={isSubmitting ? "Submitting..." : "Submit"}
+            variant="submit"
           />
         </div>
         {submissionStatus === "success" && (
