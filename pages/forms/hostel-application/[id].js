@@ -100,7 +100,7 @@ const FormDisplay = () => {
       };
 
       // Use html2pdf.js to generate and save the PDF
-      html2pdf().set(pdfConfig).from(element).save();
+      html2pdf().set(pdfConfig).from(element).toContainer().save();
     } else {
       console.error("html2pdf.js can only be used in the browser environment");
     }
