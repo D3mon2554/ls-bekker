@@ -261,11 +261,8 @@ export default function DayScholarApplication() {
     if (isSubmitting) return; // Prevent multiple submissions
 
     const isValidForm = validateForm();
+    if (!isValidForm) return;
 
-    if (!isValidForm) {
-      // Form validation failed, do not proceed
-      return;
-    }
     setIsSubmitting(true); // Set submission state to true
     const parentDetailsMotherInfo = formData.ParentDetailsMother?.Information;
     const emailFromForm = parentDetailsMotherInfo?.Email;
@@ -302,6 +299,8 @@ export default function DayScholarApplication() {
     } catch (error) {
       console.error("Error sending email:", error);
       setSubmissionStatus("error");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 

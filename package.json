@@ -25,6 +25,7 @@
     "googleapis": "^128.0.0",
     "gsap": "^3.12.5",
     "handlebars": "^4.7.8",
+    "html-pdf": "^3.0.1",
     "html2pdf.js": "^0.10.1",
     "jszip": "^3.10.1",
     "next": "14.0.3",
