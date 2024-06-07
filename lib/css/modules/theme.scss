@@ -300,3 +300,31 @@ body {
     height: 500px;
   }
 }
+.submit {
+  display: flex;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  background-color: maroon;
+  transition: ease-out 0.3s;
+  width: 198px;
+  height: 60px;
+  border-radius: 14px;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    background-color: rgb(182, 5, 5);
+    transition: ease-in 0.3s;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+}
+.button_text {
+  color: #fefefe;
+  font-size: x-large;
+  font-weight: 600;
+  text-decoration: none;
+}

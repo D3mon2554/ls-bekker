@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
+import AWS from "aws-sdk";
+import { PDFDownloadLink } from "@react-pdf/renderer";
 import ParentDetailsMother from "@/lib/ui/day-scholar-form-components/parentDetailsMother/parentdetailsmother";
 import ParentDetailsFather from "@/lib/ui/day-scholar-form-components/parentDetailsFather/parentdetailsfather";
 import AddressInformation from "@/lib/ui/day-scholar-form-components/address/address";
@@ -7,9 +9,8 @@ import LearnerInformation from "@/lib/ui/day-scholar-form-components/learnerInfo
 import ContactPresentSchool from "@/lib/ui/day-scholar-form-components/learnerInformation/contactpresentschool";
 import MedicalInformation from "@/lib/ui/day-scholar-form-components/medical_information/medical_information";
 import Acknowledgement from "@/lib/ui/day-scholar-form-components/acknoledgement/acknowledgement";
+import DayScholarPDFDocument from "@/lib/ui/pdfdocument/dayscholarformpdf";
 import PurposeImages from "@/lib/ui/images/images";
-import AWS from "aws-sdk";
-import Button from "@/lib/ui/button/button";
 
 const FormDisplay = () => {
   const router = useRouter();
@@ -74,36 +75,6 @@ const FormDisplay = () => {
 
   const isFieldDisabled = true;
 
-  const handleDownloadPDF = async () => {
-    if (typeof window !== "undefined") {
-      const html2pdf = require("html2pdf.js");
-      const element = document.getElementById("pdf-content");
-      if (!element) {
-        console.error("PDF content element not found");
-        return;
-      }
-
-      const pdfConfig = {
-        filename: `${id}.pdf`,
-        jsPDF: {
-          unit: "in",
-          format: "a4",
-          orientation: "portrait",
-          text: true,
-        },
-        options: {
-          allowTaint: true,
-          useCORS: true,
-          windowWidth: element.offsetWidth,
-        },
-      };
-
-      // Use html2pdf.js to generate and save the PDF
-      html2pdf().set(pdfConfig).from(element).save();
-    } else {
-      console.error("html2pdf.js can only be used in the browser environment");
-    }
-  };
   return (
     <>
       {/* Banner */}
@@ -116,7 +87,7 @@ const FormDisplay = () => {
                 <h1 className="font-size_xx-large font-family_futuraDemi">
                   Apply Now
                 </h1>
-                <h2 className="font-size_x-large">for Day Scholar</h2>
+                <h2 className="font-size_x-large">for Hostel</h2>
               </div>
               <div className="size_1-of-1 padding-bottom_large">
                 <p className="padding-top_medium">
@@ -128,19 +99,19 @@ const FormDisplay = () => {
           </div>
         </div>
       </div>
-      {/* Form */}
-      <div id="pdf-content" className="section">
+      {/* Form Display */}
+      <div className="section">
         <div className="section-content grid grid-wrap grid-align_vertical-center">
           {/* LearnerInformation */}
-          <div className="size_1-of-1">
+          <div className="size_1-of-1 padding-top_xxx-large">
             <LearnerInformation
               data={formData.LearnerInformation}
               disabled={isFieldDisabled}
             />
           </div>
           {/* MedicalInformation */}
-          <div className="size_1-of-1 pdf-section pdf-section-before">
-            <h1 className="color-maroon padding-top_xx-large">
+          <div className="padding-top_xx-large">
+            <h1 className="color-maroon padding-top_large padding-bottom_large medium-padding-left_large ">
               Medical Information
             </h1>
             <MedicalInformation
@@ -149,14 +120,14 @@ const FormDisplay = () => {
             />
           </div>
           {/* ContactPresentSchool */}
-          <div className="size_1-of-1">
+          <div className="size_1-of-1 padding-top_xx-large">
             <ContactPresentSchool
               data={formData.ContactPresentSchool.Information}
               disabled={isFieldDisabled}
             />
           </div>
           {/* Parent Details Mother */}
-          <div className="size_1-of-1  pdf-section">
+          <div className="size_1-of-1 padding-top_xx-large">
             <h1 className="color-maroon padding-top_large padding-bottom_large medium-padding-left_large ">
               Parent/Legal Guardian/Proxy Information
             </h1>
@@ -164,13 +135,14 @@ const FormDisplay = () => {
               data={formData.ParentDetailsMother.Information}
               disabled={isFieldDisabled}
             />
+
             <AddressInformation
               data={formData.ParentDetailsMother.AddressInformation}
               disabled={isFieldDisabled}
             />
           </div>
           {/* Parent Details Father */}
-          <div className="size_1-of-1 ">
+          <div className="padding-top_xx-large">
             {formData.ParentDetailsMother.Information &&
               ((formData.ParentDetailsMother.Information.Status === "Parent" &&
                 formData.ParentDetailsMother.Information.MaterialStatus ===
@@ -179,23 +151,37 @@ const FormDisplay = () => {
               (formData.ParentDetailsMother.Information.Status === "Parent" &&
                 formData.ParentDetailsMother.Information.MaterialStatus ===
                   "Divorced") ? (
-                <div className="pdf-section-before">
+                <div>
                   <h1 className="color-maroon padding-top_large padding-bottom_large medium-padding-left_large ">
                     Parent Details
                   </h1>
                   <ParentDetailsFather
                     data={formData.ParentDetailsFather.information}
-                    disabled={isFieldDisabled}
+                    onDataChange={(field, value) =>
+                      handleFormChange(
+                        "ParentDetailsFather",
+                        "information",
+                        field,
+                        value
+                      )
+                    }
                   />
                   <AddressInformation
                     data={formData.ParentDetailsFather.AddressInformation}
-                    disabled={isFieldDisabled}
+                    onDataChange={(field, value) =>
+                      handleFormChange(
+                        "ParentDetailsFather",
+                        "AddressInformation",
+                        field,
+                        value
+                      )
+                    }
                   />
                 </div>
               ) : null)}
           </div>
           {/* Files */}
-          <div className="padding-bottom_xxx-large pdf-section-before pdf-section">
+          <div className="size_1-of-1">
             <h1 className="color-maroon padding-top_xx-large">Files</h1>
             {fileUrls.map((url, index) => (
               <div className="padding-top_large" key={index}>
@@ -212,7 +198,7 @@ const FormDisplay = () => {
             ))}
           </div>
           {/* Acknowledgement */}
-          <div className="size_1-of-1">
+          <div className="size_1-of-1 padding-top_xx-large">
             <Acknowledgement
               data={formData.Acknowledgement.information}
               disabled={isFieldDisabled}
@@ -220,12 +206,26 @@ const FormDisplay = () => {
           </div>
         </div>
       </div>
-      <div className="padding-bottom_xxx-large medium-padding-left_xxx-large">
-        <Button
-          label="Download PDF"
-          variant="submit"
-          onClick={handleDownloadPDF}
-        />
+      {/* Download Button */}
+      <div
+        className="grid grid-align_vertical-center"
+        style={{ height: "200px" }}
+      >
+        <div className="padding-left_xxx-large">
+          <div className="submit">
+            <PDFDownloadLink
+              document={
+                <DayScholarPDFDocument formData={formData} Files={fileUrls} />
+              }
+              fileName={id}
+              className="button_text"
+            >
+              {({ blob, url, loading, error }) =>
+                loading ? "Loading document..." : "Download PDF"
+              }
+            </PDFDownloadLink>
+          </div>
+        </div>
       </div>
     </>
   );
