@@ -3,7 +3,7 @@ import axios from "axios";
 const fetchFacebookPosts = async (pageId, accessToken) => {
   try {
     const response = await axios.get(
-      `https://graph.facebook.com/v12.0/${pageId}/feed`,
+      `https://graph.facebook.com/v20.0/${pageId}/feed`,
       {
         params: {
           access_token: accessToken,
