@@ -149,6 +149,7 @@ export default function DayScholarApplication() {
         Name: "",
         Surname: "",
         date: "",
+        Marketing: "",
       },
     },
   });
@@ -418,6 +419,7 @@ export default function DayScholarApplication() {
       "Acknowledgement.information.Name",
       "Acknowledgement.information.Surname",
       "Acknowledgement.information.hereby",
+      "Acknowledgement.information.Marketing",
       "ParentDetailsMother.Information.firstName",
       "ParentDetailsMother.Information.lastName",
       "ParentDetailsMother.Information.RSACitizen",
