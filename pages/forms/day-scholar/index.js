@@ -11,6 +11,7 @@ import AWS from "aws-sdk";
 import axios from "axios";
 import FileUpload from "@/lib/ui/form-elements/file-upload/file-upload";
 import PurposeImages from "@/lib/ui/images/images";
+import { track } from "@vercel/analytics";
 
 export default function DayScholarApplication() {
   const [fileNames, setFileNames] = useState([]);
@@ -295,6 +296,13 @@ export default function DayScholarApplication() {
         nature: subject,
         fileNames: fileNames,
       });
+
+      track("form_submission", {
+        formName: "DayScholarApplication",
+        email: emailFromForm,
+        id: id,
+      });
+
       setSubmissionStatus("success");
     } catch (error) {
       console.error("Error sending email:", error);

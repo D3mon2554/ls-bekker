@@ -12,6 +12,7 @@ import axios from "axios";
 import FileUpload from "@/lib/ui/form-elements/file-upload/file-upload";
 import PurposeImages from "@/lib/ui/images/images";
 import HostelQuestions from "@/lib/ui/day-scholar-form-components/hostel-questions/hostel-questions";
+import { track } from "@vercel/analytics";
 
 export default function HostelApplication() {
   const [fileNames, setFileNames] = useState([]);
@@ -304,6 +305,13 @@ export default function HostelApplication() {
         nature: subject,
         fileNames: fileNames,
       });
+
+      track("form_submission", {
+        formName: "HostelApplication",
+        email: emailFromForm,
+        id: id,
+      });
+
       setSubmissionStatus("success");
     } catch (error) {
       console.error("Error sending email:", error);
