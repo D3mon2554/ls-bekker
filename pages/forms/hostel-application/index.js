@@ -150,6 +150,7 @@ export default function HostelApplication() {
         Name: "",
         Surname: "",
         date: "",
+        Marketing: "",
       },
     },
     HostelQuestions: {
@@ -428,6 +429,7 @@ export default function HostelApplication() {
       "Acknowledgement.information.Name",
       "Acknowledgement.information.Surname",
       "Acknowledgement.information.hereby",
+      "Acknowledgement.information.Marketing",
       "ParentDetailsMother.Information.firstName",
       "ParentDetailsMother.Information.lastName",
       "ParentDetailsMother.Information.RSACitizen",
