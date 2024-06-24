@@ -8,7 +8,7 @@ const fetchFacebookPosts = async (pageId, accessToken) => {
         params: {
           access_token: accessToken,
           fields: "id,message,full_picture,story,attachments",
-          limit: 10,
+          limit: 14,
         },
       }
     );
