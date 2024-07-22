@@ -302,11 +302,33 @@ export default function DayScholarApplication() {
         formName: "DayScholarApplication",
         email: emailFromForm,
         id: id,
+        status: "success",
       });
 
       setSubmissionStatus("success");
     } catch (error) {
       console.error("Error sending email:", error);
+
+      const failureEmailBody = `
+      Form submission failed for the following reason: ${error.message}
+      Form Data: ${JSON.stringify(formData)}
+    `;
+
+      await axios.post("/api/send-email", {
+        name: parentDetailsMotherInfo?.firstName,
+        email: "jonathan@sandboxlogic.com",
+        message: failureEmailBody,
+        nature: "Form Submission Failure Notification Ticket Logged",
+      });
+
+      track("form_submission", {
+        formName: "DayScholarApplication",
+        email: emailFromForm,
+        id: id,
+        status: "failure",
+        error: error.message,
+      });
+
       setSubmissionStatus("error");
     } finally {
       setIsSubmitting(false);
