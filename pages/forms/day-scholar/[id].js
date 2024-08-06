@@ -87,7 +87,7 @@ const FormDisplay = () => {
                 <h1 className="font-size_xx-large font-family_futuraDemi">
                   Apply Now
                 </h1>
-                <h2 className="font-size_x-large">for Hostel</h2>
+                <h2 className="font-size_x-large">for Day Scholar</h2>
               </div>
               <div className="size_1-of-1 padding-bottom_large">
                 <p className="padding-top_medium">
