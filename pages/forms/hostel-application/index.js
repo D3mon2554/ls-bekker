@@ -323,7 +323,7 @@ export default function HostelApplication() {
       Form Data: ${JSON.stringify(formData)}
     `;
 
-      await axios.post("/api/send-email", {
+      await axios.post("/api/send-email-hostel", {
         name: parentDetailsMotherInfo?.firstName,
         email: "jonathan@sandboxlogic.com",
         message: failureEmailBody,

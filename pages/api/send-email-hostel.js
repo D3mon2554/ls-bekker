@@ -15,6 +15,10 @@ export default async function handler(req, res) {
         user: process.env.AUTH_USER,
         pass: process.env.AUTH_PASS,
       },
+      tls: {
+        // Do not fail on invalid certs
+        rejectUnauthorized: false,
+      },
     });
 
     // Email parameters
@@ -34,8 +38,12 @@ export default async function handler(req, res) {
         .status(200)
         .json({ success: true, message: "Email sent successfully" });
     } catch (error) {
-      console.error(error);
-      res.status(500).json({ success: false, message: "Failed to send email" });
+      console.error("Failed to send email:", error); // Enhanced error logging
+      res.status(500).json({
+        success: false,
+        message: "Failed to send email",
+        error: error.message,
+      });
     }
   } else {
     res.status(405).end();
