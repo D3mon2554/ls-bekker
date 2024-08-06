@@ -15,6 +15,10 @@ export default async function handler(req, res) {
         user: process.env.AUTH_USER,
         pass: process.env.AUTH_PASS,
       },
+      tls: {
+        // Do not fail on invalid certs
+        rejectUnauthorized: false,
+      },
     });
 
     // Email parameters
