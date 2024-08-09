@@ -12,12 +12,69 @@ export default function Home() {
       {/* Head */}
       <Head>
         <title>Laerskool Bekker Primary</title>
+        <meta
+          name="description"
+          content="Welcome to Laerskool Bekker Primary, where we provide a nurturing environment for children to thrive academically, socially, and emotionally. Explore our school, boarding facilities, and vibrant activities."
+        />
+        <meta
+          name="keywords"
+          content="Laerskool Bekker Primary, primary school, boarding school, Gauteng, education, school events, academic excellence"
+        />
+        <meta name="author" content="Laerskool Bekker Primary" />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content="Laerskool Bekker Primary" />
+        <meta
+          property="og:description"
+          content="Discover Laerskool Bekker Primary, a nurturing environment where children excel academically and socially. Explore our school and boarding facilities in the serene Magaliesburg Mountains."
+        />
+        <meta
+          property="og:image"
+          content="https://lsbekker.com/img/home-banner.jpg"
+        />
+        <meta property="og:url" content="https://lsbekker.com" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Laerskool Bekker Primary" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Laerskool Bekker Primary | Home" />
+        <meta
+          name="twitter:description"
+          content="Explore Laerskool Bekker Primary, where we nurture students to excel academically and socially in a safe and supportive environment."
+        />
+        <meta
+          name="twitter:image"
+          content="https://lsbekker.com/img/home-banner.jpg"
+        />
+        <link rel="canonical" href="https://lsbekker.com" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta charset="UTF-8" />
-        <meta property="og:title" content="Laerskool Bekker Primary" />
-        <link rel="canonical" href="https://lsbekker.com" />
+        <meta charSet="UTF-8" />
+        <script type="application/ld+json">
+          {`
+    {
+      "@context": "http://schema.org",
+      "@type": "School",
+      "name": "Laerskool Bekker Primary",
+      "url": "https://lsbekker.com",
+      "logo": "https://lsbekker.com/img/school-logo.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "3H22+5XC, Magaliesburg",
+        "addressLocality": "Magaliesburg",
+        "addressRegion": "Gauteng",
+        "postalCode": "1791",
+        "addressCountry": "ZA"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+27-14-577-1129",
+        "contactType": "Customer Service"
+      },
+      "description": "Welcome to Laerskool Bekker Primary, a place where education and values meet in a nurturing environment. Explore our academics, boarding options, and vibrant school life."
+    }
+    `}
+        </script>
       </Head>
+
       {/* Banner */}
       <div className="section landingContainer">
         <div className="cutout-section-white">

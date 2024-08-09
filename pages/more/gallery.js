@@ -6,13 +6,68 @@ export default function Fees() {
   return (
     <>
       <Head>
-        <title>Gallery</title>
+        <title>Gallery | Laerskool Bekker Primary</title>
+        <meta
+          name="description"
+          content="Explore the moments captured at Laerskool Bekker Primary. View our gallery to see the fun and memories made during hostel weekends, sports events, and the Grade 1's activities."
+        />
+        <meta
+          name="keywords"
+          content="Laerskool Bekker Primary, school gallery, hostel activities, sports gallery, Grade 1 gallery, student life, school events"
+        />
+        <meta name="author" content="Laerskool Bekker Primary" />
+        <meta name="robots" content="index, follow" />
+        <meta
+          property="og:title"
+          content="Gallery | Laerskool Bekker Primary"
+        />
+        <meta
+          property="og:description"
+          content="Explore the moments captured at Laerskool Bekker Primary. View our gallery to see the fun and memories made during hostel weekends, sports events, and the Grade 1's activities."
+        />
+        <meta
+          property="og:image"
+          content="https://lsbekker.com/img/gallery-banner.jpg"
+        />
+        <meta property="og:url" content="https://lsbekker.com/more/gallery" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Laerskool Bekker Primary" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Gallery | Laerskool Bekker Primary"
+        />
+        <meta
+          name="twitter:description"
+          content="Explore the moments captured at Laerskool Bekker Primary. View our gallery to see the fun and memories made during hostel weekends, sports events, and the Grade 1's activities."
+        />
+        <meta
+          name="twitter:image"
+          content="https://lsbekker.com/img/gallery-banner.jpg"
+        />
+        <link rel="canonical" href="https://lsbekker.com/more/gallery" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta charset="UTF-8" />
-        <meta property="og:title" content="Gallery" />
-        <link rel="canonical" href="https://lsbekker.com/more/gallery" />
+        <meta charSet="UTF-8" />
+        <script type="application/ld+json">
+          {`
+    {
+      "@context": "http://schema.org",
+      "@type": "ImageGallery",
+      "name": "Gallery | Laerskool Bekker Primary",
+      "url": "https://lsbekker.com/more/gallery",
+      "description": "Explore the moments captured at Laerskool Bekker Primary. View our gallery to see the fun and memories made during hostel weekends, sports events, and the Grade 1's activities.",
+      "image": "https://lsbekker.com/img/gallery-banner.jpg",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Laerskool Bekker Primary",
+        "logo": "https://lsbekker.com/img/school-logo.png"
+      }
+    }
+    `}
+        </script>
       </Head>
+
       {/* Banner */}
       <div className="section hostel">
         <div className="cutout-section">

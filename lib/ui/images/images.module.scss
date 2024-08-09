@@ -88,3 +88,15 @@
     top: 100px;
   }
 }
+.formImageContainer {
+  position: absolute;
+  top: -20px;
+  right: 30px;
+  @media screen and (min-width: 1025px) {
+    right: 150px;
+    top: 10px;
+  }
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}

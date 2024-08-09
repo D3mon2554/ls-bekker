@@ -15,16 +15,82 @@ export default function Applications() {
     <>
       {/* Head */}
       <Head>
-        <title>Applications</title>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta charset="UTF-8" />
-        <meta property="og:title" content="Applications" />
+        <title>Applications | Laerskool Bekker Primary</title>
+        <meta
+          name="description"
+          content="Apply now for admission to Laerskool Bekker Primary. Explore our application process for day scholars, hostel students, and Grade R learners. Conveniently access all necessary forms online."
+        />
+        <meta
+          name="keywords"
+          content="Laerskool Bekker Primary, school applications, admission forms, hostel applications, Grade R applications, school fees, boarding school applications"
+        />
+        <meta name="author" content="Laerskool Bekker Primary" />
+        <meta name="robots" content="index, follow" />
+        <meta
+          property="og:title"
+          content="Applications | Laerskool Bekker Primary"
+        />
+        <meta
+          property="og:description"
+          content="Apply now for admission to Laerskool Bekker Primary. Explore our application process for day scholars, hostel students, and Grade R learners. Conveniently access all necessary forms online."
+        />
+        <meta
+          property="og:image"
+          content="https://lsbekker.com/img/applications-banner.jpg"
+        />
+        <meta
+          property="og:url"
+          content="https://lsbekker.com/registration/applications"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Laerskool Bekker Primary" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Applications | Laerskool Bekker Primary"
+        />
+        <meta
+          name="twitter:description"
+          content="Apply now for admission to Laerskool Bekker Primary. Explore our application process for day scholars, hostel students, and Grade R learners. Conveniently access all necessary forms online."
+        />
+        <meta
+          name="twitter:image"
+          content="https://lsbekker.com/img/applications-banner.jpg"
+        />
         <link
           rel="canonical"
           href="https://lsbekker.com/registration/applications"
         />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charSet="UTF-8" />
+        <script type="application/ld+json">
+          {`
+    {
+      "@context": "http://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "Laerskool Bekker Primary",
+      "url": "https://lsbekker.com/registration/applications",
+      "logo": "https://lsbekker.com/img/school-logo.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Laerskool Bekker Primary",
+        "addressLocality": "Magaliesburg",
+        "addressRegion": "Gauteng",
+        "postalCode": "1791",
+        "addressCountry": "ZA"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+27-14-576-0040",
+        "contactType": "Customer Service"
+      },
+      "description": "Apply now for admission to Laerskool Bekker Primary. Explore our application process for day scholars, hostel students, and Grade R learners. Conveniently access all necessary forms online."
+    }
+    `}
+        </script>
       </Head>
+
       {/* Banner */}
       <div className="section hostel">
         <div className="cutout-section">

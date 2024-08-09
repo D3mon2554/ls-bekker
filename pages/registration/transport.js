@@ -33,16 +33,82 @@ export default function Transport() {
     <>
       {/* Head */}
       <Head>
-        <title>Transport</title>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta charset="UTF-8" />
-        <meta property="og:title" content="Transport" />
+        <title>Transport | Laerskool Bekker Primary</title>
+        <meta
+          name="description"
+          content="Learn about the transportation services provided by Laerskool Bekker Primary, including bus routes, tariffs, and application processes. Secure a seat for your child on our school buses today."
+        />
+        <meta
+          name="keywords"
+          content="Laerskool Bekker Primary transport, school bus services, transport routes, school transport application, bus tariffs, day bus, weekend bus"
+        />
+        <meta name="author" content="Laerskool Bekker Primary" />
+        <meta name="robots" content="index, follow" />
+        <meta
+          property="og:title"
+          content="Transport | Laerskool Bekker Primary"
+        />
+        <meta
+          property="og:description"
+          content="Learn about the transportation services provided by Laerskool Bekker Primary, including bus routes, tariffs, and application processes. Secure a seat for your child on our school buses today."
+        />
+        <meta
+          property="og:image"
+          content="https://lsbekker.com/img/transport-banner.jpg"
+        />
+        <meta
+          property="og:url"
+          content="https://lsbekker.com/registration/transport"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Laerskool Bekker Primary" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Transport | Laerskool Bekker Primary"
+        />
+        <meta
+          name="twitter:description"
+          content="Learn about the transportation services provided by Laerskool Bekker Primary, including bus routes, tariffs, and application processes. Secure a seat for your child on our school buses today."
+        />
+        <meta
+          name="twitter:image"
+          content="https://lsbekker.com/img/transport-banner.jpg"
+        />
         <link
           rel="canonical"
           href="https://lsbekker.com/registration/transport"
         />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charSet="UTF-8" />
+        <script type="application/ld+json">
+          {`
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "name": "Laerskool Bekker Primary",
+      "url": "https://lsbekker.com/registration/transport",
+      "logo": "https://lsbekker.com/img/school-logo.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Laerskool Bekker Primary",
+        "addressLocality": "Magaliesburg",
+        "addressRegion": "Gauteng",
+        "postalCode": "1791",
+        "addressCountry": "ZA"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+27-14-576-0040",
+        "contactType": "Customer Service"
+      },
+      "description": "Learn about the transportation services provided by Laerskool Bekker Primary, including bus routes, tariffs, and application processes. Secure a seat for your child on our school buses today."
+    }
+    `}
+        </script>
       </Head>
+
       {/* Banner */}
       <div className="section transport">
         <div className="cutout-section">

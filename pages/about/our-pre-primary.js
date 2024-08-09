@@ -24,15 +24,80 @@ export default function OurPreSchool() {
   return (
     <>
       <Head>
-        <title>Our Pre-Primary</title>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta charset="UTF-8" />
-        <meta property="og:title" content="Our Pre-Primary" />
+        <title>Our Pre-Primary | Bekkies Pre-Primary</title>
+        <meta
+          name="description"
+          content="Welcome to Bekkies Pre-Primary at Laerskool Bekker Primary in Magaliesburg. Discover our high-quality early development program for children aged 3 to 6, with a focus on learning through play."
+        />
+        <meta
+          name="keywords"
+          content="Pre-Primary, Bekkies Pre-Primary, Laerskool Bekker Primary, preschool, early childhood development, Magaliesburg, education"
+        />
+        <meta name="author" content="Laerskool Bekker Primary" />
+        <meta name="robots" content="index, follow" />
+        <meta
+          property="og:title"
+          content="Our Pre-Primary | Bekkies Pre-Primary"
+        />
+        <meta
+          property="og:description"
+          content="Welcome to Bekkies Pre-Primary at Laerskool Bekker Primary in Magaliesburg. Discover our high-quality early development program for children aged 3 to 6, with a focus on learning through play."
+        />
+        <meta
+          property="og:image"
+          content="https://lsbekker.com/img/school/bekkieswall.jpg"
+        />
+        <meta
+          property="og:url"
+          content="https://lsbekker.com/about/our-pre-primary"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Laerskool Bekker Primary" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Our Pre-Primary | Bekkies Pre-Primary"
+        />
+        <meta
+          name="twitter:description"
+          content="Welcome to Bekkies Pre-Primary at Laerskool Bekker Primary in Magaliesburg. Discover our high-quality early development program for children aged 3 to 6, with a focus on learning through play."
+        />
+        <meta
+          name="twitter:image"
+          content="https://lsbekker.com/img/school/bekkieswall.jpg"
+        />
         <link
           rel="canonical"
           href="https://lsbekker.com/about/our-pre-primary"
         />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charSet="UTF-8" />
+        <script type="application/ld+json">
+          {`
+    {
+      "@context": "http://schema.org",
+      "@type": "School",
+      "name": "Bekkies Pre-Primary",
+      "url": "https://lsbekker.com/about/our-pre-primary",
+      "logo": "https://lsbekker.com/img/school/bekkieswall.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Laerskool Bekker Primary",
+        "addressLocality": "Magaliesburg",
+        "addressRegion": "Gauteng",
+        "postalCode": "1791",
+        "addressCountry": "ZA"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+27-14-576-0040",
+        "contactType": "Customer Service"
+      },
+      "description": "Welcome to Bekkies Pre-Primary at Laerskool Bekker Primary in Magaliesburg. Discover our high-quality early development program for children aged 3 to 6, with a focus on learning through play."
+    }
+    `}
+        </script>
       </Head>
       {/* Banner */}
       <div className="section prePrimary">

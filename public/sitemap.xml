@@ -4,60 +4,85 @@
   <url>
     <loc>https://lsbekker.com/</loc>
     <lastmod>2024-05-27</lastmod>
+    <priority>1.0</priority>
+    <changefreq>daily</changefreq>
   </url>
-<!--About us-->
+
+  <!-- About Us -->
   <url>
     <loc>https://lsbekker.com/about/our-purpose</loc>
     <lastmod>2024-05-27</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
   </url>
-  <!--Our School-->
   <url>
     <loc>https://lsbekker.com/about/our-school</loc>
     <lastmod>2024-05-27</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
   </url>
-  <!--Our Pre-Primary-->
   <url>
     <loc>https://lsbekker.com/about/our-pre-primary</loc>
     <lastmod>2024-05-27</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
   </url>
-  <!--Our Hostel-->
+
+  <!-- Hostel -->
   <url>
     <loc>https://lsbekker.com/hostel/our-hostel</loc>
     <lastmod>2024-05-27</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
   </url>
-  <!--Hostel-Newsletter-->
   <url>
     <loc>https://lsbekker.com/hostel/newsletter</loc>
     <lastmod>2024-05-27</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
   </url>
-  <!--Calendar-->
+
+  <!-- Calendar -->
   <url>
     <loc>https://lsbekker.com/calendar/upcoming</loc>
     <lastmod>2024-05-27</lastmod>
+    <priority>0.7</priority>
+    <changefreq>weekly</changefreq>
   </url>
-  <!--General Newsletter-->
   <url>
     <loc>https://lsbekker.com/calendar/general-newsletter</loc>
     <lastmod>2024-05-27</lastmod>
+    <priority>0.7</priority>
+    <changefreq>weekly</changefreq>
   </url>
-  <!--Transport-->
+
+  <!-- Registration -->
   <url>
     <loc>https://lsbekker.com/registration/transport</loc>
     <lastmod>2024-05-27</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
   </url>
-  <!--Applications-->
   <url>
     <loc>https://lsbekker.com/registration/applications</loc>
     <lastmod>2024-05-27</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
   </url>
-  <!--Gallery-->
+
+  <!-- Gallery -->
   <url>
     <loc>https://lsbekker.com/more/gallery</loc>
     <lastmod>2024-05-27</lastmod>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
   </url>
-  <!--Contact Us-->
+
+  <!-- Contact Us -->
   <url>
     <loc>https://lsbekker.com/contact</loc>
     <lastmod>2024-05-27</lastmod>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
   </url>
 </urlset>

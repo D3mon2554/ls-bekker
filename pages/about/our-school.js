@@ -86,14 +86,78 @@ export default function OurSchool() {
     <>
       {/* Head */}
       <Head>
-        <title>Our School</title>
+        <title>Our School | Laerskool Bekker Primary</title>
+        <meta
+          name="description"
+          content="Discover the comprehensive educational offerings at Laerskool Bekker Primary. From academics to sports and extracurricular activities, we provide a holistic environment for student growth."
+        />
+        <meta
+          name="keywords"
+          content="Laerskool Bekker Primary, Our School, academics, sports, extracurricular activities, primary education, holistic education, Magaliesburg, top school in south africa, top schools, top primary schools in south africa, top primary schools, primary schools in gauteng,top primary schools in guateng"
+        />
+        <meta name="author" content="Laerskool Bekker Primary" />
+        <meta name="robots" content="index, follow" />
+        <meta
+          property="og:title"
+          content="Our School | Laerskool Bekker Primary"
+        />
+        <meta
+          property="og:description"
+          content="Discover the comprehensive educational offerings at Laerskool Bekker Primary. From academics to sports and extracurricular activities, we provide a holistic environment for student growth."
+        />
+        <meta
+          property="og:image"
+          content="https://lsbekker.com/img/school/excellence.png"
+        />
+        <meta
+          property="og:url"
+          content="https://lsbekker.com/about/our-school"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Laerskool Bekker Primary" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Our School | Laerskool Bekker Primary"
+        />
+        <meta
+          name="twitter:description"
+          content="Discover the comprehensive educational offerings at Laerskool Bekker Primary. From academics to sports and extracurricular activities, we provide a holistic environment for student growth."
+        />
+        <meta
+          name="twitter:image"
+          content="https://lsbekker.com/img/school/excellence.png"
+        />
+        <link rel="canonical" href="https://lsbekker.com/about/our-school" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta charset="UTF-8" />
-        <meta property="og:title" content="Our School" />
-        <link rel="canonical" href="https://lsbekker.com/about/our-school" />
+        <meta charSet="UTF-8" />
+        <script type="application/ld+json">
+          {`
+    {
+      "@context": "http://schema.org",
+      "@type": "School",
+      "name": "Laerskool Bekker Primary",
+      "url": "https://lsbekker.com/about/our-school",
+      "logo": "https://lsbekker.com/img/school/excellence.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Laerskool Bekker Primary",
+        "addressLocality": "Magaliesburg",
+        "addressRegion": "Gauteng",
+        "postalCode": "1791",
+        "addressCountry": "ZA"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+27-14-576-0040",
+        "contactType": "Customer Service"
+      },
+      "description": "Discover the comprehensive educational offerings at Laerskool Bekker Primary. From academics to sports and extracurricular activities, we provide a holistic environment for student growth."
+    }
+    `}
+        </script>
       </Head>
-
       {/* Banner */}
       <div className="section prefect">
         <div className="cutout-section">
@@ -346,12 +410,6 @@ export default function OurSchool() {
           </div>
         </div>
       </div>
-      {/* School Application & Contact Us
-      <div className="section">
-        <div className="section-content">
-          <h1>If you have any questions please feel free to contact us</h1>
-        </div>
-      </div> */}
     </>
   );
 }

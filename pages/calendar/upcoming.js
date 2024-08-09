@@ -8,13 +8,82 @@ export default function Upcoming() {
   return (
     <>
       <Head>
-        <title>Events</title>
+        <title>Events | Laerskool Bekker Primary</title>
+        <meta
+          name="description"
+          content="Stay updated with all upcoming events at Laerskool Bekker Primary. From school holidays to outdoor activities, find all the information you need right here."
+        />
+        <meta
+          name="keywords"
+          content="Laerskool Bekker Primary, school events, upcoming events, school calendar, Bekker events, outdoor activities"
+        />
+        <meta name="author" content="Laerskool Bekker Primary" />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content="Events | Laerskool Bekker Primary" />
+        <meta
+          property="og:description"
+          content="Stay updated with all upcoming events at Laerskool Bekker Primary. From school holidays to outdoor activities, find all the information you need right here."
+        />
+        <meta
+          property="og:image"
+          content="https://lsbekker.com/img/events-banner.jpg"
+        />
+        <meta
+          property="og:url"
+          content="https://lsbekker.com/calendar/upcomming"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Laerskool Bekker Primary" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Events | Laerskool Bekker Primary"
+        />
+        <meta
+          name="twitter:description"
+          content="Stay updated with all upcoming events at Laerskool Bekker Primary. From school holidays to outdoor activities, find all the information you need right here."
+        />
+        <meta
+          name="twitter:image"
+          content="https://lsbekker.com/img/events-banner.jpg"
+        />
+        <link rel="canonical" href="https://lsbekker.com/calendar/upcomming" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta charset="UTF-8" />
-        <meta property="og:title" content="Events" />
-        <link rel="canonical" href="https://lsbekker.com/calendar/upcomming" />
+        <meta charSet="UTF-8" />
+        <script type="application/ld+json">
+          {`
+    {
+      "@context": "http://schema.org",
+      "@type": "Event",
+      "name": "Upcoming Events",
+      "url": "https://lsbekker.com/calendar/upcomming",
+      "description": "Stay updated with all upcoming events at Laerskool Bekker Primary. From school holidays to outdoor activities, find all the information you need right here.",
+      "startDate": "2023-08-01T08:00:00Z",
+      "endDate": "2023-12-31T17:00:00Z",
+      "location": {
+        "@type": "Place",
+        "name": "Laerskool Bekker Primary",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Laerskool Bekker Primary",
+          "addressLocality": "Magaliesburg",
+          "addressRegion": "Gauteng",
+          "postalCode": "1791",
+          "addressCountry": "ZA"
+        }
+      },
+      "image": "https://lsbekker.com/img/events-banner.jpg",
+      "organizer": {
+        "@type": "Organization",
+        "name": "Laerskool Bekker Primary",
+        "url": "https://lsbekker.com"
+      }
+    }
+    `}
+        </script>
       </Head>
+
       {/* Banner */}
       <div className="section events">
         <div className="cutout-section">
