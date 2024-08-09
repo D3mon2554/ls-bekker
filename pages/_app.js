@@ -69,7 +69,7 @@ function MyApp({ Component, pageProps }) {
         />
         <meta
           name="keywords"
-          content="Laerskool Bekker Primary, top primary school South Africa, leading school Gauteng, primary education, boarding school South Africa, hostel school, best primary school Gauteng, top school Magaliesburg"
+          content="Laerskool Bekker Primary, top primary school South Africa, leading school Gauteng, primary education, boarding school South Africa, hostel school, best primary school Gauteng, top school Magaliesburg, South African education, quality primary education, Gauteng school, private school South Africa, Magaliesburg education, Laerskool Bekker hostel, holistic education, independent school, best boarding school South Africa, primary school with boarding, academic excellence, pre-primary education"
         />
         <meta name="author" content="Laerskool Bekker Primary" />
         <meta name="robots" content="index, follow" />
@@ -107,30 +107,31 @@ function MyApp({ Component, pageProps }) {
         <meta charSet="UTF-8" />
         <script type="application/ld+json">
           {`
-          {
-            "@context": "http://schema.org",
-            "@type": "School",
-            "name": "Laerskool Bekker Primary",
-            "url": "https://lsbekker.com",
-            "logo": "https://lsbekker.com/img/school-logo.png",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "3H22+5XC, Magaliesburg",
-              "addressLocality": "Magaliesburg",
-              "addressRegion": "Gauteng",
-              "postalCode": "1791",
-              "addressCountry": "ZA"
-            },
-            "contactPoint": {
-              "@type": "ContactPoint",
-              "telephone": "+27-14-577-1129",
-              "contactType": "Customer Service"
-            },
-            "description": "Laerskool Bekker Primary is the leading primary school in South Africa and Gauteng, offering top-tier education and boarding facilities in a nurturing environment."
-          }
-          `}
+    {
+      "@context": "http://schema.org",
+      "@type": "School",
+      "name": "Laerskool Bekker Primary",
+      "url": "https://lsbekker.com",
+      "logo": "https://lsbekker.com/img/school-logo.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "3H22+5XC, Magaliesburg",
+        "addressLocality": "Magaliesburg",
+        "addressRegion": "Gauteng",
+        "postalCode": "1791",
+        "addressCountry": "ZA"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+27-14-577-1129",
+        "contactType": "Customer Service"
+      },
+      "description": "Laerskool Bekker Primary is the leading primary school in South Africa and Gauteng, offering top-tier education and boarding facilities in a nurturing environment."
+    }
+    `}
         </script>
       </Head>
+
       <Navigation />
       <main>
         <Component {...pageProps} />

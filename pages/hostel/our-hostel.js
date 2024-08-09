@@ -13,7 +13,7 @@ export default function OurHostel() {
         />
         <meta
           name="keywords"
-          content="Laerskool Bekker Primary, hostel, boarding school, student housing, school hostel, boarding facilities, Bekker hostel,top boarding schools in south africa, top boarding schools, top primary boarding school, top boarding school in guateng,bnoarding schools in guateng"
+          content="Laerskool Bekker Primary, hostel, boarding school, student housing, school hostel, boarding facilities, Bekker hostel,top boarding schools in south africa, top boarding schools, top primary boarding school, top boarding school in gauteng,bnoarding schools in gauteng"
         />
         <meta name="author" content="Laerskool Bekker Primary" />
         <meta name="robots" content="index, follow" />
