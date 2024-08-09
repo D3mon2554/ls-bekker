@@ -1,26 +1,84 @@
 import PurposeImages from "@/lib/ui/images/images";
 import Image from "next/image";
-import { StaffCardChef, StaffCard } from "@/lib/ui/card/card";
 import Head from "next/head";
-
-const HeadCheff = [
-  {
-    Image: "/img/school/teachers/headcheff2.jpg",
-    Name: "Our Head Chef",
-  },
-];
 
 export default function OurHostel() {
   return (
     <>
       <Head>
-        <title>Our Hostel</title>
+        <title>Our Hostel | Laerskool Bekker Primary</title>
+        <meta
+          name="description"
+          content="Discover the hostel facilities at Laerskool Bekker Primary. We provide a nurturing and fun environment where lifelong friendships are made and memories are cherished."
+        />
+        <meta
+          name="keywords"
+          content="Laerskool Bekker Primary, hostel, boarding school, student housing, school hostel, boarding facilities, Bekker hostel,top boarding schools in south africa, top boarding schools, top primary boarding school, top boarding school in guateng,bnoarding schools in guateng"
+        />
+        <meta name="author" content="Laerskool Bekker Primary" />
+        <meta name="robots" content="index, follow" />
+        <meta
+          property="og:title"
+          content="Our Hostel | Laerskool Bekker Primary"
+        />
+        <meta
+          property="og:description"
+          content="Discover the hostel facilities at Laerskool Bekker Primary. We provide a nurturing and fun environment where lifelong friendships are made and memories are cherished."
+        />
+        <meta
+          property="og:image"
+          content="https://lsbekker.com/img/hostel-banner.jpg"
+        />
+        <meta
+          property="og:url"
+          content="https://lsbekker.com/hostel/our-hostel"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Laerskool Bekker Primary" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Our Hostel | Laerskool Bekker Primary"
+        />
+        <meta
+          name="twitter:description"
+          content="Discover the hostel facilities at Laerskool Bekker Primary. We provide a nurturing and fun environment where lifelong friendships are made and memories are cherished."
+        />
+        <meta
+          name="twitter:image"
+          content="https://lsbekker.com/img/hostel-banner.jpg"
+        />
+        <link rel="canonical" href="https://lsbekker.com/hostel/our-hostel" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta charset="UTF-8" />
-        <meta property="og:title" content="Our Hostel" />
-        <link rel="canonical" href="https://lsbekker.com/hostel/our-hostel" />
+        <meta charSet="UTF-8" />
+        <script type="application/ld+json">
+          {`
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "name": "Laerskool Bekker Primary",
+      "url": "https://lsbekker.com/hostel/our-hostel",
+      "logo": "https://lsbekker.com/img/hostel-banner.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Laerskool Bekker Primary",
+        "addressLocality": "Magaliesburg",
+        "addressRegion": "Gauteng",
+        "postalCode": "1791",
+        "addressCountry": "ZA"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+27-14-576-0040",
+        "contactType": "Customer Service"
+      },
+      "description": "Discover the hostel facilities at Laerskool Bekker Primary. We provide a nurturing and fun environment where lifelong friendships are made and memories are cherished."
+    }
+    `}
+        </script>
       </Head>
+
       {/* Banner */}
       <div className="section hostel">
         <div className="cutout-section">

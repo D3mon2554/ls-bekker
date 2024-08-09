@@ -7,13 +7,79 @@ export default function OurPurpose() {
     <>
       {/* Head */}
       <Head>
-        <title>Our Purpose</title>
+        <title>Our Purpose | Laerskool Bekker Primary</title>
+        <meta
+          name="description"
+          content="Discover the purpose of Laerskool Bekker Primary. We are dedicated to nurturing excellence in education and character development through our core values of respect, honesty, accountability, attitude, and loyalty."
+        />
+        <meta
+          name="keywords"
+          content="Our Purpose, Laerskool Bekker Primary, education, character development, core values, respect, honesty, accountability, attitude, loyalty"
+        />
+        <meta name="author" content="Laerskool Bekker Primary" />
+        <meta name="robots" content="index, follow" />
+        <meta
+          property="og:title"
+          content="Our Purpose | Laerskool Bekker Primary"
+        />
+        <meta
+          property="og:description"
+          content="Discover the purpose of Laerskool Bekker Primary. We are dedicated to nurturing excellence in education and character development through our core values of respect, honesty, accountability, attitude, and loyalty."
+        />
+        <meta
+          property="og:image"
+          content="https://lsbekker.com/img/school/excellence.png"
+        />
+        <meta
+          property="og:url"
+          content="https://lsbekker.com/about/our-purpose"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Laerskool Bekker Primary" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Our Purpose | Laerskool Bekker Primary"
+        />
+        <meta
+          name="twitter:description"
+          content="Discover the purpose of Laerskool Bekker Primary. We are dedicated to nurturing excellence in education and character development through our core values of respect, honesty, accountability, attitude, and loyalty."
+        />
+        <meta
+          name="twitter:image"
+          content="https://lsbekker.com/img/school/excellence.png"
+        />
+        <link rel="canonical" href="https://lsbekker.com/about/our-purpose" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta charset="UTF-8" />
-        <meta property="og:title" content="Our Purpose" />
-        <link rel="canonical" href="https://lsbekker.com/about/our-purpose" />
+        <meta charSet="UTF-8" />
+        <script type="application/ld+json">
+          {`
+    {
+      "@context": "http://schema.org",
+      "@type": "School",
+      "name": "Laerskool Bekker Primary",
+      "url": "https://lsbekker.com/about/our-purpose",
+      "logo": "https://lsbekker.com/img/school/excellence.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Laerskool Bekker Primary",
+        "addressLocality": "Magaliesburg",
+        "addressRegion": "Gauteng",
+        "postalCode": "1791",
+        "addressCountry": "ZA"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+27-14-576-0040",
+        "contactType": "Customer Service"
+      },
+      "description": "Discover the purpose of Laerskool Bekker Primary. We are dedicated to nurturing excellence in education and character development through our core values of respect, honesty, accountability, attitude, and loyalty."
+    }
+    `}
+        </script>
       </Head>
+
       {/* Banner */}
       <div className=" section aboutBanner">
         <div className="cutout-sectionLeft">

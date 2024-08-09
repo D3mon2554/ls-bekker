@@ -10,7 +10,7 @@ import ContactPresentSchool from "@/lib/ui/day-scholar-form-components/learnerIn
 import MedicalInformation from "@/lib/ui/day-scholar-form-components/medical_information/medical_information";
 import Acknowledgement from "@/lib/ui/day-scholar-form-components/acknoledgement/acknowledgement";
 import DayScholarPDFDocument from "@/lib/ui/pdfdocument/dayscholarformpdf";
-import PurposeImages from "@/lib/ui/images/images";
+import { FormImages } from "@/lib/ui/images/images";
 
 const FormDisplay = () => {
   const router = useRouter();
@@ -74,7 +74,13 @@ const FormDisplay = () => {
   }
 
   const isFieldDisabled = true;
-
+  const learnerInfo = formData.LearnerInformation[0].Information || {};
+  // const learnerFirstName = learnerInfo.firstName || "";
+  const learnerLastName = learnerInfo.lastName || "";
+  const parentLastName =
+    formData.ParentDetailsMother?.Information?.lastName || "";
+  const parentFristName =
+    formData.ParentDetailsMother?.Information?.firstName || "";
   return (
     <>
       {/* Banner */}
@@ -82,17 +88,20 @@ const FormDisplay = () => {
         <div className="cutout-sectionLeft">
           <div className="section-content grid grid-align_horizontal-end grid-align_vertical-center">
             <div className="size_1-of-1 large-size_2-of-4 medium-padding-left_xx-large  medium-padding-bottom_xx-large">
-              <PurposeImages color="#FFC82D" width={380} height={180} />
+              <FormImages color="#FFC82D" width={380} height={180} />
               <div className="size_1-of-1 padding-bottom_xx-large ">
                 <h1 className="font-size_xx-large font-family_futuraDemi">
-                  Apply Now
+                  Welcome to your Application Form
                 </h1>
-                <h2 className="font-size_x-large">for Day Scholar</h2>
+                <h2 className="font-size_x-large">
+                  {parentFristName} {parentLastName}
+                </h2>
               </div>
               <div className="size_1-of-1 padding-bottom_large">
                 <p className="padding-top_medium">
-                  Experience the future of{" "}
-                  <span className="color-primary">education</span> with us!
+                  Embark on a journey to excellence with us. Experience the
+                  future of <span className="color-primary">education</span>{" "}
+                  today!!
                 </p>
               </div>
             </div>

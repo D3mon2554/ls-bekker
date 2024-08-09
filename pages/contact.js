@@ -48,13 +48,76 @@ export default function Contact() {
   return (
     <>
       <Head>
-        <title>Contact Us</title>
+        <title>Contact Us | Laerskool Bekker Primary</title>
+        <meta
+          name="description"
+          content="Get in touch with Laerskool Bekker Primary. Contact us via phone, email, or visit our location in Magaliesburg. We're here to help with any queries you may have."
+        />
+        <meta
+          name="keywords"
+          content="Laerskool Bekker Primary contact, contact information, school contact details, phone number, email address, school address"
+        />
+        <meta name="author" content="Laerskool Bekker Primary" />
+        <meta name="robots" content="index, follow" />
+        <meta
+          property="og:title"
+          content="Contact Us | Laerskool Bekker Primary"
+        />
+        <meta
+          property="og:description"
+          content="Get in touch with Laerskool Bekker Primary. Contact us via phone, email, or visit our location in Magaliesburg. We're here to help with any queries you may have."
+        />
+        <meta
+          property="og:image"
+          content="https://lsbekker.com/img/contact-banner.jpg"
+        />
+        <meta property="og:url" content="https://lsbekker.com/contact" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Laerskool Bekker Primary" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Contact Us | Laerskool Bekker Primary"
+        />
+        <meta
+          name="twitter:description"
+          content="Get in touch with Laerskool Bekker Primary. Contact us via phone, email, or visit our location in Magaliesburg. We're here to help with any queries you may have."
+        />
+        <meta
+          name="twitter:image"
+          content="https://lsbekker.com/img/contact-banner.jpg"
+        />
+        <link rel="canonical" href="https://lsbekker.com/contact" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta charset="UTF-8" />
-        <meta property="og:title" content="Contact Us" />
-        <link rel="canonical" href="https://lsbekker.com/contact" />
+        <meta charSet="UTF-8" />
+        <script type="application/ld+json">
+          {`
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "name": "Laerskool Bekker Primary",
+      "url": "https://lsbekker.com/contact",
+      "logo": "https://lsbekker.com/img/school-logo.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "3H22+5XC, Magaliesburg",
+        "addressLocality": "Magaliesburg",
+        "addressRegion": "Gauteng",
+        "postalCode": "1791",
+        "addressCountry": "ZA"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+27-14-577-1129",
+        "contactType": "Customer Service"
+      },
+      "description": "Get in touch with Laerskool Bekker Primary. Contact us via phone, email, or visit our location in Magaliesburg. We're here to help with any queries you may have."
+    }
+    `}
+        </script>
       </Head>
+
       {/* Banner */}
       <div className="section hostel">
         <div className="cutout-section">
