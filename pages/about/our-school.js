@@ -93,7 +93,7 @@ export default function OurSchool() {
         />
         <meta
           name="keywords"
-          content="Laerskool Bekker Primary, Our School, academics, sports, extracurricular activities, primary education, holistic education, Magaliesburg, top school in south africa, top schools, top primary schools in south africa, top primary schools, primary schools in gauteng,top primary schools in guateng"
+          content="Laerskool Bekker Primary, Our School, academics, sports, extracurricular activities, primary education, holistic education, Magaliesburg, top school in south africa, top schools, top primary schools in south africa, top primary schools, primary schools in gauteng,top primary schools in gauteng"
         />
         <meta name="author" content="Laerskool Bekker Primary" />
         <meta name="robots" content="index, follow" />
