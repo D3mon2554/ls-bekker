@@ -49,9 +49,6 @@ export default async function handler(req, res) {
         user: AuthUser,
         pass: AuthPass,
       },
-      tls: {
-        rejectUnauthorized: false,
-      },
     });
 
     // Read the email template file
