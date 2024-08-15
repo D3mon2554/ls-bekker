@@ -42,7 +42,6 @@ export default async function handler(req, res) {
         break;
     }
 
-    // Create a Nodemailer transporter
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
@@ -50,7 +49,7 @@ export default async function handler(req, res) {
         pass: AuthPass,
       },
       tls: {
-        rejectUnauthorized: false,
+        rejectUnauthorized: false, // Important if you have SSL/TLS issues
       },
     });
 
