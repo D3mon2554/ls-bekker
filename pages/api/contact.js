@@ -17,7 +17,27 @@ export default async function handler(req, res) {
       case "Complaints":
         toEmail = "info@lsbekker.co.za";
         break;
-      // Other cases...
+      case "Compliments":
+        toEmail = "info@lsbekker.co.za";
+        break;
+      case "General Information":
+        toEmail = "info@lsbekker.co.za";
+        break;
+      case "My Account Status":
+        toEmail = "accounts@lsbekker.co.za";
+        break;
+      case "New Hostel Application":
+        toEmail = "info@lsbekker.co.za";
+        break;
+      case "New School Application":
+        toEmail = "school@lsbekker.co.za";
+        break;
+      case "Exemptions":
+        toEmail = "hr@lsbekker.com";
+        break;
+      case "Other":
+        toEmail = "info@lsbekker.co.za";
+        break;
       default:
         toEmail = EmailTo;
         break;
