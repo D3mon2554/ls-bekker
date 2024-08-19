@@ -520,7 +520,6 @@ export default function HostelApplication() {
 
     return isValid;
   };
-
   return (
     <>
       {/* Banner */}
