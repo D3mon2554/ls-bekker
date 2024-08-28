@@ -680,6 +680,40 @@ export default function DayScholarApplication() {
               }
             />
           </div>
+          <div className="padding-top_small">
+            <div className="grid grid-wrap">
+              <div className="size_1-of-1 padding-bottom_large medium-padding-bottom_none">
+                <div className=" color-maroon">
+                  <div className="">
+                    <h1>School fees</h1>
+                  </div>
+                  <div className="padding-top_xx-large padding-bottom_large">
+                    <h3>Annual Fees R 12 870.00</h3>
+                  </div>
+                  <div className="padding-bottom_large">
+                    <p>
+                      Annually (before the end of Feb 2024) R 11 700. (10 %
+                      discount for advance payment)
+                    </p>
+                  </div>
+                  <div>
+                    <h3>Quarterly payments</h3>
+                    <ul>1st Quarter – R 3 510.00</ul>
+                    <ul>2nd Quarter – R 3 510.00</ul>
+                    <ul>3rd Quarter – R 3 510.00</ul>
+                    <ul>4th Quarter – R 2 340.00</ul>
+                  </div>
+                  <div>
+                    <h3 className="padding-bottom_large">Monthly payments</h3>
+                    <p>
+                      Monthly payments of R 1 170.00 by EFT before the 7th of
+                      each month
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div>
