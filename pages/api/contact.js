@@ -33,7 +33,7 @@ export default async function handler(req, res) {
         toEmail = "school@lsbekker.co.za";
         break;
       case "Exemptions":
-        toEmail = "hr@lsbekker.com";
+        toEmail = "info@lsbekker.com";
         break;
       case "Other":
         toEmail = "info@lsbekker.co.za";
