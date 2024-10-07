@@ -297,15 +297,14 @@ export default function DayScholarApplication() {
         nature: subject,
         fileNames: fileNames,
       });
-
+      setSubmissionStatus("success");
       track("form_submission", {
         formName: "DayScholarApplication",
         email: emailFromForm,
         id: id,
         status: "success",
       });
-
-      setSubmissionStatus("success");
+      console.log("Tracking successful form submission.", track);
     } catch (error) {
       console.error("Error sending email:", error);
 
@@ -320,7 +319,7 @@ export default function DayScholarApplication() {
         message: failureEmailBody,
         nature: "Form Submission Failure Notification Ticket Logged",
       });
-
+      setSubmissionStatus("error");
       track("form_submission", {
         formName: "DayScholarApplication",
         email: emailFromForm,
@@ -328,8 +327,7 @@ export default function DayScholarApplication() {
         status: "failure",
         error: error.message,
       });
-
-      setSubmissionStatus("error");
+      console.log("Tracking failed form submission.", track);
     } finally {
       setIsSubmitting(false);
     }
