@@ -306,15 +306,13 @@ export default function HostelApplication() {
         nature: subject,
         fileNames: fileNames,
       });
-
+      setSubmissionStatus("success");
       track("form_submission", {
         formName: "HostelApplication",
         email: emailFromForm,
         id: id,
         status: "success",
       });
-
-      setSubmissionStatus("success");
     } catch (error) {
       console.error("Error sending email:", error);
 
@@ -329,7 +327,7 @@ export default function HostelApplication() {
         message: failureEmailBody,
         nature: "Form Submission Failure Notification Ticket Logged",
       });
-
+      setSubmissionStatus("error");
       track("form_submission", {
         formName: "HostelApplication",
         email: emailFromForm,
@@ -337,8 +335,6 @@ export default function HostelApplication() {
         status: "failure",
         error: error.message,
       });
-
-      setSubmissionStatus("error");
     } finally {
       setIsSubmitting(false); // Reset submission state
     }
