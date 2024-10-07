@@ -12,8 +12,8 @@ export default async function handler(req, res) {
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: process.env.AUTH_USER,
-        pass: process.env.AUTH_PASS,
+        user: "johnny.zietsman1@gmail.com",
+        pass: "gghq lmmv oumo ahbw",
       },
       tls: {
         // Do not fail on invalid certs
