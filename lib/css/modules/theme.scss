@@ -328,3 +328,15 @@ body {
   font-weight: 600;
   text-decoration: none;
 }
+.link {
+  color: #6a0911;
+  text-decoration: underline;
+  font-size: 20px;
+  font-weight: 500;
+  transition: ease-out 0.6s;
+  &:hover {
+    color: #b60505;
+    transition: ease-in 0.6s;
+    text-decoration: none;
+  }
+}

@@ -229,7 +229,7 @@ export default function Home() {
                   extramural activities.
                 </p>
               </div>
-              <div className="size_1-of-1 grid grid-align_vertical-center">
+              <div className="size_1-of-1 grid  grid-align_vertical-center">
                 <div className="size_1-of-1 padding-top_large">
                   <Link href="/hostel/our-hostel">
                     <Button label="Read More" variant="submit" />
@@ -268,6 +268,19 @@ export default function Home() {
                   Capable and experienced staff manage the school's professional
                   aspects.
                 </p>
+                {/* Code of conduct */}
+                <div className="size_1-of-1 grid grid-wrap grid-align_vertical-center">
+                  <p className="size_1-of-1 font-size_x-medium font-weight_regular padding-top_large padding-bottom_large">
+                    We invite you to read our{" "}
+                    <Link
+                      className="link"
+                      href="https://lsbekker.s3.eu-north-1.amazonaws.com/Files/Code+of+conduct+for+learner+Laerskool+Bekker.docx.pdf"
+                    >
+                      code of conduct.
+                    </Link>{" "}
+                    to learn more about our values and expectations.
+                  </p>
+                </div>
               </div>
               <div className="size_1-of-1 grid grid-align_vertical-center">
                 <div className="size_1-of-1 padding-top_large">
