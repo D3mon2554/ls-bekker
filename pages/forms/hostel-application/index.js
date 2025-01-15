@@ -19,6 +19,8 @@ export default function HostelApplication() {
   const [selectedFiles, setSelectedFiles] = useState([]);
   const [formErrors, setFormErrors] = useState({});
   const [submissionStatus, setSubmissionStatus] = useState("");
+  const [validationErrors, setValidationErrors] = useState([]);
+  const [showErrorOverlay, setShowErrorOverlay] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     ParentDetailsMother: {
@@ -462,16 +464,50 @@ export default function HostelApplication() {
       "ParentDetailsMother.AddressInformation.HomeApartment",
       "ParentDetailsMother.AddressInformation.homeAddress",
     ];
+    const fieldNames = {
+      "Acknowledgement.information.Name": "Name at Acknowledgement",
+      "Acknowledgement.information.Surname": "Surname at Acknowledgement",
+      "Acknowledgement.information.hereby": "Hereby at Acknowledgement",
+      "Acknowledgement.information.Marketing": "Marketing at Acknowledgement",
+      "ParentDetailsMother.Information.firstName":
+        "First Name at Parent/Legal Guardian/Proxy",
+      "ParentDetailsMother.Information.lastName":
+        "Last Name at Parent/Legal Guardian/Proxy",
+      "ParentDetailsMother.Information.RSACitizen":
+        "RSA Citizen at Parent/Legal Guardian/Proxy",
+      "ParentDetailsMother.Information.IDNumber":
+        "ID Number at Parent/Legal Guardian/Proxy",
+      "ParentDetailsMother.Information.Email":
+        "Email at Parent/Legal Guardian/Proxy",
+      "ParentDetailsMother.Information.MaterialStatus":
+        "Material Status at Parent/Legal Guardian/Proxy",
+      "ParentDetailsMother.Information.Status":
+        "Status at Parent/Legal Guardian/Proxy",
+      "ParentDetailsMother.AddressInformation.HomePostal":
+        "Home Postal at Parent/Legal Guardian/Proxy",
+      "ParentDetailsMother.AddressInformation.HomeCountry":
+        "Home Country at Parent/Legal Guardian/Proxy",
+      "ParentDetailsMother.AddressInformation.HomeProvince":
+        "Home Province at Parent/Legal Guardian/Proxy",
+      "ParentDetailsMother.AddressInformation.HomeCity":
+        "Home City at Parent/Legal Guardian/Proxy",
+      "ParentDetailsMother.AddressInformation.HomeApartment":
+        "Home Apartment at Parent/Legal Guardian/Proxy",
+      "ParentDetailsMother.AddressInformation.homeAddress":
+        "Home Address at Parent/Legal Guardian/Proxy",
+    };
 
     let isValid = true;
-
+    const errors = [];
     // Loop through each required field and validate
     requiredFields.forEach((fieldPath) => {
       const [parent, category, field] = fieldPath.split(".");
-      const value = formData[parent][category][field];
+      const value =
+        formData[parent]?.[category]?.[field] || formData[fieldPath];
 
       // Perform validation (e.g., check if the value is not empty)
       if (!value) {
+        errors.push(`${fieldNames[fieldPath]} is required.`);
         // Set error state for the field
         setFormData((prevFormData) => ({
           ...prevFormData,
@@ -513,7 +549,8 @@ export default function HostelApplication() {
         selectedFiles: "", // Clear error message if files are sufficient
       }));
     }
-
+    setValidationErrors(errors);
+    setShowErrorOverlay(errors.length > 0);
     return isValid;
   };
   return (
@@ -707,6 +744,23 @@ export default function HostelApplication() {
             variant="submit"
           />
         </div>
+        {showErrorOverlay && (
+          <div className="errorMassage">
+            <div className="container">
+              <button
+                className="button"
+                onClick={() => setShowErrorOverlay(false)}
+              >
+                Close
+              </button>
+              <ul>
+                {validationErrors.map((error, index) => (
+                  <li key={index}>{error}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        )}
         {submissionStatus === "success" && (
           <div className="section-content padding-around_large padding-top_xx-large padding-bottom_xx-large">
             <p className="font-size_large" style={{ color: "green" }}>
