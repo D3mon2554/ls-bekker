@@ -23,7 +23,7 @@ const FormDisplay = () => {
     const fetchFormData = async () => {
       try {
         const response = await fetch(
-          `https://lsbekker.s3.eu-north-1.amazonaws.com/forms/hostel-application/${id}/${id}.json`
+          ``
         );
         if (!response.ok) {
           throw new Error("Failed to fetch form data");
