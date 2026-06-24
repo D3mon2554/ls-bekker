@@ -22,7 +22,7 @@ const FormDisplay = () => {
     const fetchFormData = async () => {
       try {
         const response = await fetch(
-          `https://lsbekker.s3.eu-north-1.amazonaws.com/forms/day-scholar/${id}/${id}.json`
+          `.amazonaws.com/forms/day-scholar/${id}/${id}.json`
         );
         if (!response.ok) {
           throw new Error("Failed to fetch form data");
@@ -59,7 +59,7 @@ const FormDisplay = () => {
         const urls = response.Contents.filter(
           (obj) => obj.Key !== `forms/day-scholar/${id}/${id}.json`
         ).map((obj) => {
-          return `https://lsbekker.s3.eu-north-1.amazonaws.com/${obj.Key}`;
+          return `.amazonaws.com/${obj.Key}`;
         });
 
         setFileUrls(urls);
