@@ -161,9 +161,9 @@ export default function DayScholarApplication() {
     const firstName = parentDetailsMotherInfo?.firstName;
     const lastName = parentDetailsMotherInfo?.lastName;
     const emailImageURL =
-      "https://lsbekker.s3.eu-north-1.amazonaws.com/Files/dayscholar_email.PNG";
+      "";
     const emailFooterUrl =
-      "https://lsbekker.s3.eu-north-1.amazonaws.com/Files/dayscholar_email_foot.PNG";
+      "";
     const subject = "Day-Scholar application Form";
 
     // Construct the email body with HTML content and inline CSS styles
