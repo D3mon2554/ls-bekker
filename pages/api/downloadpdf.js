@@ -9,14 +9,14 @@ export default async function handler(req, res) {
 
   const params = {
     Bucket: process.env.AWS_BUCKET_NAME,
-    Key: "Files/BUS-TRANSPORT-CONTRACT-DAY-SCHOLARS-2023.pdf",
+    Key: "",
   };
 
   try {
     const data = await s3.getObject(params).promise();
     res.setHeader(
       "Content-Disposition",
-      `attachment; filename="BUS-TRANSPORT-CONTRACT-DAY-SCHOLARS-2023.pdf"`
+      `attachment; filename=""`
     );
     res.setHeader("Content-Type", "application/pdf");
     res.send(data.Body);
