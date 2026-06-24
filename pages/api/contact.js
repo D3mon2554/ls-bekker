@@ -15,28 +15,28 @@ export default async function handler(req, res) {
     let toEmail;
     switch (nature) {
       case "Complaints":
-        toEmail = "info@lsbekker.co.za";
+        toEmail = "";
         break;
       case "Compliments":
-        toEmail = "info@lsbekker.co.za";
+        toEmail = "";
         break;
       case "General Information":
-        toEmail = "info@lsbekker.co.za";
+        toEmail = "";
         break;
       case "My Account Status":
-        toEmail = "accounts@lsbekker.co.za";
+        toEmail = "";
         break;
       case "New Hostel Application":
-        toEmail = "info@lsbekker.co.za";
+        toEmail = "";
         break;
       case "New School Application":
-        toEmail = "school@lsbekker.co.za";
+        toEmail = "";
         break;
       case "Exemptions":
-        toEmail = "info@lsbekker.com";
+        toEmail = "";
         break;
       case "Other":
-        toEmail = "info@lsbekker.co.za";
+        toEmail = "";
         break;
       default:
         toEmail = EmailTo;
